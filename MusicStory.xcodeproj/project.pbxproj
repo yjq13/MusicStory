@@ -44,6 +44,8 @@
 		E36230921B74054400F53E1A /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362308C1B74054400F53E1A /* SetViewController.swift */; };
 		E36230931B74054400F53E1A /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362308D1B74054400F53E1A /* SwitchViewController.swift */; };
 		E36230961B74055D00F53E1A /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230951B74055D00F53E1A /* BuyViewController.swift */; };
+		E36230981B74F01A00F53E1A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230971B74F01A00F53E1A /* GameViewController.swift */; };
+		E362309A1B74F02800F53E1A /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230991B74F02800F53E1A /* StoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		E362308C1B74054400F53E1A /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		E362308D1B74054400F53E1A /* SwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		E36230951B74055D00F53E1A /* BuyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		E36230971B74F01A00F53E1A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E36230991B74F02800F53E1A /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,8 @@
 				E362308B1B74054400F53E1A /* RoomViewController.swift */,
 				E362308C1B74054400F53E1A /* SetViewController.swift */,
 				E362308D1B74054400F53E1A /* SwitchViewController.swift */,
+				E36230971B74F01A00F53E1A /* GameViewController.swift */,
+				E36230991B74F02800F53E1A /* StoryViewController.swift */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -366,7 +372,9 @@
 				E362306B1B7402F600F53E1A /* bls_Music_InfoManage.swift in Sources */,
 				E362306A1B7402F600F53E1A /* bls_Music_GetInfo.swift in Sources */,
 				E36230671B7402F600F53E1A /* bls_Game_InfoManage.swift in Sources */,
+				E362309A1B74F02800F53E1A /* StoryViewController.swift in Sources */,
 				E36230221B74006F00F53E1A /* ViewController.swift in Sources */,
+				E36230981B74F01A00F53E1A /* GameViewController.swift in Sources */,
 				E36230761B7403CE00F53E1A /* data_Music_GetData.swift in Sources */,
 				E36230901B74054400F53E1A /* DeskViewController.swift in Sources */,
 				E36230931B74054400F53E1A /* SwitchViewController.swift in Sources */,
@@ -589,6 +597,7 @@
 				E362303B1B74007000F53E1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E362303C1B74007000F53E1A /* Build configuration list for PBXNativeTarget "MusicStoryTests" */ = {
 			isa = XCConfigurationList;
@@ -597,6 +606,7 @@
 				E362303E1B74007000F53E1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
