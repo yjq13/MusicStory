@@ -198,13 +198,14 @@ class GameViewController: UIViewController {
     }
     @IBAction func touchButton3(sender: AnyObject) {
     }
-    @IBAction func touchButton4(sender: AnyObject) {
-    }
-    @IBAction func touchButton5(sender: AnyObject) {
-    }
+    
     @IBAction func touchButton6(sender: AnyObject) {
     }
     
+    @IBAction func touchButton5(sender: AnyObject) {
+    }
+    @IBAction func touchButton4(sender: AnyObject) {
+    }
     @IBAction func resumeButton(sender: AnyObject) {
         stopView.hidden=true
     }
