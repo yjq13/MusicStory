@@ -477,7 +477,6 @@
                                 </state>
                                 <connections>
                                     <action selector="touchButton4:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="LdS-Ha-IRE"/>
-                                    <action selector="touchButton:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="AZl-Gu-BmL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lis-fP-ixw">
@@ -528,7 +527,6 @@
                                 </state>
                                 <connections>
                                     <action selector="touchButton5:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="fIq-fm-B3o"/>
-                                    <action selector="touchButton:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="OX0-8U-hGA"/>
                                 </connections>
                             </button>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="LZI-xS-frK">
@@ -590,8 +588,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="93u-O8-SlV"/>
-        <segue reference="4jh-F3-Y20"/>
+        <segue reference="FXu-CQ-3UQ"/>
         <segue reference="u0b-8s-bs7"/>
+        <segue reference="4jh-F3-Y20"/>
     </inferredMetricsTieBreakers>
 </document>
