@@ -202,13 +202,8 @@
 		E362304F1B74023200F53E1A /* dataService */ = {
 			isa = PBXGroup;
 			children = (
-				E36230501B7402B600F53E1A /* ds_Game_GetInfo.swift */,
-				E36230511B7402B600F53E1A /* ds_Game_InfoManage.swift */,
-				E36230521B7402B600F53E1A /* ds_Game_WriteInfo.swift */,
-				E36230531B7402B600F53E1A /* ds_Music_GetData.swift */,
-				E36230541B7402B600F53E1A /* ds_Music_GetInfo.swift */,
-				E36230551B7402B600F53E1A /* ds_Music_InfoManage.swift */,
-				E36230561B7402B600F53E1A /* ds_Music_WriteInfo.swift */,
+				E36230A21B76894700F53E1A /* ds_Music */,
+				E36230A11B76893E00F53E1A /* ds_Game */,
 			);
 			name = dataService;
 			sourceTree = "<group>";
@@ -216,13 +211,8 @@
 		E362305E1B7402BD00F53E1A /* blService */ = {
 			isa = PBXGroup;
 			children = (
-				E362305F1B7402F600F53E1A /* bls_Game_GetInfo.swift */,
-				E36230601B7402F600F53E1A /* bls_Game_InfoManage.swift */,
-				E36230611B7402F600F53E1A /* bls_Game_WriteInfo.swift */,
-				E36230621B7402F600F53E1A /* bls_Music_GetData.swift */,
-				E36230631B7402F600F53E1A /* bls_Music_GetInfo.swift */,
-				E36230641B7402F600F53E1A /* bls_Music_InfoManage.swift */,
-				E36230651B7402F600F53E1A /* bls_Music_WriteInfo.swift */,
+				E36230A01B76893100F53E1A /* bls_Music */,
+				E362309F1B76892700F53E1A /* bls_Game */,
 			);
 			name = blService;
 			sourceTree = "<group>";
@@ -230,11 +220,8 @@
 		E362306D1B74039600F53E1A /* data */ = {
 			isa = PBXGroup;
 			children = (
-				E362306F1B7403CE00F53E1A /* data_Game_GetInfo.swift */,
-				E36230701B7403CE00F53E1A /* data_Game_WriteInfo.swift */,
-				E36230711B7403CE00F53E1A /* data_Music_GetData.swift */,
-				E36230721B7403CE00F53E1A /* data_Music_GetInfo.swift */,
-				E36230731B7403CE00F53E1A /* data_Music_WriteInfo.swift */,
+				E362309E1B7688DE00F53E1A /* data_Music */,
+				E362309D1B7688D300F53E1A /* data_Game */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -242,13 +229,8 @@
 		E362306E1B74039D00F53E1A /* bl */ = {
 			isa = PBXGroup;
 			children = (
-				E36230791B7403FA00F53E1A /* bl_Game_CountInfo.swift */,
-				E362307A1B7403FA00F53E1A /* bl_Game_GetInfo.swift */,
-				E362307B1B7403FA00F53E1A /* bl_Game_WriteInfo.swift */,
-				E362307C1B7403FA00F53E1A /* bl_Music_CountInfo.swift */,
-				E362307D1B7403FA00F53E1A /* bl_Music_GetData.swift */,
-				E362307E1B7403FA00F53E1A /* bl_Music_GetInfo.swift */,
-				E362307F1B7403FA00F53E1A /* bl_Music_WriteInfo.swift */,
+				E362309C1B7688A700F53E1A /* bl_Music */,
+				E362309B1B76889A00F53E1A /* bl_Game */,
 			);
 			name = bl;
 			sourceTree = "<group>";
@@ -265,6 +247,88 @@
 			children = (
 			);
 			name = vo;
+			sourceTree = "<group>";
+		};
+		E362309B1B76889A00F53E1A /* bl_Game */ = {
+			isa = PBXGroup;
+			children = (
+				E36230791B7403FA00F53E1A /* bl_Game_CountInfo.swift */,
+				E362307A1B7403FA00F53E1A /* bl_Game_GetInfo.swift */,
+				E362307B1B7403FA00F53E1A /* bl_Game_WriteInfo.swift */,
+			);
+			name = bl_Game;
+			sourceTree = "<group>";
+		};
+		E362309C1B7688A700F53E1A /* bl_Music */ = {
+			isa = PBXGroup;
+			children = (
+				E362307C1B7403FA00F53E1A /* bl_Music_CountInfo.swift */,
+				E362307D1B7403FA00F53E1A /* bl_Music_GetData.swift */,
+				E362307E1B7403FA00F53E1A /* bl_Music_GetInfo.swift */,
+				E362307F1B7403FA00F53E1A /* bl_Music_WriteInfo.swift */,
+			);
+			name = bl_Music;
+			sourceTree = "<group>";
+		};
+		E362309D1B7688D300F53E1A /* data_Game */ = {
+			isa = PBXGroup;
+			children = (
+				E362306F1B7403CE00F53E1A /* data_Game_GetInfo.swift */,
+				E36230701B7403CE00F53E1A /* data_Game_WriteInfo.swift */,
+			);
+			name = data_Game;
+			sourceTree = "<group>";
+		};
+		E362309E1B7688DE00F53E1A /* data_Music */ = {
+			isa = PBXGroup;
+			children = (
+				E36230711B7403CE00F53E1A /* data_Music_GetData.swift */,
+				E36230721B7403CE00F53E1A /* data_Music_GetInfo.swift */,
+				E36230731B7403CE00F53E1A /* data_Music_WriteInfo.swift */,
+			);
+			name = data_Music;
+			sourceTree = "<group>";
+		};
+		E362309F1B76892700F53E1A /* bls_Game */ = {
+			isa = PBXGroup;
+			children = (
+				E362305F1B7402F600F53E1A /* bls_Game_GetInfo.swift */,
+				E36230601B7402F600F53E1A /* bls_Game_InfoManage.swift */,
+				E36230611B7402F600F53E1A /* bls_Game_WriteInfo.swift */,
+			);
+			name = bls_Game;
+			sourceTree = "<group>";
+		};
+		E36230A01B76893100F53E1A /* bls_Music */ = {
+			isa = PBXGroup;
+			children = (
+				E36230621B7402F600F53E1A /* bls_Music_GetData.swift */,
+				E36230631B7402F600F53E1A /* bls_Music_GetInfo.swift */,
+				E36230641B7402F600F53E1A /* bls_Music_InfoManage.swift */,
+				E36230651B7402F600F53E1A /* bls_Music_WriteInfo.swift */,
+			);
+			name = bls_Music;
+			sourceTree = "<group>";
+		};
+		E36230A11B76893E00F53E1A /* ds_Game */ = {
+			isa = PBXGroup;
+			children = (
+				E36230501B7402B600F53E1A /* ds_Game_GetInfo.swift */,
+				E36230511B7402B600F53E1A /* ds_Game_InfoManage.swift */,
+				E36230521B7402B600F53E1A /* ds_Game_WriteInfo.swift */,
+			);
+			name = ds_Game;
+			sourceTree = "<group>";
+		};
+		E36230A21B76894700F53E1A /* ds_Music */ = {
+			isa = PBXGroup;
+			children = (
+				E36230531B7402B600F53E1A /* ds_Music_GetData.swift */,
+				E36230541B7402B600F53E1A /* ds_Music_GetInfo.swift */,
+				E36230551B7402B600F53E1A /* ds_Music_InfoManage.swift */,
+				E36230561B7402B600F53E1A /* ds_Music_WriteInfo.swift */,
+			);
+			name = ds_Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
