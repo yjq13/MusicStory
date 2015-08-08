@@ -18,31 +18,35 @@ class GameViewController: UIViewController {
         stopView.hidden=true
         //测试
         //游戏开始倒计时
-        var clock=UIImageView(frame: CGRectMake(100, 50, 300, 200))
+        gameThread()
         
-        UIView.animateWithDuration(1, delay:5,
-            options:UIViewAnimationOptions.TransitionNone, animations:
-            {
-                
-                self.view.addSubview(clock)
-            },
-            completion:{
-                (finished:Bool) -> Void in
-                UIView.animateWithDuration(1.5, animations:{
-                    ()-> Void in
-                   self.gameStart()
-                })
-        })
-
         
-       
         
     }
+    
     //游戏开始
     //六个按键的节奏=6个数组
+    //把游戏动画放入线程
+    func gameThread(){
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            
+            //这里写需要大量时间的代码
+            
+            
+            
+            sleep(1);
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                
+                //这里返回主线程，写需要主线程执行的代码
+                //即改ui的代码
+                self.game()
+            })
+        })
+    }
     var width:CGFloat=50
     var heigth:CGFloat=20
-    func gameStart() {
+    func game() {
         var list1=[1.0,2.5,3.1,4.5,4.8,6.2]
         var list2=[1.2,1.4,2.1,2.8,8.14,9.1]
         var list3=[1.9,3.8,5.4,7.1,7.9,8.1,8,3]
@@ -66,7 +70,7 @@ class GameViewController: UIViewController {
                     (finished:Bool) -> Void in
                     UIView.animateWithDuration(1.5, animations:{
                         ()-> Void in
-                       // background1.layer.removeFromSuperlayer()
+                        // background1.layer.removeFromSuperlayer()
                         background1.hidden=true
                     })
             })
@@ -158,7 +162,7 @@ class GameViewController: UIViewController {
                     (finished:Bool) -> Void in
                     UIView.animateWithDuration(1.5, animations:{
                         ()-> Void in
-                       // background5.layer.removeFromSuperlayer()
+                        // background5.layer.removeFromSuperlayer()
                         background5.hidden=true
                     })
             })
@@ -179,7 +183,7 @@ class GameViewController: UIViewController {
                     (finished:Bool) -> Void in
                     UIView.animateWithDuration(1.5, animations:{
                         ()-> Void in
-                       // background6.layer.removeFromSuperlayer()
+                        // background6.layer.removeFromSuperlayer()
                         background6.hidden=true
                     })
             })
@@ -211,7 +215,7 @@ class GameViewController: UIViewController {
     }
     @IBAction func retryButton(sender: AnyObject) {
         stopView.hidden=true
-        gameStart()
+        
     }
     @IBAction func backButton(sender: AnyObject) {
     }
