@@ -7,3 +7,6 @@
 //音乐信息
 
 import Foundation
+class MusicInfoVo {
+    
+}

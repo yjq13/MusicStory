@@ -7,3 +7,6 @@
 //游戏信息
 
 import Foundation
+class GameInfoVo {
+    
+}

@@ -7,3 +7,6 @@
 //故事情节记录
 
 import Foundation
+class StoryInfoVo {
+    
+}

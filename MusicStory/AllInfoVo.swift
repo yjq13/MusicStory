@@ -7,3 +7,6 @@
 //金币等级记录
 
 import Foundation
+class AllInfoVo {
+    
+}

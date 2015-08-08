@@ -7,3 +7,6 @@
 //音乐节奏
 
 import Foundation
+class MusicDataVo {
+    
+}
