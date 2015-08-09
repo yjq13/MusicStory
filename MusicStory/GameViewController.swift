@@ -9,44 +9,24 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    
+    var isPause:Bool!//判断暂停
     @IBOutlet weak var stopView: UITableViewCell!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        //隐藏暂停选项
         stopView.hidden=true
-        //测试
-        //游戏开始倒计时
-        gameThread()
-        
-        
+        isPause=false
+        gameAnimation()
         
     }
     
     //游戏开始
     //六个按键的节奏=6个数组
-    //把游戏动画放入线程
-    func gameThread(){
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            
-            //这里写需要大量时间的代码
-            
-            
-            
-            sleep(1);
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                
-                //这里返回主线程，写需要主线程执行的代码
-                //即改ui的代码
-                self.game()
-            })
-        })
-    }
     var width:CGFloat=50
     var heigth:CGFloat=20
-    func game() {
+    func gameAnimation() {
         var list1=[1.0,2.5,3.1,4.5,4.8,6.2]
         var list2=[1.2,1.4,2.1,2.8,8.14,9.1]
         var list3=[1.9,3.8,5.4,7.1,7.9,8.1,8,3]
@@ -191,6 +171,7 @@ class GameViewController: UIViewController {
     }
     //下面是6键模式的按键
     @IBAction func stopButton(sender: AnyObject) {
+        pauseLayer(self.view.layer)
         
         stopView.hidden=false
     }
@@ -211,10 +192,13 @@ class GameViewController: UIViewController {
     @IBAction func touchButton4(sender: AnyObject) {
     }
     @IBAction func resumeButton(sender: AnyObject) {
+        resumeLayer(self.view.layer)
         stopView.hidden=true
     }
     @IBAction func retryButton(sender: AnyObject) {
         stopView.hidden=true
+        self.view.layer.removeAllAnimations()
+        gameAnimation()
         
     }
     @IBAction func backButton(sender: AnyObject) {
@@ -223,6 +207,22 @@ class GameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //下面两个方法用来暂停和恢复
+    func pauseLayer(var layer:CALayer){
+        var pauseTime=CFTimeInterval(layer.convertTime(CACurrentMediaTime(), fromLayer: nil))
+        layer.speed=0
+        layer.timeOffset=pauseTime
+    }
+    func resumeLayer(var layer:CALayer){
+        var pauseTime=CFTimeInterval(layer.timeOffset)
+        layer.speed=1.0
+        layer.timeOffset=0.0
+        layer.beginTime=0.0
+        var timeSincePause=CFTimeInterval(layer.convertTime(CACurrentMediaTime(), fromLayer: nil)) - pauseTime
+        layer.beginTime=timeSincePause
+    }
+    
     
     /*
     // MARK: - Navigation
