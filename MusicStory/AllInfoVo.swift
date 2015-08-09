@@ -11,15 +11,13 @@ class AllInfoVo {
     var storyStep:Int
     var lv:Int
     var money:Int
-    var state:String
-    init(storyStep:Int,lv:Int,state:String,money:Int){
+    init(storyStep:Int,lv:Int,money:Int){
         self.lv=lv
-        self.state=state
         self.storyStep=storyStep
         self.money=money
     }
     func createPo()->AllInfoPo{
-        var po:AllInfoPo = AllInfoPo(storyStep: self.storyStep, lv: self.lv, state: self.state, money: self.money)
+        var po:AllInfoPo = AllInfoPo(storyStep: self.storyStep, lv: self.lv, money: self.money)
         return po
     }
 }

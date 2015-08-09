@@ -9,5 +9,8 @@
 import Foundation
 
 class bl_Music_CountInfo {
-    
+    func countMoneyByGame(vo:GameInfoVo)->Int{
+        var score:Int = 0
+        return score
+    }
 }

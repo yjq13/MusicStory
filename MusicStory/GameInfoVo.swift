@@ -2,18 +2,22 @@
 //  GameInfoVo.swift
 //  MusicStory
 //
-//  Created by yjq131250077 on 15/8/9.
+//  Created by yjq131250077 on 15/8/10.
 //  Copyright (c) 2015年 yjq131250077. All rights reserved.
-//游戏信息
+//
 
 import Foundation
 class GameInfoVo {
-    var score:Int
+    var perfectNum:Int
+    var greatNum:Int
+    var badNum:Int
+    var missNum:Int
     var combo:Int
-    var evaluation:String
-    init(score:Int,combo:Int,evaluation:String){
-        self.score=score
+    init(perfectNum:Int,greatNum:Int,badNum:Int,missNum:Int,combo:Int){
+        self.perfectNum=perfectNum
+        self.greatNum=greatNum
+        self.badNum=badNum
+        self.missNum=missNum
         self.combo=combo
-        self.evaluation=evaluation
     }
 }

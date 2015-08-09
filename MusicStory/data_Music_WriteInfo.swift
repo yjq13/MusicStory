@@ -9,5 +9,11 @@
 import Foundation
 
 class  data_Music_WriteInfo:MusicWriteInfo_DataService{
+    func WriteMusicBoughtInfo(Po: BuyMusicPo) {
+        
+    }
     
+    func WriteMusicInfoByID(Po: MusicInfoPo) {
+        
+    }
 }

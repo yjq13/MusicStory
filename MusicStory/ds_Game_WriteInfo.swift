@@ -10,4 +10,8 @@ import Foundation
 
 protocol GameWriteInfo_DataService{
     
+    func WriteAllInfoNew(AllInfoPo)
+    
+    func WritePetInfoNew(PetPo)
+ 
 }

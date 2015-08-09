@@ -9,5 +9,9 @@
 import Foundation
 
 protocol GameGetInfo_BlService{
+    func getStoryInfoOld()->StoryInfoVo
     
+    func getAllInfoOld()->AllInfoVo
+    
+    func getPetInfoOld()->PetVo
 }

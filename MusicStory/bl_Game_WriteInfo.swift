@@ -9,5 +9,12 @@
 import Foundation
 
 class bl_Game_WriteInfo:GameWriteInfo_BlService {
+    var WriteInfo:GameWriteInfo_DataService = data_Game_WriteInfo()
+    func WriteAllInfoNew(vo: AllInfoVo) {
+        WriteInfo.WriteAllInfoNew(vo.createPo())
+    }
     
+    func WritePetInfoNew(vo: PetVo) {
+        WriteInfo.WritePetInfoNew(vo.createPo())
+    }
 }

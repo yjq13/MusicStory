@@ -9,5 +9,11 @@
 import Foundation
 
 class data_Game_WriteInfo:GameWriteInfo_DataService {
+    func WriteAllInfoNew(po: AllInfoPo) {
+        
+    }
     
+    func WritePetInfoNew(po: PetPo) {
+        
+    }
 }

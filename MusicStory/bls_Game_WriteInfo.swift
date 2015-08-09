@@ -10,4 +10,7 @@ import Foundation
 
 protocol GameWriteInfo_BlService{
     
+    func WriteAllInfoNew(AllInfoVo)
+    
+    func WritePetInfoNew(PetVo)
 }

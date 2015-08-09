@@ -9,5 +9,13 @@
 import Foundation
 
 class bl_Music_WriteInfo: MusicWriteInfo_BlService{
+    var WriteMusicInfo:MusicWriteInfo_DataService = data_Music_WriteInfo()
     
+    func WriteMusicBoughtInfo(vo: BuyMusicVo) {
+        WriteMusicInfo.WriteMusicBoughtInfo(vo.createPo())
+    }
+    
+    func WriteMusicInfoByID(vo: MusicInfoVo) {
+        WriteMusicInfo.WriteMusicInfoByID(vo.createPo())
+    }
 }

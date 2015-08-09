@@ -9,5 +9,7 @@
 import Foundation
 
 protocol MusicWriteInfo_DataService{
+    func WriteMusicInfoByID(MusicInfoPo)
     
+    func WriteMusicBoughtInfo(BuyMusicPo)
 }

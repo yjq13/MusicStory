@@ -9,5 +9,20 @@
 import Foundation
 
 class bl_Game_GetInfo:GameGetInfo_BlService {
+    var GameGetInfo:GameGetInfo_DataService = data_Game_GetInfo()
     
+    func getAllInfoOld() -> AllInfoVo {
+        var vo = GameGetInfo.getAllInfoOld().createVo()
+        return vo
+    }
+    
+    func getStoryInfoOld() -> StoryInfoVo {
+        var vo = GameGetInfo.getStoryInfoOld().createVo()
+        return vo
+    }
+    
+    func getPetInfoOld() -> PetVo {
+        var vo = GameGetInfo.getPetInfoOld().createVo()
+        return vo
+    }
 }
