@@ -11,6 +11,15 @@ import Foundation
 class bl_Music_CountInfo {
     func countMoneyByGame(vo:GameInfoVo)->Int{
         var score:Int = 0
+        var perfect = vo.perfectNum
+        var great = vo.greatNum
+        var bad = vo.badNum
+        var miss  = vo.missNum
+        var combo = vo.combo
+        score = perfect*20+great*10+bad
+        for comboE in combo{
+            score = score + comboE*5
+        }
         return score
     }
 }
