@@ -12,8 +12,8 @@ class GameInfoVo {
     var greatNum:Int
     var badNum:Int
     var missNum:Int
-    var combo:Int
-    init(perfectNum:Int,greatNum:Int,badNum:Int,missNum:Int,combo:Int){
+    var combo:[Int]
+    init(perfectNum:Int,greatNum:Int,badNum:Int,missNum:Int,combo:[Int]){
         self.perfectNum=perfectNum
         self.greatNum=greatNum
         self.badNum=badNum

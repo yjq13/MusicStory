@@ -56,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicStory/bl_Music_GetData.swift"
-            timestampString = "460809955.132264"
+            timestampString = "460848072.542199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "getMusicData(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicStory/bls_Music_WriteInfo.swift"
-            timestampString = "460841168.318007"
+            timestampString = "460848072.542199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12">
+            startingLineNumber = "13"
+            endingLineNumber = "13">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -118,13 +118,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicStory/bl_Music_GetInfo.swift"
-            timestampString = "460843708.124831"
+            timestampString = "460848072.542199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
             landmarkName = "bl_Music_GetInfo"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicStory.bl_Music_GetInfo.getMusicInfo.getter : MusicStory.MusicGetInfo_DataService"
+                  moduleName = "MusicStory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/bl_Music_GetInfo.swift"
+                  timestampString = "460855517.979948"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicStory.bl_Music_GetInfo.getMusicInfo.setter : MusicStory.MusicGetInfo_DataService"
+                  moduleName = "MusicStory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/bl_Music_GetInfo.swift"
+                  timestampString = "460855517.980188"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicStory.bl_Music_GetInfo.getMusicInfo.materializeForSet : MusicStory.MusicGetInfo_DataService"
+                  moduleName = "MusicStory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/bl_Music_GetInfo.swift"
+                  timestampString = "460855517.980365"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicStory.bl_Music_GetInfo.init (MusicStory.bl_Music_GetInfo.Type)() -&gt; MusicStory.bl_Music_GetInfo"
+                  moduleName = "MusicStory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/bl_Music_GetInfo.swift"
+                  timestampString = "460855517.980584"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
