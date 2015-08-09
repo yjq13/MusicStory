@@ -8,5 +8,12 @@
 
 import Foundation
 class GameInfoVo {
-    
+    var score:Int
+    var combo:Int
+    var evaluation:String
+    init(score:Int,combo:Int,evaluation:String){
+        self.score=score
+        self.combo=combo
+        self.evaluation=evaluation
+    }
 }

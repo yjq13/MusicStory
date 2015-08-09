@@ -11,7 +11,10 @@ import Foundation
 class bl_Music_GetData:MusicGetData_BlService {
     func getMusicData(ID: String) -> MusicDataVo {
         var musicdata:MusicDataVo
-        musicdata = MusicDataVo()
+        var getDataService:MusicGetData_DataService
+        getDataService = data_Music_GetData()
+        var Po:MusicDataPo = getDataService.getMusicData(ID)
+        musicdata = Po.createVo()
         return musicdata
     }
 }

@@ -10,8 +10,9 @@ import Foundation
 
 class data_Music_GetData:MusicGetData_DataService {
     func getMusicData(ID: String) -> MusicDataPo {
-        var musicdata:MusicDataPo
-        musicdata=MusicDataPo()
+        var Mpath = [0.0,1.0]
+        //获取文件内的音乐节奏
+        var musicdata:MusicDataPo = MusicDataPo(path1: Mpath, path2: Mpath, path3: Mpath, path4: Mpath, path5: Mpath, path6: Mpath)
         return musicdata
     }
 }

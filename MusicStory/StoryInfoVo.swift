@@ -8,5 +8,14 @@
 
 import Foundation
 class StoryInfoVo {
-    
+    var step:Int
+    var target:String
+    var MusicID:String
+    var LvNeed:Int
+    init(step:Int,target:String,MusicID:String,LvNeed:Int){
+        self.step=step
+        self.target=target
+        self.MusicID=MusicID
+        self.LvNeed=LvNeed
+    }
 }

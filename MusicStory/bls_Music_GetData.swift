@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MusicGetData_BlService{
-    func getMusicData(String)-> MusicDataVo
+    func getMusicData(String)-> MusicDataVo    //获取节奏信息
 }

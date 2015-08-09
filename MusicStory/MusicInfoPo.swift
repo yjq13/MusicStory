@@ -7,6 +7,29 @@
 //
 
 import Foundation
-class MuiscInfoPo {
+class MusicInfoPo {
+    var score:Int
+    var combo:Int
+    var ID:String
+    var name:String
+    var imagePath:String
+    var difficilty:Int
+    var musicLV:Int
+    var evaluation:String
+    init(score:Int,combo:Int,evaluation:String,ID:String,difficity:Int,name:String,lv:Int,imagePath:String){
+        self.score=score
+        self.combo=combo
+        self.evaluation=evaluation
+        self.ID=ID
+        self.difficilty=difficity
+        self.name=name
+        self.musicLV=lv
+        self.imagePath=imagePath
+    }
     
+    func createVo()->MusicInfoVo{
+        var vo:MusicInfoVo = MusicInfoVo(score: self.score, combo: self.combo, evaluation: self.evaluation, ID: self.ID, difficity: self.difficilty, name: self.name, lv: self.musicLV, imagePath: self.imagePath)
+        return vo
+    }
+
 }

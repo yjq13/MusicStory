@@ -7,3 +7,8 @@
 //
 
 import Foundation
+class Constant{
+    static var VOLUME:Double = 0.0
+    static var MUSIC:Bool = true
+    static var SOUND:Bool = true
+}

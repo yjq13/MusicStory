@@ -48,7 +48,6 @@
 		E362309A1B74F02800F53E1A /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230991B74F02800F53E1A /* StoryViewController.swift */; };
 		E36230B61B76BDCB00F53E1A /* MusicDataVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230B51B76BDCB00F53E1A /* MusicDataVo.swift */; };
 		E36230B81B76BDF900F53E1A /* BuyMusicVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230B71B76BDF900F53E1A /* BuyMusicVo.swift */; };
-		E36230BA1B76BE1400F53E1A /* GameInfoVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230B91B76BE1400F53E1A /* GameInfoVo.swift */; };
 		E36230BC1B76BE4B00F53E1A /* StoryInfoVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230BB1B76BE4B00F53E1A /* StoryInfoVo.swift */; };
 		E36230BE1B76BE6200F53E1A /* AllInfoVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230BD1B76BE6200F53E1A /* AllInfoVo.swift */; };
 		E36230C01B76BF4700F53E1A /* MusicDataPo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230BF1B76BF4700F53E1A /* MusicDataPo.swift */; };
@@ -117,7 +116,6 @@
 		E36230991B74F02800F53E1A /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		E36230B51B76BDCB00F53E1A /* MusicDataVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDataVo.swift; sourceTree = "<group>"; };
 		E36230B71B76BDF900F53E1A /* BuyMusicVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyMusicVo.swift; sourceTree = "<group>"; };
-		E36230B91B76BE1400F53E1A /* GameInfoVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfoVo.swift; sourceTree = "<group>"; };
 		E36230BB1B76BE4B00F53E1A /* StoryInfoVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryInfoVo.swift; sourceTree = "<group>"; };
 		E36230BD1B76BE6200F53E1A /* AllInfoVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllInfoVo.swift; sourceTree = "<group>"; };
 		E36230BF1B76BF4700F53E1A /* MusicDataPo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDataPo.swift; sourceTree = "<group>"; };
@@ -280,7 +278,6 @@
 			children = (
 				E36230B51B76BDCB00F53E1A /* MusicDataVo.swift */,
 				E36230B71B76BDF900F53E1A /* BuyMusicVo.swift */,
-				E36230B91B76BE1400F53E1A /* GameInfoVo.swift */,
 				E36230BB1B76BE4B00F53E1A /* StoryInfoVo.swift */,
 				E36230BD1B76BE6200F53E1A /* AllInfoVo.swift */,
 				E36230C71B77114100F53E1A /* MusicInfoVo.swift */,
@@ -482,7 +479,6 @@
 				E36230591B7402B600F53E1A /* ds_Game_WriteInfo.swift in Sources */,
 				E36230CD1B77552F00F53E1A /* Constant.swift in Sources */,
 				E36230581B7402B600F53E1A /* ds_Game_InfoManage.swift in Sources */,
-				E36230BA1B76BE1400F53E1A /* GameInfoVo.swift in Sources */,
 				E362306B1B7402F600F53E1A /* bls_Music_InfoManage.swift in Sources */,
 				E36230BE1B76BE6200F53E1A /* AllInfoVo.swift in Sources */,
 				E362306A1B7402F600F53E1A /* bls_Music_GetInfo.swift in Sources */,
