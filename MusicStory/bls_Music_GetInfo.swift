@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MusicGetInfo_BlService{
-    
+    //func getMusicInfoForBuy(String)->MusicInfoVo
 }

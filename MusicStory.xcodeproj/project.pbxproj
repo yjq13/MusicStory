@@ -47,14 +47,18 @@
 		E36230981B74F01A00F53E1A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230971B74F01A00F53E1A /* GameViewController.swift */; };
 		E362309A1B74F02800F53E1A /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230991B74F02800F53E1A /* StoryViewController.swift */; };
 		E36230B61B76BDCB00F53E1A /* MusicDataVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230B51B76BDCB00F53E1A /* MusicDataVo.swift */; };
-		E36230B81B76BDF900F53E1A /* MusicInfoVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230B71B76BDF900F53E1A /* MusicInfoVo.swift */; };
+		E36230B81B76BDF900F53E1A /* BuyMusicVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230B71B76BDF900F53E1A /* BuyMusicVo.swift */; };
 		E36230BA1B76BE1400F53E1A /* GameInfoVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230B91B76BE1400F53E1A /* GameInfoVo.swift */; };
 		E36230BC1B76BE4B00F53E1A /* StoryInfoVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230BB1B76BE4B00F53E1A /* StoryInfoVo.swift */; };
 		E36230BE1B76BE6200F53E1A /* AllInfoVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230BD1B76BE6200F53E1A /* AllInfoVo.swift */; };
 		E36230C01B76BF4700F53E1A /* MusicDataPo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230BF1B76BF4700F53E1A /* MusicDataPo.swift */; };
-		E36230C21B76BF6B00F53E1A /* MusicInfoPo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230C11B76BF6B00F53E1A /* MusicInfoPo.swift */; };
+		E36230C21B76BF6B00F53E1A /* BuyMusicPo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230C11B76BF6B00F53E1A /* BuyMusicPo.swift */; };
 		E36230C41B76BF9400F53E1A /* StoryInfoPo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230C31B76BF9400F53E1A /* StoryInfoPo.swift */; };
 		E36230C61B76BFAB00F53E1A /* AllInfoPo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230C51B76BFAB00F53E1A /* AllInfoPo.swift */; };
+		E36230C81B77114100F53E1A /* MusicInfoVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230C71B77114100F53E1A /* MusicInfoVo.swift */; };
+		E36230CA1B77166800F53E1A /* MusicInfoPo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230C91B77166800F53E1A /* MusicInfoPo.swift */; };
+		E36230CD1B77552F00F53E1A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230CC1B77552F00F53E1A /* Constant.swift */; };
+		E36230CF1B77563C00F53E1A /* IGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230CE1B77563C00F53E1A /* IGViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,14 +116,18 @@
 		E36230971B74F01A00F53E1A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		E36230991B74F02800F53E1A /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		E36230B51B76BDCB00F53E1A /* MusicDataVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDataVo.swift; sourceTree = "<group>"; };
-		E36230B71B76BDF900F53E1A /* MusicInfoVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicInfoVo.swift; sourceTree = "<group>"; };
+		E36230B71B76BDF900F53E1A /* BuyMusicVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyMusicVo.swift; sourceTree = "<group>"; };
 		E36230B91B76BE1400F53E1A /* GameInfoVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfoVo.swift; sourceTree = "<group>"; };
 		E36230BB1B76BE4B00F53E1A /* StoryInfoVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryInfoVo.swift; sourceTree = "<group>"; };
 		E36230BD1B76BE6200F53E1A /* AllInfoVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllInfoVo.swift; sourceTree = "<group>"; };
 		E36230BF1B76BF4700F53E1A /* MusicDataPo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDataPo.swift; sourceTree = "<group>"; };
-		E36230C11B76BF6B00F53E1A /* MusicInfoPo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicInfoPo.swift; sourceTree = "<group>"; };
+		E36230C11B76BF6B00F53E1A /* BuyMusicPo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyMusicPo.swift; sourceTree = "<group>"; };
 		E36230C31B76BF9400F53E1A /* StoryInfoPo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryInfoPo.swift; sourceTree = "<group>"; };
 		E36230C51B76BFAB00F53E1A /* AllInfoPo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllInfoPo.swift; sourceTree = "<group>"; };
+		E36230C71B77114100F53E1A /* MusicInfoVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicInfoVo.swift; sourceTree = "<group>"; };
+		E36230C91B77166800F53E1A /* MusicInfoPo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicInfoPo.swift; sourceTree = "<group>"; };
+		E36230CC1B77552F00F53E1A /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E36230CE1B77563C00F53E1A /* IGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +182,7 @@
 		E362301D1B74006F00F53E1A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E36230CB1B7753B700F53E1A /* util */,
 				E36230881B7404AA00F53E1A /* vo */,
 				E36230871B7404A400F53E1A /* po */,
 				E362306E1B74039D00F53E1A /* bl */,
@@ -213,6 +222,7 @@
 				E362308D1B74054400F53E1A /* SwitchViewController.swift */,
 				E36230971B74F01A00F53E1A /* GameViewController.swift */,
 				E36230991B74F02800F53E1A /* StoryViewController.swift */,
+				E36230CE1B77563C00F53E1A /* IGViewController.swift */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -257,9 +267,10 @@
 			isa = PBXGroup;
 			children = (
 				E36230BF1B76BF4700F53E1A /* MusicDataPo.swift */,
-				E36230C11B76BF6B00F53E1A /* MusicInfoPo.swift */,
+				E36230C11B76BF6B00F53E1A /* BuyMusicPo.swift */,
 				E36230C31B76BF9400F53E1A /* StoryInfoPo.swift */,
 				E36230C51B76BFAB00F53E1A /* AllInfoPo.swift */,
+				E36230C91B77166800F53E1A /* MusicInfoPo.swift */,
 			);
 			name = po;
 			sourceTree = "<group>";
@@ -268,10 +279,11 @@
 			isa = PBXGroup;
 			children = (
 				E36230B51B76BDCB00F53E1A /* MusicDataVo.swift */,
-				E36230B71B76BDF900F53E1A /* MusicInfoVo.swift */,
+				E36230B71B76BDF900F53E1A /* BuyMusicVo.swift */,
 				E36230B91B76BE1400F53E1A /* GameInfoVo.swift */,
 				E36230BB1B76BE4B00F53E1A /* StoryInfoVo.swift */,
 				E36230BD1B76BE6200F53E1A /* AllInfoVo.swift */,
+				E36230C71B77114100F53E1A /* MusicInfoVo.swift */,
 			);
 			name = vo;
 			sourceTree = "<group>";
@@ -356,6 +368,14 @@
 				E36230561B7402B600F53E1A /* ds_Music_WriteInfo.swift */,
 			);
 			name = ds_Music;
+			sourceTree = "<group>";
+		};
+		E36230CB1B7753B700F53E1A /* util */ = {
+			isa = PBXGroup;
+			children = (
+				E36230CC1B77552F00F53E1A /* Constant.swift */,
+			);
+			name = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,6 +480,7 @@
 			files = (
 				E36230C41B76BF9400F53E1A /* StoryInfoPo.swift in Sources */,
 				E36230591B7402B600F53E1A /* ds_Game_WriteInfo.swift in Sources */,
+				E36230CD1B77552F00F53E1A /* Constant.swift in Sources */,
 				E36230581B7402B600F53E1A /* ds_Game_InfoManage.swift in Sources */,
 				E36230BA1B76BE1400F53E1A /* GameInfoVo.swift in Sources */,
 				E362306B1B7402F600F53E1A /* bls_Music_InfoManage.swift in Sources */,
@@ -473,8 +494,10 @@
 				E36230901B74054400F53E1A /* DeskViewController.swift in Sources */,
 				E36230931B74054400F53E1A /* SwitchViewController.swift in Sources */,
 				E362305A1B7402B600F53E1A /* ds_Music_GetData.swift in Sources */,
+				E36230CF1B77563C00F53E1A /* IGViewController.swift in Sources */,
 				E36230851B7403FA00F53E1A /* bl_Music_GetInfo.swift in Sources */,
 				E36230771B7403CE00F53E1A /* data_Music_GetInfo.swift in Sources */,
+				E36230CA1B77166800F53E1A /* MusicInfoPo.swift in Sources */,
 				E362305C1B7402B600F53E1A /* ds_Music_InfoManage.swift in Sources */,
 				E36230C01B76BF4700F53E1A /* MusicDataPo.swift in Sources */,
 				E36230921B74054400F53E1A /* SetViewController.swift in Sources */,
@@ -483,16 +506,17 @@
 				E36230911B74054400F53E1A /* RoomViewController.swift in Sources */,
 				E36230821B7403FA00F53E1A /* bl_Game_WriteInfo.swift in Sources */,
 				E362306C1B7402F600F53E1A /* bls_Music_WriteInfo.swift in Sources */,
-				E36230C21B76BF6B00F53E1A /* MusicInfoPo.swift in Sources */,
+				E36230C21B76BF6B00F53E1A /* BuyMusicPo.swift in Sources */,
 				E36230C61B76BFAB00F53E1A /* AllInfoPo.swift in Sources */,
 				E36230811B7403FA00F53E1A /* bl_Game_GetInfo.swift in Sources */,
 				E36230751B7403CE00F53E1A /* data_Game_WriteInfo.swift in Sources */,
 				E36230781B7403CE00F53E1A /* data_Music_WriteInfo.swift in Sources */,
 				E36230741B7403CE00F53E1A /* data_Game_GetInfo.swift in Sources */,
 				E36230681B7402F600F53E1A /* bls_Game_WriteInfo.swift in Sources */,
+				E36230C81B77114100F53E1A /* MusicInfoVo.swift in Sources */,
 				E36230691B7402F600F53E1A /* bls_Music_GetData.swift in Sources */,
 				E36230201B74006F00F53E1A /* AppDelegate.swift in Sources */,
-				E36230B81B76BDF900F53E1A /* MusicInfoVo.swift in Sources */,
+				E36230B81B76BDF900F53E1A /* BuyMusicVo.swift in Sources */,
 				E36230B61B76BDCB00F53E1A /* MusicDataVo.swift in Sources */,
 				E36230BC1B76BE4B00F53E1A /* StoryInfoVo.swift in Sources */,
 				E36230831B7403FA00F53E1A /* bl_Music_CountInfo.swift in Sources */,

@@ -9,5 +9,9 @@
 import Foundation
 
 class data_Music_GetData:MusicGetData_DataService {
-    
+    func getMusicData(ID: String) -> MusicDataPo {
+        var musicdata:MusicDataPo
+        musicdata=MusicDataPo()
+        return musicdata
+    }
 }

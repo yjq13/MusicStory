@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MusicGetData_DataService{
-    
+    func getMusicData(String)-> MusicDataPo
 }
