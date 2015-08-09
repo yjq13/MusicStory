@@ -18,10 +18,27 @@ class GameViewController: UIViewController {
         //隐藏暂停选项
         stopView.hidden=true
         isPause=false
-        gameAnimation()
+        game()
         
     }
-    
+    func game(){
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            
+            //这里写需要大量时间的代码
+            
+            
+            
+            sleep(1);
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                
+                //这里返回主线程，写需要主线程执行的代码
+                //即改ui的代码
+                self.gameAnimation()
+            })
+        })
+    }
+
     //游戏开始
     //六个按键的节奏=6个数组
     var width:CGFloat=50
@@ -197,8 +214,6 @@ class GameViewController: UIViewController {
     }
     @IBAction func retryButton(sender: AnyObject) {
         stopView.hidden=true
-        self.view.layer.removeAllAnimations()
-        gameAnimation()
         
     }
     @IBAction func backButton(sender: AnyObject) {
