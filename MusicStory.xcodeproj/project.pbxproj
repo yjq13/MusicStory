@@ -60,6 +60,8 @@
 		E36230D11B77DB7000F53E1A /* PetVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230D01B77DB7000F53E1A /* PetVo.swift */; };
 		E36230D31B77DD4F00F53E1A /* PetPo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230D21B77DD4F00F53E1A /* PetPo.swift */; };
 		E36230D51B77E97D00F53E1A /* GameInfoVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230D41B77E97D00F53E1A /* GameInfoVo.swift */; };
+		E36230DA1B78ACD200F53E1A /* AllInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E36230D91B78ACD200F53E1A /* AllInfo.plist */; };
+		E36230DC1B78ACF400F53E1A /* StoryInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E36230DB1B78ACF400F53E1A /* StoryInfo.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +132,8 @@
 		E36230D01B77DB7000F53E1A /* PetVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetVo.swift; sourceTree = "<group>"; };
 		E36230D21B77DD4F00F53E1A /* PetPo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetPo.swift; sourceTree = "<group>"; };
 		E36230D41B77E97D00F53E1A /* GameInfoVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfoVo.swift; sourceTree = "<group>"; };
+		E36230D91B78ACD200F53E1A /* AllInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AllInfo.plist; sourceTree = "<group>"; };
+		E36230DB1B78ACF400F53E1A /* StoryInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StoryInfo.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +188,8 @@
 		E362301D1B74006F00F53E1A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E36230D71B78AB7700F53E1A /* Source */,
+				E36230D61B78AB7200F53E1A /* ConfigurationFile */,
 				E36230CB1B7753B700F53E1A /* util */,
 				E36230881B7404AA00F53E1A /* vo */,
 				E36230871B7404A400F53E1A /* po */,
@@ -381,6 +387,38 @@
 			name = util;
 			sourceTree = "<group>";
 		};
+		E36230D61B78AB7200F53E1A /* ConfigurationFile */ = {
+			isa = PBXGroup;
+			children = (
+				E36230DD1B78ADC200F53E1A /* MusicConfig */,
+				E36230D91B78ACD200F53E1A /* AllInfo.plist */,
+				E36230DB1B78ACF400F53E1A /* StoryInfo.plist */,
+			);
+			name = ConfigurationFile;
+			sourceTree = "<group>";
+		};
+		E36230D71B78AB7700F53E1A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E36230D81B78AC3200F53E1A /* MusicFIle */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		E36230D81B78AC3200F53E1A /* MusicFIle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MusicFIle;
+			sourceTree = "<group>";
+		};
+		E36230DD1B78ADC200F53E1A /* MusicConfig */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MusicConfig;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -461,8 +499,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E36230DA1B78ACD200F53E1A /* AllInfo.plist in Resources */,
 				E36230411B7400E600F53E1A /* Main.storyboard in Resources */,
 				E362302A1B74006F00F53E1A /* LaunchScreen.xib in Resources */,
+				E36230DC1B78ACF400F53E1A /* StoryInfo.plist in Resources */,
 				E36230271B74006F00F53E1A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
