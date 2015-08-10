@@ -27,18 +27,18 @@ class GameViewController: UIViewController {
             completion:{
                 (finished:Bool) -> Void in
                 self.gameAnimation()
-
-        })
                 
+        })
+        
     }
     
     //游戏开始
     //六个按键的节奏=6个数组
-//音符高宽
+    //音符高宽
     var width:CGFloat=50
     var heigth:CGFloat=20
-//动画开始时间
-var beginTime:CFTimeInterval!
+    //动画开始时间
+    var beginTime:CFTimeInterval!
     func gameAnimation() {
         var list1=[1.0,2.0,3.0,4.0,5.0,6.0]
         var list2=[1.0,2.0,3.0,4.0,5.0]
@@ -207,8 +207,11 @@ var beginTime:CFTimeInterval!
     }
     @IBAction func resumeButton(sender: AnyObject) {
         
-        resumeLayer(self.view.layer)
-        stopView.hidden=true
+        self.resumeAnimation()
+        
+        self.resumeLayer(self.view.layer)
+        self.stopView.hidden=true
+        
     }
     @IBAction func retryButton(sender: AnyObject) {
         
@@ -235,18 +238,32 @@ var beginTime:CFTimeInterval!
         layer.speed=1.0
         layer.timeOffset=0.0
         layer.beginTime=0.0
-        var timeSincePause=CFTimeInterval(layer.convertTime(CACurrentMediaTime(), fromLayer: nil)) - pauseTime
+        var timeSincePause=CFTimeInterval(layer.convertTime(CACurrentMediaTime(), fromLayer: nil)) - pauseTime+5
         layer.beginTime=timeSincePause
     }
     //下面用来重试游戏
-func retryLayer(var layer:CALayer){
+    func retryLayer(var layer:CALayer){
         layer.speed=1.0
         layer.timeOffset=0.0
         layer.beginTime=0.0
         var timeSinceBegin=CFTimeInterval(layer.convertTime(CACurrentMediaTime(), fromLayer: nil)) - beginTime
         layer.beginTime=timeSinceBegin
+    }
+    //下面是恢复时的倒计时动画
+    func resumeAnimation(){
+        var imageView=UIImageView(frame: CGRectMake(100, 100, 200, 200))
+        imageView.center=self.view.center
+        var images=[AnyObject]()
+        for var i=1;i<7;i++ {
+            var im=UIImage(named: "\(i).jpg")
+            images.append(im!)
         }
-
+        imageView.animationImages=images
+        imageView.animationDuration=5
+        imageView.animationRepeatCount=1
+        imageView.startAnimating()
+        self.view.addSubview(imageView)
+    }
     
     /*
     // MARK: - Navigation
