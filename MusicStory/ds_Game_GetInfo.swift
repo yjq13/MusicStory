@@ -9,7 +9,7 @@
 import Foundation
 
 protocol GameGetInfo_DataService{
-    func getStoryInfoOld()->StoryInfoPo
+    func getStoryInfoOld(Int)->StoryInfoPo
     
     func getAllInfoOld()->AllInfoPo
     

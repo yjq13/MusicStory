@@ -134,7 +134,7 @@
                   moduleName = "MusicStory"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/bl_Music_GetInfo.swift"
-                  timestampString = "460855517.979948"
+                  timestampString = "460894810.15718"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -149,7 +149,7 @@
                   moduleName = "MusicStory"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/bl_Music_GetInfo.swift"
-                  timestampString = "460855517.980188"
+                  timestampString = "460894810.157302"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -164,7 +164,7 @@
                   moduleName = "MusicStory"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/bl_Music_GetInfo.swift"
-                  timestampString = "460855517.980365"
+                  timestampString = "460894810.157407"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -179,7 +179,7 @@
                   moduleName = "MusicStory"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/bl_Music_GetInfo.swift"
-                  timestampString = "460855517.980584"
+                  timestampString = "460894810.157507"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "12"
@@ -187,6 +187,22 @@
                   offsetFromSymbolStart = "12">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicStory/data_Game_GetInfo.swift"
+            timestampString = "460887298.645634"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "data_Game_GetInfo"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

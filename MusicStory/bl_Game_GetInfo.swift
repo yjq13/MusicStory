@@ -16,8 +16,8 @@ class bl_Game_GetInfo:GameGetInfo_BlService {
         return vo
     }
     
-    func getStoryInfoOld() -> StoryInfoVo {
-        var vo = GameGetInfo.getStoryInfoOld().createVo()
+    func getStoryInfoOld(StoryStep:Int) -> StoryInfoVo {
+        var vo = GameGetInfo.getStoryInfoOld(StoryStep).createVo()
         return vo
     }
     
