@@ -9,12 +9,17 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    var musicName:String!//音乐名
+    var musicSpeed:Int!//音乐速度
+    var musicData:MusicDataVo!
     var isPause:Bool!//判断暂停
     @IBOutlet weak var stopView: UITableViewCell!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        var getMusicData:MusicGetData_BlService=bl_Music_GetData()
+        //musicData=getMusicData.getMusicData(musicName)
+        
         //隐藏暂停选项
         stopView.hidden=true
         isPause=false
@@ -27,7 +32,6 @@ class GameViewController: UIViewController {
             completion:{
                 (finished:Bool) -> Void in
                 self.gameAnimation()
-                
         })
         
     }
@@ -40,12 +44,12 @@ class GameViewController: UIViewController {
     //动画开始时间
     var beginTime:CFTimeInterval!
     func gameAnimation() {
-        var list1=[1.0,2.0,3.0,4.0,5.0,6.0]
-        var list2=[1.0,2.0,3.0,4.0,5.0]
-        var list3=[1.0,2.0,3.0,4.0]
-        var list4=[1.0,2.0,3.0]
-        var list5=[1.0,2.0]
-        var list6=[1.0]
+        var list1=musicData.musicPath1
+        var list2=musicData.musicPath2
+        var list3=musicData.musicPath3
+        var list4=musicData.musicPath4
+        var list5=musicData.musicPath5
+        var list6=musicData.musicPath6
         beginTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))
         //设置动画效果
         for t in list1{
@@ -70,7 +74,6 @@ class GameViewController: UIViewController {
             })
             
         }
-        //设置动画效果
         
         for t in list2{
             var background2 = UIView(frame:CGRectMake(180, 50, width, heigth))
@@ -190,20 +193,76 @@ class GameViewController: UIViewController {
         stopView.hidden=false
     }
     
+    
+    
     @IBAction func touchButton1(sender: AnyObject) {
+        var musicTime=musicData.musicPath1
+        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
+        for i in musicTime {
+            var offset=i-buttonPushTime
+            if (offset>=0&&offset<0.2) {
+                print("perfect")
+            }
+        }
+        
     }
     
     @IBAction func touchButton2(sender: AnyObject) {
+        var musicTime=musicData.musicPath2
+        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
+        for i in musicTime {
+            var offset=i-buttonPushTime
+            if (offset>=0&&offset<0.2) {
+                print("perfect")
+            }
+        }
+
     }
     @IBAction func touchButton3(sender: AnyObject) {
+        var musicTime=musicData.musicPath3
+        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
+        for i in musicTime {
+            var offset=i-buttonPushTime
+            if (offset>=0&&offset<0.2) {
+                print("perfect")
+            }
+        }
+
     }
     
     @IBAction func touchButton6(sender: AnyObject) {
+        var musicTime=musicData.musicPath6
+        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
+        for i in musicTime {
+            var offset=i-buttonPushTime
+            if (offset>=0&&offset<0.2) {
+                print("perfect")
+            }
+        }
+
     }
     
     @IBAction func touchButton5(sender: AnyObject) {
+        var musicTime=musicData.musicPath5
+        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
+        for i in musicTime {
+            var offset=i-buttonPushTime
+            if (offset>=0&&offset<0.2) {
+                print("perfect")
+            }
+        }
+
     }
     @IBAction func touchButton4(sender: AnyObject) {
+        var musicTime=musicData.musicPath4
+        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
+        for i in musicTime {
+            var offset=i-buttonPushTime
+            if (offset>=0&&offset<0.2) {
+                print("perfect")
+            }
+        }
+
     }
     @IBAction func resumeButton(sender: AnyObject) {
         

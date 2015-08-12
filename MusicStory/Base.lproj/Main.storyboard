@@ -50,6 +50,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="startGame:" destination="5x9-eL-VK9" eventType="touchUpInside" id="KVn-4E-UTI"/>
                                     <segue destination="oXb-zd-x9Z" kind="modal" id="kcx-7C-msJ"/>
                                 </connections>
                             </button>
@@ -147,7 +148,7 @@
                                 <rect key="frame" x="357" y="245" width="39" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="FzN-0a-BH9">
@@ -180,6 +181,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="startGame:" destination="pef-6V-dmm" eventType="touchUpInside" id="VG0-eh-9lx"/>
                                     <segue destination="oXb-zd-x9Z" kind="modal" id="4jh-F3-Y20"/>
                                 </connections>
                             </button>
@@ -489,16 +491,6 @@
                                     <action selector="touchButton1:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="Fvi-hX-Fv9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P2I-PM-5gH">
-                                <rect key="frame" x="200" y="250" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchButton3:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="sZn-BG-R8b"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7TL-qz-ihg">
                                 <rect key="frame" x="380" y="250" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -529,11 +521,11 @@
                                     <action selector="touchButton5:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="fIq-fm-B3o"/>
                                 </connections>
                             </button>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="LZI-xS-frK">
-                                <rect key="frame" x="124" y="96" width="320" height="128"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="178" id="LZI-xS-frK">
+                                <rect key="frame" x="124" y="46" width="320" height="178"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LZI-xS-frK" id="GWb-Jo-f65">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="127.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="177.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lP7-Ys-Vf6">
@@ -546,16 +538,6 @@
                                                 <action selector="retryButton:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="4vh-Rc-iXY"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k0F-TV-vOy">
-                                            <rect key="frame" x="143" y="84" width="34" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="back">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="backButton:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="AqN-NS-DDX"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sxy-yE-CPI">
                                             <rect key="frame" x="135" y="8" width="51" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -566,9 +548,39 @@
                                                 <action selector="resumeButton:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="zaZ-u9-hrM"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nw5-xL-axf">
+                                            <rect key="frame" x="147" y="84" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="set">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="z1U-06-Srs" kind="modal" id="r6e-Ki-4JU"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k0F-TV-vOy">
+                                            <rect key="frame" x="145" y="122" width="34" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="back">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="backButton:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="AqN-NS-DDX"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P2I-PM-5gH">
+                                <rect key="frame" x="200" y="250" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton3:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="sZn-BG-R8b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -588,8 +600,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="4jh-F3-Y20"/>
-        <segue reference="93u-O8-SlV"/>
-        <segue reference="u0b-8s-bs7"/>
+        <segue reference="YSm-57-yf5"/>
+        <segue reference="iKR-i2-mqS"/>
+        <segue reference="kcx-7C-msJ"/>
+        <segue reference="r6e-Ki-4JU"/>
     </inferredMetricsTieBreakers>
 </document>

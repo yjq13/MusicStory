@@ -15,6 +15,8 @@ class DeskViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func startGame(sender: AnyObject) {
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
