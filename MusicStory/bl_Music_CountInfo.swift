@@ -8,8 +8,8 @@
 
 import Foundation
 
-class bl_Music_CountInfo {
-    func countMoneyByGame(vo:GameInfoVo)->Int{
+class bl_Music_CountInfo :MusicCountInfo_BlService {
+    func countScoreByGame(vo:GameInfoVo)->Int{
         var score:Int = 0
         var perfect = vo.perfectNum
         var great = vo.greatNum
