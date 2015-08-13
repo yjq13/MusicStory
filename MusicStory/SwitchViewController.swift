@@ -10,15 +10,21 @@ import UIKit
 
 class SwitchViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     //let colorclass = color()
-    
+    var musicName:String!
+    var musicSpeed:Int!
     var colors = ["None"]
     
+    @IBOutlet weak var speedChooseView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         //colors = colorclass.getColors()
         // Do any additional setup after loading the view.
+        speedChooseView.hidden=true
     }
 
+    @IBAction func startGameButton(sender: AnyObject) {
+        speedChooseView.hidden=false
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,6 +40,19 @@ class SwitchViewController: UIViewController,UIPickerViewDataSource,UIPickerView
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return colors[row]
+    }
+    @IBAction func speed1Button(sender: AnyObject) {
+        self.musicSpeed=1
+    }
+    
+    @IBAction func speed2Button(sender: AnyObject) {
+        self.musicSpeed=2
+    }
+    @IBAction func speed3Button(sender: AnyObject) {
+        self.musicSpeed=3
+    }
+    @IBAction func closeSpeedViewButton(sender: AnyObject) {
+        speedChooseView.hidden=true
     }
     /*
     // MARK: - Navigation

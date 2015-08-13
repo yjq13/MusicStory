@@ -13,6 +13,8 @@ class GameViewController: UIViewController {
     var musicSpeed:Int!//音乐速度
     var musicData:MusicDataVo!
     var isPause:Bool!//判断暂停
+
+    
     @IBOutlet weak var stopView: UITableViewCell!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,12 +46,20 @@ class GameViewController: UIViewController {
     //动画开始时间
     var beginTime:CFTimeInterval!
     func gameAnimation() {
-        var list1=musicData.musicPath1
-        var list2=musicData.musicPath2
-        var list3=musicData.musicPath3
-        var list4=musicData.musicPath4
-        var list5=musicData.musicPath5
-        var list6=musicData.musicPath6
+        print(self.musicSpeed)
+//        var list1=musicData.musicPath1
+//        var list2=musicData.musicPath2
+//        var list3=musicData.musicPath3
+//        var list4=musicData.musicPath4
+//        var list5=musicData.musicPath5
+//        var list6=musicData.musicPath6
+        var list1=[1.0]
+        var list2=[2.0]
+        var list3=[3.0]
+        var list4=[4.0]
+        var list5=[5.0]
+        var list6=[6.0]
+
         beginTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))
         //设置动画效果
         for t in list1{
@@ -200,8 +210,10 @@ class GameViewController: UIViewController {
         var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
         for i in musicTime {
             var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.2) {
+            if (offset>=0&&offset<0.1) {
                 print("perfect")
+            }else if(offset>=0.1&&offset<0.2){
+                print("good")
             }
         }
         
@@ -212,9 +224,12 @@ class GameViewController: UIViewController {
         var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
         for i in musicTime {
             var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.2) {
+            if (offset>=0&&offset<0.1) {
                 print("perfect")
+            }else if(offset>=0.1&&offset<0.2){
+                print("good")
             }
+
         }
 
     }
@@ -223,9 +238,12 @@ class GameViewController: UIViewController {
         var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
         for i in musicTime {
             var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.2) {
+            if (offset>=0&&offset<0.1) {
                 print("perfect")
+            }else if(offset>=0.1&&offset<0.2){
+                print("good")
             }
+
         }
 
     }
@@ -235,9 +253,12 @@ class GameViewController: UIViewController {
         var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
         for i in musicTime {
             var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.2) {
+            if (offset>=0&&offset<0.1) {
                 print("perfect")
+            }else if(offset>=0.1&&offset<0.2){
+                print("good")
             }
+
         }
 
     }
@@ -247,9 +268,12 @@ class GameViewController: UIViewController {
         var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
         for i in musicTime {
             var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.2) {
+            if (offset>=0&&offset<0.1) {
                 print("perfect")
+            }else if(offset>=0.1&&offset<0.2){
+                print("good")
             }
+
         }
 
     }
@@ -258,9 +282,12 @@ class GameViewController: UIViewController {
         var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
         for i in musicTime {
             var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.2) {
+            if (offset>=0&&offset<0.1) {
                 print("perfect")
+            }else if(offset>=0.1&&offset<0.2){
+                print("good")
             }
+
         }
 
     }

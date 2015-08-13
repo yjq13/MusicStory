@@ -51,7 +51,6 @@
                                 </state>
                                 <connections>
                                     <action selector="startGame:" destination="5x9-eL-VK9" eventType="touchUpInside" id="KVn-4E-UTI"/>
-                                    <segue destination="oXb-zd-x9Z" kind="modal" id="kcx-7C-msJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DZA-qe-kUd">
@@ -101,10 +100,72 @@
                                     <segue destination="oto-Ro-yax" kind="modal" id="5ab-Ut-qrU"/>
                                 </connections>
                             </button>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="9jV-9e-suA">
+                                <rect key="frame" x="124" y="100" width="320" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9jV-9e-suA" id="60L-Y0-TbN">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="choose speed" borderStyle="roundedRect" minimumFontSize="17" id="BXc-Kf-WLS">
+                                            <rect key="frame" x="104" y="35" width="112" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yhc-OJ-GX5">
+                                            <rect key="frame" x="91" y="85" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="1">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="speed1Button:" destination="5x9-eL-VK9" eventType="touchUpInside" id="2DD-yE-4jh"/>
+                                                <segue destination="oXb-zd-x9Z" kind="modal" id="gQP-RO-rW6"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4fy-vD-20Y">
+                                            <rect key="frame" x="145" y="85" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="2">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="speed2Button:" destination="5x9-eL-VK9" eventType="touchUpInside" id="xlL-MR-TMx"/>
+                                                <segue destination="oXb-zd-x9Z" kind="modal" id="U4H-qR-bMf"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="men-zu-mAp">
+                                            <rect key="frame" x="199" y="85" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="3">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="speed3Button:" destination="5x9-eL-VK9" eventType="touchUpInside" id="380-CK-pG0"/>
+                                                <segue destination="oXb-zd-x9Z" kind="modal" id="0Xi-Gl-yCw"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YoT-j2-LBi">
+                                            <rect key="frame" x="290" y="0.0" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="x">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="closeSpeedViewButton:" destination="5x9-eL-VK9" eventType="touchUpInside" id="QjP-cq-ZwC"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="speedChooseView" destination="9jV-9e-suA" id="eHE-nV-5cY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBY-SP-IZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,7 +243,6 @@
                                 </state>
                                 <connections>
                                     <action selector="startGame:" destination="pef-6V-dmm" eventType="touchUpInside" id="VG0-eh-9lx"/>
-                                    <segue destination="oXb-zd-x9Z" kind="modal" id="4jh-F3-Y20"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sbS-jV-7ia">
@@ -195,10 +255,72 @@
                                     <segue destination="OF6-e5-810" kind="modal" id="93u-O8-SlV"/>
                                 </connections>
                             </button>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="2nL-ZM-VIM">
+                                <rect key="frame" x="135" y="69" width="320" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2nL-ZM-VIM" id="HTm-y6-OEI">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="choose speed" borderStyle="roundedRect" minimumFontSize="17" id="O1n-gi-mxn">
+                                            <rect key="frame" x="104" y="35" width="112" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F8a-2S-NfL">
+                                            <rect key="frame" x="91" y="85" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="1">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="speed1Button:" destination="pef-6V-dmm" eventType="touchUpInside" id="2gg-5m-EgN"/>
+                                                <segue destination="oXb-zd-x9Z" kind="modal" id="T8O-3E-zcO"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JQT-xu-b3A">
+                                            <rect key="frame" x="145" y="85" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="2">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="speed2Button:" destination="pef-6V-dmm" eventType="touchUpInside" id="K3O-aF-0e9"/>
+                                                <segue destination="oXb-zd-x9Z" kind="modal" id="VXc-cD-Zno"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vea-I1-soX">
+                                            <rect key="frame" x="290" y="0.0" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="x">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="closeSpeedViewButton:" destination="pef-6V-dmm" eventType="touchUpInside" id="Rxo-25-cLr"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JBa-vn-v72">
+                                            <rect key="frame" x="199" y="85" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="3">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="speed3Button:" destination="pef-6V-dmm" eventType="touchUpInside" id="jSV-2O-Jqx"/>
+                                                <segue destination="oXb-zd-x9Z" kind="modal" id="lzi-qt-PAM"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="speedChooseView" destination="HTm-y6-OEI" id="y1T-hv-KFf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rV1-IZ-Fj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,13 +392,6 @@
                                     <segue destination="OF6-e5-810" kind="custom" id="J6M-gs-jEa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PVn-xq-FLi">
-                                <rect key="frame" x="36" y="220" width="166" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="difficulty">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bak-MY-ks3">
                                 <rect key="frame" x="315" y="48" width="152" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -289,20 +404,82 @@
                                     <outlet property="delegate" destination="JuU-Ou-C8j" id="29Y-IQ-fiz"/>
                                 </connections>
                             </pickerView>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="NEV-gj-vCA">
+                                <rect key="frame" x="124" y="85" width="320" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NEV-gj-vCA" id="doi-Jy-rMr">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="choose speed" borderStyle="roundedRect" minimumFontSize="17" id="NqW-rC-UnC">
+                                            <rect key="frame" x="104" y="35" width="112" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6s8-cz-Yyp">
+                                            <rect key="frame" x="91" y="85" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="1">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="speed1Button:" destination="JuU-Ou-C8j" eventType="touchUpInside" id="bfm-f8-CeB"/>
+                                                <segue destination="oXb-zd-x9Z" kind="modal" id="6sW-uo-Wqq"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ES7-PX-RYn">
+                                            <rect key="frame" x="145" y="85" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="2">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="speed2Button:" destination="JuU-Ou-C8j" eventType="touchUpInside" id="asc-39-3Xn"/>
+                                                <segue destination="oXb-zd-x9Z" kind="modal" id="GaU-pr-xAT"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jys-ss-GzC">
+                                            <rect key="frame" x="199" y="85" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="3">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="speed3Button:" destination="JuU-Ou-C8j" eventType="touchUpInside" id="zFu-oB-ORu"/>
+                                                <segue destination="oXb-zd-x9Z" kind="modal" id="WX9-xS-bGU"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lig-gP-e4q">
+                                            <rect key="frame" x="290" y="0.0" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="x">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="closeSpeedViewButton:" destination="JuU-Ou-C8j" eventType="touchUpInside" id="a9D-PB-4Lc"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tKz-b5-Djd">
-                                <rect key="frame" x="265" y="193" width="108" height="107"/>
+                                <rect key="frame" x="230" y="193" width="108" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="oXb-zd-x9Z" kind="modal" id="ldC-ii-yRd"/>
+                                    <action selector="startGameButton:" destination="JuU-Ou-C8j" eventType="touchUpInside" id="OPM-6c-zuA"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="speedChooseView" destination="doi-Jy-rMr" id="5fN-JJ-QOo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SU5-4V-ACt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -445,8 +622,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="iKR-i2-mqS"/>
+        <segue reference="J6M-gs-jEa"/>
+        <segue reference="WX9-xS-bGU"/>
         <segue reference="u0b-8s-bs7"/>
-        <segue reference="kcx-7C-msJ"/>
     </inferredMetricsTieBreakers>
 </document>
