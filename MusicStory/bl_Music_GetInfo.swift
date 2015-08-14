@@ -17,9 +17,9 @@ class bl_Music_GetInfo:MusicGetInfo_BlService {
         return vo
     }
     
-    func getMusicInfoForBuy(ID: String) -> [BuyMusicVo] {
+    func getMusicInfoForBuy() -> [BuyMusicVo] {
         var volist:[BuyMusicVo] = []
-        var polist:[BuyMusicPo] = getMusicInfo.getMusicInfoForBuy(ID)
+        var polist:[BuyMusicPo] = getMusicInfo.getMusicInfoForBuy()
         for po in polist{
             volist.append(po.createVo())
         }

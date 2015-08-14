@@ -12,7 +12,7 @@ class data_Music_GetData:MusicGetData_DataService {
     func getMusicData(ID: String) -> MusicDataPo {
         var musicdata:MusicDataPo!
         
-        var dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("test", ofType: "plist")!)
+        var dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource(ID, ofType: "plist")!)
         var thing1: AnyObject? = dict?.objectForKey("path1")!
         var thing2: AnyObject? = dict?.objectForKey("path2")!
         var thing3: AnyObject? = dict?.objectForKey("path3")!

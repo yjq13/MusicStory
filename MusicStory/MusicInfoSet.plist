@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>M-0000</key>
+	<dict>
+		<key>ID</key>
+		<string>M-0000</string>
+		<key>price</key>
+		<integer>0</integer>
+		<key>ifBought</key>
+		<false/>
+		<key>imagePath</key>
+		<string>None</string>
+		<key>difficulty</key>
+		<integer>0</integer>
+		<key>score</key>
+		<integer>0</integer>
+		<key>combo</key>
+		<integer>0</integer>
+		<key>musicLV</key>
+		<integer>0</integer>
+		<key>name</key>
+		<string>test</string>
+		<key>evaluation</key>
+		<string>None</string>
+	</dict>
+</dict>
+</plist>

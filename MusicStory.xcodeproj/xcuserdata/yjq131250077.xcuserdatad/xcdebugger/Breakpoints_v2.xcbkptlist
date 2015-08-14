@@ -203,6 +203,53 @@
             endingLineNumber = "11"
             landmarkName = "data_Game_GetInfo"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicStory.data_Game_GetInfo.__deallocating_deinit"
+                  moduleName = "MusicStory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/data_Game_GetInfo.swift"
+                  timestampString = "461263155.951264"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicStory.data_Game_GetInfo.deinit"
+                  moduleName = "MusicStory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/data_Game_GetInfo.swift"
+                  timestampString = "461263155.951488"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicStory.data_Game_GetInfo.init (MusicStory.data_Game_GetInfo.Type)() -&gt; MusicStory.data_Game_GetInfo"
+                  moduleName = "MusicStory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/data_Game_GetInfo.swift"
+                  timestampString = "461263155.951631"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -217,6 +264,118 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
             endingLineNumber = "13">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicStory/data_Game_GetInfo.swift"
+            timestampString = "461263205.903009"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "getAllInfoOld()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicStory/data_Game_GetInfo.swift"
+            timestampString = "461266539.708414"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getPetInfoOld()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicStory/data_Music_GetInfo.swift"
+            timestampString = "461265843.064468"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getMusicInfoByID(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicStory/data_Music_GetInfo.swift"
+            timestampString = "461265996.838695"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "getMusicInfoByID(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicStory.data_Music_getInfo.getMusicInfoForBuy (MusicStory.data_Music_getInfo)(Swift.String) -&gt; Swift.Array&lt;MusicStory.BuyMusicPo&gt;"
+                  moduleName = "MusicStory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/data_Music_GetInfo.swift"
+                  timestampString = "461265996.841096"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "protocol witness for MusicStory.MusicGetInfo_DataService.getMusicInfoForBuy &lt;A : MusicStory.MusicGetInfo_DataService&gt;(MusicStory.MusicGetInfo_DataService.Self)(Swift.String) -&gt; Swift.Array&lt;MusicStory.BuyMusicPo&gt; in conformance MusicStory.data_Music_getInfo : MusicStory.MusicGetInfo_DataService in MusicStory"
+                  moduleName = "MusicStory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/data_Music_GetInfo.swift"
+                  timestampString = "461265996.841283"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicStory/data_Music_GetInfo.swift"
+            timestampString = "461266539.708414"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getMusicInfoByID(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

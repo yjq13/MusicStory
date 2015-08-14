@@ -12,6 +12,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        var getInfo = data_Game_GetInfo()
+//        var po = getInfo.getAllInfoOld()
+       // println(po.storyStep)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

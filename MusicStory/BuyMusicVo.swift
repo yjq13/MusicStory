@@ -12,12 +12,12 @@ class BuyMusicVo {
     var price:Int
     var name:String
     var imagePath:String
-    var difficilty:Int
+    var difficulty:Int
     var musicLV:Int
     var ifBought:Bool
-    init(ID:String,price:Int,name:String,imagePath:String,difficity:Int,lv:Int,ifBought:Bool){
+    init(ID:String,price:Int,name:String,imagePath:String,difficulty:Int,lv:Int,ifBought:Bool){
         self.ID=ID
-        self.difficilty=difficity
+        self.difficulty=difficulty
         self.name=name
         self.price=price
         self.musicLV=lv
@@ -25,7 +25,7 @@ class BuyMusicVo {
         self.ifBought=ifBought
     }
     func createPo()->BuyMusicPo{
-        var po:BuyMusicPo = BuyMusicPo(ID: self.ID, price: self.price, name: self.name, imagePath: self.imagePath, difficity: self.difficilty, lv: self.musicLV, ifBought: self.ifBought)
+        var po:BuyMusicPo = BuyMusicPo(ID: self.ID, price: self.price, name: self.name, imagePath: self.imagePath, difficulty: self.difficulty, lv: self.musicLV, ifBought: self.ifBought)
         return po
     }
 }

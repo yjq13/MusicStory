@@ -11,5 +11,5 @@ import Foundation
 protocol MusicGetInfo_BlService{
     func getMusicInfoByID(String)->MusicInfoVo
     
-    func getMusicInfoForBuy(String)->[BuyMusicVo]
+    func getMusicInfoForBuy()->[BuyMusicVo]
 }
