@@ -9,8 +9,6 @@
 import UIKit
 
 class DeskViewController: UIViewController {
-    var musicName:String!
-    var musicSpeed:Int!
     @IBOutlet weak var speedChooseView: UITableViewCell!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +17,7 @@ speedChooseView.hidden=true
     }
     @IBAction func startGame(sender: AnyObject) {
         speedChooseView.hidden=false
+         Constant.LAST_VIEW_IDENTIFY="desk"
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,13 +26,25 @@ speedChooseView.hidden=true
     }
     
     @IBAction func speed1Button(sender: AnyObject) {
-        self.musicSpeed=1
+        Constant.SPEED=2
+        //下面的方法是代码跳转界面
+        let myStoryBoard = self.storyboard
+        let anotherView:UIViewController = myStoryBoard?.instantiateViewControllerWithIdentifier("game") as! UIViewController
+        self.presentViewController(anotherView, animated: true, completion: nil)
     }
     @IBAction func speed2Button(sender: AnyObject) {
-        self.musicSpeed=2
+        Constant.SPEED=1.5
+        //下面的方法是代码跳转界面
+        let myStoryBoard = self.storyboard
+        let anotherView:UIViewController = myStoryBoard?.instantiateViewControllerWithIdentifier("game") as! UIViewController
+        self.presentViewController(anotherView, animated: true, completion: nil)
     }
     @IBAction func speed3Button(sender: AnyObject) {
-        self.musicSpeed=3
+        Constant.SPEED=1
+        //下面的方法是代码跳转界面
+        let myStoryBoard = self.storyboard
+        let anotherView:UIViewController = myStoryBoard?.instantiateViewControllerWithIdentifier("game") as! UIViewController
+        self.presentViewController(anotherView, animated: true, completion: nil)
     }
     @IBAction func closeSpeedViewButton(sender: AnyObject) {
         speedChooseView.hidden=true

@@ -10,8 +10,6 @@ import UIKit
 
 class SwitchViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     //let colorclass = color()
-    var musicName:String!
-    var musicSpeed:Int!
     var colors = ["None"]
     
     @IBOutlet weak var speedChooseView: UIView!
@@ -24,6 +22,7 @@ class SwitchViewController: UIViewController,UIPickerViewDataSource,UIPickerView
 
     @IBAction func startGameButton(sender: AnyObject) {
         speedChooseView.hidden=false
+        Constant.LAST_VIEW_IDENTIFY="switch"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -42,14 +41,26 @@ class SwitchViewController: UIViewController,UIPickerViewDataSource,UIPickerView
         return colors[row]
     }
     @IBAction func speed1Button(sender: AnyObject) {
-        self.musicSpeed=1
+        Constant.SPEED=2
+        //下面的方法是代码跳转界面
+        let myStoryBoard = self.storyboard
+        let anotherView:UIViewController = myStoryBoard?.instantiateViewControllerWithIdentifier("game") as! UIViewController
+        self.presentViewController(anotherView, animated: true, completion: nil)
     }
     
     @IBAction func speed2Button(sender: AnyObject) {
-        self.musicSpeed=2
+        Constant.SPEED=1.5
+        //下面的方法是代码跳转界面
+        let myStoryBoard = self.storyboard
+        let anotherView:UIViewController = myStoryBoard?.instantiateViewControllerWithIdentifier("game") as! UIViewController
+        self.presentViewController(anotherView, animated: true, completion: nil)
     }
     @IBAction func speed3Button(sender: AnyObject) {
-        self.musicSpeed=3
+        Constant.SPEED=1
+        //下面的方法是代码跳转界面
+        let myStoryBoard = self.storyboard
+        let anotherView:UIViewController = myStoryBoard?.instantiateViewControllerWithIdentifier("game") as! UIViewController
+        self.presentViewController(anotherView, animated: true, completion: nil)
     }
     @IBAction func closeSpeedViewButton(sender: AnyObject) {
         speedChooseView.hidden=true

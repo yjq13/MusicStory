@@ -9,22 +9,21 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    var musicName:String!//音乐名
-    var musicSpeed:Int!//音乐速度
+    var musicName:String=Constant.MUSIC_NAME//音乐名
+    var musicSpeed:Double=Constant.SPEED//音乐速度
     var musicData:MusicDataVo!
-    var isPause:Bool!//判断暂停
-
+    var isPause:Bool=false//判断暂停
+    var score:Int=0//得分
+    var combo:Int=0//连击数
     
     @IBOutlet weak var stopView: UITableViewCell!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         var getMusicData:MusicGetData_BlService=bl_Music_GetData()
         //musicData=getMusicData.getMusicData(musicName)
-        
         //隐藏暂停选项
         stopView.hidden=true
-        isPause=false
+        //游戏开始
         UIView.animateWithDuration(1, delay:0,
             options:UIViewAnimationOptions.TransitionNone, animations:
             {
@@ -46,155 +45,170 @@ class GameViewController: UIViewController {
     //动画开始时间
     var beginTime:CFTimeInterval!
     func gameAnimation() {
-        print(self.musicSpeed)
-//        var list1=musicData.musicPath1
-//        var list2=musicData.musicPath2
-//        var list3=musicData.musicPath3
-//        var list4=musicData.musicPath4
-//        var list5=musicData.musicPath5
-//        var list6=musicData.musicPath6
-        var list1=[1.0]
+        //        var list1=musicData.musicPath1
+        //        var list2=musicData.musicPath2
+        //        var list3=musicData.musicPath3
+        //        var list4=musicData.musicPath4
+        //        var list5=musicData.musicPath5
+        //        var list6=musicData.musicPath6
+        var list1=[2.0]
         var list2=[2.0]
         var list3=[3.0]
         var list4=[4.0]
-        var list5=[5.0]
+        var list5=[7.0]
         var list6=[6.0]
-
+        
+        var gameTime=0.0
+        var listOfLast=[list1[list1.count-1],list2[list2.count-1],list3[list3.count-1],list4[list4.count-1],list5[list5.count-1],list6[list6.count-1]]
+        sort(&listOfLast)
+        gameTime=listOfLast[5]
+        
         beginTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))
         //设置动画效果
-        for t in list1{
-            var background1 = UIView(frame:CGRectMake(100, 50, width, heigth))
-            background1.backgroundColor = UIColor.darkGrayColor()
-            self.view.addSubview(background1)
-            background1.alpha=0.0
-            UIView.animateWithDuration(1, delay:t,
-                options:UIViewAnimationOptions.TransitionNone, animations:
-                {
-                    ()-> Void in
-                    background1.alpha=1.0
-                    background1.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
-                },
-                completion:{
-                    (finished:Bool) -> Void in
-                    UIView.animateWithDuration(1, animations:{
-                        ()-> Void in
-                        // background1.layer.removeFromSuperlayer()
-                        background1.hidden=true
+        UIView.animateWithDuration(musicSpeed, delay:gameTime+3,
+            options:UIViewAnimationOptions.TransitionNone, animations:
+            {
+                ()-> Void in
+                for t in list1{
+                    var background1 = UIView(frame:CGRectMake(100, 50, self.width, self.heigth))
+                    background1.backgroundColor = UIColor.darkGrayColor()
+                    self.view.addSubview(background1)
+                    background1.alpha=0.0
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                        options:UIViewAnimationOptions.TransitionNone, animations:
+                        {
+                            ()-> Void in
+                            background1.alpha=1.0
+                            background1.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                        },
+                        completion:{
+                            (finished:Bool) -> Void in
+                            UIView.animateWithDuration(1, animations:{
+                                ()-> Void in
+                                // background1.layer.removeFromSuperlayer()
+                                background1.hidden=true
+                            })
                     })
-            })
-            
-        }
-        
-        for t in list2{
-            var background2 = UIView(frame:CGRectMake(180, 50, width, heigth))
-            background2.backgroundColor = UIColor.darkGrayColor()
-            self.view.addSubview(background2)
-            background2.alpha=0.0
-            UIView.animateWithDuration(1, delay:t,
-                options:UIViewAnimationOptions.TransitionNone, animations:
-                {
-                    ()-> Void in
-                    background2.alpha=1.0
-                    background2.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
-                },
-                completion:{
-                    (finished:Bool) -> Void in
-                    UIView.animateWithDuration(1, animations:{
-                        ()-> Void in
-                        //background2.layer.removeFromSuperlayer()
-                        background2.hidden=true
+                    
+                }
+                
+                for t in list2{
+                    var background2 = UIView(frame:CGRectMake(180, 50, self.width, self.heigth))
+                    background2.backgroundColor = UIColor.darkGrayColor()
+                    self.view.addSubview(background2)
+                    background2.alpha=0.0
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                        options:UIViewAnimationOptions.TransitionNone, animations:
+                        {
+                            ()-> Void in
+                            background2.alpha=1.0
+                            background2.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                        },
+                        completion:{
+                            (finished:Bool) -> Void in
+                            UIView.animateWithDuration(1, animations:{
+                                ()-> Void in
+                                //background2.layer.removeFromSuperlayer()
+                                background2.hidden=true
+                            })
                     })
-            })
-        }
-        
-        
-        for t in list3{
-            var background3 = UIView(frame:CGRectMake(260, 50, width, heigth))
-            background3.backgroundColor = UIColor.darkGrayColor()
-            self.view.addSubview(background3)
-            background3.alpha=0.0
-            UIView.animateWithDuration(1, delay:t,
-                options:UIViewAnimationOptions.TransitionNone, animations:
-                {
-                    ()-> Void in
-                    background3.alpha=1.0
-                    background3.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
-                },
-                completion:{
-                    (finished:Bool) -> Void in
-                    UIView.animateWithDuration(1, animations:{
-                        ()-> Void in
-                        //background3.layer.removeFromSuperlayer()
-                        background3.hidden=true
+                }
+                
+                
+                for t in list3{
+                    var background3 = UIView(frame:CGRectMake(260, 50, self.width, self.heigth))
+                    background3.backgroundColor = UIColor.darkGrayColor()
+                    self.view.addSubview(background3)
+                    background3.alpha=0.0
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                        options:UIViewAnimationOptions.TransitionNone, animations:
+                        {
+                            ()-> Void in
+                            background3.alpha=1.0
+                            background3.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                        },
+                        completion:{
+                            (finished:Bool) -> Void in
+                            UIView.animateWithDuration(1, animations:{
+                                ()-> Void in
+                                //background3.layer.removeFromSuperlayer()
+                                background3.hidden=true
+                            })
                     })
-            })
-        }
-        
-        
-        
-        for t in list4{
-            var background4 = UIView(frame:CGRectMake(340, 50, width, heigth))
-            background4.backgroundColor = UIColor.darkGrayColor()
-            self.view.addSubview(background4)
-            background4.alpha=0.0
-            UIView.animateWithDuration(1, delay:t,
-                options:UIViewAnimationOptions.TransitionNone, animations:
-                {
-                    ()-> Void in
-                    background4.alpha=1.0
-                    background4.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
-                },
-                completion:{
-                    (finished:Bool) -> Void in
-                    UIView.animateWithDuration(1, animations:{
-                        ()-> Void in
-                        //background4.layer.removeFromSuperlayer()
-                        background4.hidden=true
+                }
+                
+                
+                
+                for t in list4{
+                    var background4 = UIView(frame:CGRectMake(340, 50, self.width, self.heigth))
+                    background4.backgroundColor = UIColor.darkGrayColor()
+                    self.view.addSubview(background4)
+                    background4.alpha=0.0
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                        options:UIViewAnimationOptions.TransitionNone, animations:
+                        {
+                            ()-> Void in
+                            background4.alpha=1.0
+                            background4.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                        },
+                        completion:{
+                            (finished:Bool) -> Void in
+                            UIView.animateWithDuration(1, animations:{
+                                ()-> Void in
+                                //background4.layer.removeFromSuperlayer()
+                                background4.hidden=true
+                            })
                     })
-            })
-        }
-        for t in list5{
-            var background5 = UIView(frame:CGRectMake(420, 50, width, heigth))
-            background5.backgroundColor = UIColor.darkGrayColor()
-            self.view.addSubview(background5)
-            background5.alpha=0.0
-            UIView.animateWithDuration(1, delay:t,
-                options:UIViewAnimationOptions.TransitionNone, animations:
-                {
-                    ()-> Void in
-                    background5.alpha=1.0
-                    background5.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
-                },
-                completion:{
-                    (finished:Bool) -> Void in
-                    UIView.animateWithDuration(1, animations:{
-                        ()-> Void in
-                        // background5.layer.removeFromSuperlayer()
-                        background5.hidden=true
+                }
+                for t in list5{
+                    var background5 = UIView(frame:CGRectMake(420, 50, self.width, self.heigth))
+                    background5.backgroundColor = UIColor.darkGrayColor()
+                    self.view.addSubview(background5)
+                    background5.alpha=0.0
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                        options:UIViewAnimationOptions.TransitionNone, animations:
+                        {
+                            ()-> Void in
+                            background5.alpha=1.0
+                            background5.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                        },
+                        completion:{
+                            (finished:Bool) -> Void in
+                            UIView.animateWithDuration(1, animations:{
+                                ()-> Void in
+                                // background5.layer.removeFromSuperlayer()
+                                background5.hidden=true
+                            })
                     })
-            })
-        }
-        for t in list6{
-            var background6 = UIView(frame:CGRectMake(500, 50, width, heigth))
-            background6.backgroundColor = UIColor.darkGrayColor()
-            self.view.addSubview(background6)
-            background6.alpha=0.0
-            UIView.animateWithDuration(1, delay:t,
-                options:UIViewAnimationOptions.TransitionNone, animations:
-                {
-                    ()-> Void in
-                    background6.alpha=1.0
-                    background6.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
-                },
-                completion:{
-                    (finished:Bool) -> Void in
-                    UIView.animateWithDuration(1, animations:{
-                        ()-> Void in
-                        // background6.layer.removeFromSuperlayer()
-                        background6.hidden=true
+                }
+                for t in list6{
+                    var background6 = UIView(frame:CGRectMake(500, 50, self.width, self.heigth))
+                    background6.backgroundColor = UIColor.darkGrayColor()
+                    self.view.addSubview(background6)
+                    background6.alpha=0.0
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                        options:UIViewAnimationOptions.TransitionNone, animations:
+                        {
+                            ()-> Void in
+                            background6.alpha=1.0
+                            background6.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                        },
+                        completion:{
+                            (finished:Bool) -> Void in
+                            UIView.animateWithDuration(1, animations:{
+                                ()-> Void in
+                                // background6.layer.removeFromSuperlayer()
+                                background6.hidden=true
+                            })
                     })
-            })
-        }
+                }
+                
+            },
+            completion:{
+                (finished:Bool) -> Void in
+                self.backButton(self)
+        })
+        
     }
     //下面是6键模式的按键
     @IBAction func stopButton(sender: AnyObject) {
@@ -212,8 +226,11 @@ class GameViewController: UIViewController {
             var offset=i-buttonPushTime
             if (offset>=0&&offset<0.1) {
                 print("perfect")
+                combo++
             }else if(offset>=0.1&&offset<0.2){
                 print("good")
+            }else{
+                
             }
         }
         
@@ -229,9 +246,9 @@ class GameViewController: UIViewController {
             }else if(offset>=0.1&&offset<0.2){
                 print("good")
             }
-
+            
         }
-
+        
     }
     @IBAction func touchButton3(sender: AnyObject) {
         var musicTime=musicData.musicPath3
@@ -243,9 +260,9 @@ class GameViewController: UIViewController {
             }else if(offset>=0.1&&offset<0.2){
                 print("good")
             }
-
+            
         }
-
+        
     }
     
     @IBAction func touchButton6(sender: AnyObject) {
@@ -258,9 +275,9 @@ class GameViewController: UIViewController {
             }else if(offset>=0.1&&offset<0.2){
                 print("good")
             }
-
+            
         }
-
+        
     }
     
     @IBAction func touchButton5(sender: AnyObject) {
@@ -273,9 +290,9 @@ class GameViewController: UIViewController {
             }else if(offset>=0.1&&offset<0.2){
                 print("good")
             }
-
+            
         }
-
+        
     }
     @IBAction func touchButton4(sender: AnyObject) {
         var musicTime=musicData.musicPath4
@@ -287,16 +304,15 @@ class GameViewController: UIViewController {
             }else if(offset>=0.1&&offset<0.2){
                 print("good")
             }
-
+            
         }
-
+        
     }
     @IBAction func resumeButton(sender: AnyObject) {
-        
-        self.resumeAnimation()
-        
-        self.resumeLayer(self.view.layer)
         self.stopView.hidden=true
+        self.resumeAnimation()
+        self.resumeLayer(self.view.layer)
+        
         
     }
     @IBAction func retryButton(sender: AnyObject) {
@@ -307,6 +323,9 @@ class GameViewController: UIViewController {
         
     }
     @IBAction func backButton(sender: AnyObject) {
+        let myStoryBoard = self.storyboard
+        let anotherView:UIViewController = myStoryBoard?.instantiateViewControllerWithIdentifier(Constant.LAST_VIEW_IDENTIFY) as! UIViewController
+        self.presentViewController(anotherView, animated: true, completion: nil)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

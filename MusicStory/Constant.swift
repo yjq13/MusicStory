@@ -8,14 +8,13 @@
 
 import Foundation
 class Constant{
-    static var VOLUME:Double = 0.0
-    static var MUSIC:Bool = true
-    static var SOUND:Bool = true
     static var MONEY = 0
     static var LV = 0
     static var STORY_STEP = 0
     static var PET_STATE = ""
     static var PET_LV = 0
     static var PET_EXPERINCE = 0
-    static var SPEED = 1
+    static var MUSIC_NAME=""
+    static var SPEED:Double = 0//这个速度的值是指按键从头掉到尾所需要的时间
+    static var LAST_VIEW_IDENTIFY=""//用于返回上一个界面
 }

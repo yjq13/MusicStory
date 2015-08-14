@@ -38,7 +38,7 @@
         <!--Desk View Controller-->
         <scene sceneID="ysn-is-GUW">
             <objects>
-                <viewController id="5x9-eL-VK9" customClass="DeskViewController" customModule="MusicStory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="desk" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5x9-eL-VK9" customClass="DeskViewController" customModule="MusicStory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fE3-v1-cgh">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,17 +113,6 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yhc-OJ-GX5">
-                                            <rect key="frame" x="91" y="85" width="30" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="1">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="speed1Button:" destination="5x9-eL-VK9" eventType="touchUpInside" id="2DD-yE-4jh"/>
-                                                <segue destination="oXb-zd-x9Z" kind="modal" id="gQP-RO-rW6"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4fy-vD-20Y">
                                             <rect key="frame" x="145" y="85" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -132,7 +121,6 @@
                                             </state>
                                             <connections>
                                                 <action selector="speed2Button:" destination="5x9-eL-VK9" eventType="touchUpInside" id="xlL-MR-TMx"/>
-                                                <segue destination="oXb-zd-x9Z" kind="modal" id="U4H-qR-bMf"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="men-zu-mAp">
@@ -143,7 +131,6 @@
                                             </state>
                                             <connections>
                                                 <action selector="speed3Button:" destination="5x9-eL-VK9" eventType="touchUpInside" id="380-CK-pG0"/>
-                                                <segue destination="oXb-zd-x9Z" kind="modal" id="0Xi-Gl-yCw"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YoT-j2-LBi">
@@ -154,6 +141,16 @@
                                             </state>
                                             <connections>
                                                 <action selector="closeSpeedViewButton:" destination="5x9-eL-VK9" eventType="touchUpInside" id="QjP-cq-ZwC"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yhc-OJ-GX5">
+                                            <rect key="frame" x="91" y="85" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="1">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="speed1Button:" destination="5x9-eL-VK9" eventType="touchUpInside" id="2DD-yE-4jh"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -230,7 +227,7 @@
         <!--Story View Controller-->
         <scene sceneID="xe0-gF-mjE">
             <objects>
-                <viewController id="pef-6V-dmm" customClass="StoryViewController" customModule="MusicStory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="story" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pef-6V-dmm" customClass="StoryViewController" customModule="MusicStory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I5q-cu-Hca">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,7 +273,6 @@
                                             </state>
                                             <connections>
                                                 <action selector="speed1Button:" destination="pef-6V-dmm" eventType="touchUpInside" id="2gg-5m-EgN"/>
-                                                <segue destination="oXb-zd-x9Z" kind="modal" id="T8O-3E-zcO"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JQT-xu-b3A">
@@ -287,7 +283,6 @@
                                             </state>
                                             <connections>
                                                 <action selector="speed2Button:" destination="pef-6V-dmm" eventType="touchUpInside" id="K3O-aF-0e9"/>
-                                                <segue destination="oXb-zd-x9Z" kind="modal" id="VXc-cD-Zno"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vea-I1-soX">
@@ -308,7 +303,6 @@
                                             </state>
                                             <connections>
                                                 <action selector="speed3Button:" destination="pef-6V-dmm" eventType="touchUpInside" id="jSV-2O-Jqx"/>
-                                                <segue destination="oXb-zd-x9Z" kind="modal" id="lzi-qt-PAM"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -377,7 +371,7 @@
         <!--Switch View Controller-->
         <scene sceneID="sV7-sp-a7t">
             <objects>
-                <viewController id="JuU-Ou-C8j" customClass="SwitchViewController" customModule="MusicStory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="switch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JuU-Ou-C8j" customClass="SwitchViewController" customModule="MusicStory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BBI-R0-ubY">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -425,7 +419,6 @@
                                             </state>
                                             <connections>
                                                 <action selector="speed1Button:" destination="JuU-Ou-C8j" eventType="touchUpInside" id="bfm-f8-CeB"/>
-                                                <segue destination="oXb-zd-x9Z" kind="modal" id="6sW-uo-Wqq"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ES7-PX-RYn">
@@ -436,7 +429,6 @@
                                             </state>
                                             <connections>
                                                 <action selector="speed2Button:" destination="JuU-Ou-C8j" eventType="touchUpInside" id="asc-39-3Xn"/>
-                                                <segue destination="oXb-zd-x9Z" kind="modal" id="GaU-pr-xAT"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jys-ss-GzC">
@@ -447,7 +439,6 @@
                                             </state>
                                             <connections>
                                                 <action selector="speed3Button:" destination="JuU-Ou-C8j" eventType="touchUpInside" id="zFu-oB-ORu"/>
-                                                <segue destination="oXb-zd-x9Z" kind="modal" id="WX9-xS-bGU"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lig-gP-e4q">
@@ -488,7 +479,7 @@
         <!--Game View Controller-->
         <scene sceneID="mdp-jt-gkM">
             <objects>
-                <viewController id="oXb-zd-x9Z" customClass="GameViewController" customModule="MusicStory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="game" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oXb-zd-x9Z" customClass="GameViewController" customModule="MusicStory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a9d-t8-3TY">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -553,6 +544,16 @@
                                     <action selector="touchButton5:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="fIq-fm-B3o"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P2I-PM-5gH">
+                                <rect key="frame" x="200" y="250" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton3:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="sZn-BG-R8b"/>
+                                </connections>
+                            </button>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="185" id="LZI-xS-frK">
                                 <rect key="frame" x="124" y="39" width="320" height="185"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -593,16 +594,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P2I-PM-5gH">
-                                <rect key="frame" x="200" y="250" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchButton3:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="sZn-BG-R8b"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -622,8 +613,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="J6M-gs-jEa"/>
-        <segue reference="WX9-xS-bGU"/>
+        <segue reference="iKR-i2-mqS"/>
         <segue reference="u0b-8s-bs7"/>
     </inferredMetricsTieBreakers>
 </document>

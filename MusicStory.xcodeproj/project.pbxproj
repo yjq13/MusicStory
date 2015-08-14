@@ -46,7 +46,6 @@
 		E36230861B7403FA00F53E1A /* bl_Music_WriteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362307F1B7403FA00F53E1A /* bl_Music_WriteInfo.swift */; };
 		E36230901B74054400F53E1A /* DeskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362308A1B74054400F53E1A /* DeskViewController.swift */; };
 		E36230911B74054400F53E1A /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362308B1B74054400F53E1A /* RoomViewController.swift */; };
-		E36230921B74054400F53E1A /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362308C1B74054400F53E1A /* SetViewController.swift */; };
 		E36230931B74054400F53E1A /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362308D1B74054400F53E1A /* SwitchViewController.swift */; };
 		E36230961B74055D00F53E1A /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230951B74055D00F53E1A /* BuyViewController.swift */; };
 		E36230981B74F01A00F53E1A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230971B74F01A00F53E1A /* GameViewController.swift */; };
@@ -124,7 +123,6 @@
 		E362307F1B7403FA00F53E1A /* bl_Music_WriteInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bl_Music_WriteInfo.swift; sourceTree = "<group>"; };
 		E362308A1B74054400F53E1A /* DeskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeskViewController.swift; sourceTree = "<group>"; };
 		E362308B1B74054400F53E1A /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
-		E362308C1B74054400F53E1A /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		E362308D1B74054400F53E1A /* SwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		E36230951B74055D00F53E1A /* BuyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		E36230971B74F01A00F53E1A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 				E36230951B74055D00F53E1A /* BuyViewController.swift */,
 				E362308A1B74054400F53E1A /* DeskViewController.swift */,
 				E362308B1B74054400F53E1A /* RoomViewController.swift */,
-				E362308C1B74054400F53E1A /* SetViewController.swift */,
 				E362308D1B74054400F53E1A /* SwitchViewController.swift */,
 				E36230971B74F01A00F53E1A /* GameViewController.swift */,
 				E36230991B74F02800F53E1A /* StoryViewController.swift */,
@@ -577,7 +574,6 @@
 				E36230D31B77DD4F00F53E1A /* PetPo.swift in Sources */,
 				E362305C1B7402B600F53E1A /* ds_Music_InfoManage.swift in Sources */,
 				E36230C01B76BF4700F53E1A /* MusicDataPo.swift in Sources */,
-				E36230921B74054400F53E1A /* SetViewController.swift in Sources */,
 				E36230571B7402B600F53E1A /* ds_Game_GetInfo.swift in Sources */,
 				E36230961B74055D00F53E1A /* BuyViewController.swift in Sources */,
 				E36230911B74054400F53E1A /* RoomViewController.swift in Sources */,
