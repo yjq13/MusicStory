@@ -18,8 +18,13 @@ class data_Game_GetInfo:GameGetInfo_DataService {
         var po:PetPo = PetPo(state: 100, experince: 0, lv: 0)
         return po
     }
+    func getExamInfo(Int)->MusicInfoPo{
+        var po:MusicInfoPo = MusicInfoPo(score: 0, combo: 0, evaluation: "", ID: "", difficity: 0, name: "", lv: 0, imagePath: "")
+        return po
+
+    }
     
-    func getStoryInfoOld(StoryStep:Int) -> StoryInfoPo {
+    func getStoryInfo(StoryStep:Int) -> StoryInfoPo {
         var po:StoryInfoPo = StoryInfoPo(step: 0, target: "", MusicID: "", LvNeed: 0)
         return po
     }

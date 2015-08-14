@@ -3,7 +3,7 @@
 //  MusicStory
 //
 //  Created by yjq131250077 on 15/8/7.
-//  Copyright (c) 2015年 yjq131250077. All rights reserved.
+//  Copyright (c) 2015 yjq131250077. All rights reserved.
 //
 
 import Foundation
@@ -16,8 +16,13 @@ class bl_Game_GetInfo:GameGetInfo_BlService {
         return vo
     }
     
-    func getStoryInfoOld(StoryStep:Int) -> StoryInfoVo {
-        var vo = GameGetInfo.getStoryInfoOld(StoryStep).createVo()
+    func getStoryInfo(StoryStep:Int) -> StoryInfoVo {
+        var vo = GameGetInfo.getStoryInfo(StoryStep).createVo()
+        return vo
+    }
+    
+    func getExamInfo(lv:Int)->MusicInfoVo{
+        var vo = GameGetInfo.getExamInfo(lv).createVo()
         return vo
     }
     
