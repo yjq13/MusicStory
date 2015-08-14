@@ -2,8 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>storySetp</key>
+	<key>petLV</key>
+	<integer>1</integer>
+	<key>experince</key>
 	<integer>0</integer>
+	<key>state</key>
+	<integer>90</integer>
+	<key>storySetp</key>
+	<integer>1</integer>
 	<key>lv</key>
 	<integer>1</integer>
 	<key>money</key>

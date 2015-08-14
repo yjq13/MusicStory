@@ -67,6 +67,7 @@
 		E36230D51B77E97D00F53E1A /* GameInfoVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230D41B77E97D00F53E1A /* GameInfoVo.swift */; };
 		E36230DA1B78ACD200F53E1A /* AllInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E36230D91B78ACD200F53E1A /* AllInfo.plist */; };
 		E36230DC1B78ACF400F53E1A /* StoryInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E36230DB1B78ACF400F53E1A /* StoryInfo.plist */; };
+		E3D419681B7D618E004DAAB4 /* bls_Music_CountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		E36230D41B77E97D00F53E1A /* GameInfoVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfoVo.swift; sourceTree = "<group>"; };
 		E36230D91B78ACD200F53E1A /* AllInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AllInfo.plist; sourceTree = "<group>"; };
 		E36230DB1B78ACF400F53E1A /* StoryInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StoryInfo.plist; sourceTree = "<group>"; };
+		E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bls_Music_CountInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +378,7 @@
 				E36230631B7402F600F53E1A /* bls_Music_GetInfo.swift */,
 				E36230641B7402F600F53E1A /* bls_Music_InfoManage.swift */,
 				E36230651B7402F600F53E1A /* bls_Music_WriteInfo.swift */,
+				E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */,
 			);
 			name = bls_Music;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				E36230CA1B77166800F53E1A /* MusicInfoPo.swift in Sources */,
 				E36230D31B77DD4F00F53E1A /* PetPo.swift in Sources */,
 				E362305C1B7402B600F53E1A /* ds_Music_InfoManage.swift in Sources */,
+				E3D419681B7D618E004DAAB4 /* bls_Music_CountInfo.swift in Sources */,
 				E36230C01B76BF4700F53E1A /* MusicDataPo.swift in Sources */,
 				E36230571B7402B600F53E1A /* ds_Game_GetInfo.swift in Sources */,
 				E36230961B74055D00F53E1A /* BuyViewController.swift in Sources */,

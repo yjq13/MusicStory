@@ -10,8 +10,8 @@ import Foundation
 class Constant{
     static var MONEY = 0
     static var LV = 0
-    static var STORY_STEP = 0
-    static var PET_STATE = ""
+    static var STORY_STEP = 1
+    static var PET_STATE = 100
     static var PET_LV = 0
     static var PET_EXPERINCE = 0
     static var MUSIC_NAME=""
