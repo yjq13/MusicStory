@@ -8,10 +8,10 @@
 
 import Foundation
 class PetVo {
-    var state:String
+    var state:Int
     var experince:Int
     var lv:Int
-    init(state:String,experince:Int,lv:Int){
+    init(state:Int,experince:Int,lv:Int){
         self.state=state
         self.experince=experince
         self.lv=lv

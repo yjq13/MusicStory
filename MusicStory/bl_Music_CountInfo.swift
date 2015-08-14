@@ -3,7 +3,7 @@
 //  MusicStory
 //
 //  Created by yjq131250077 on 15/8/7.
-//  Copyright (c) 2015年 yjq131250077. All rights reserved.
+//  Copyright (c) 2015 yjq131250077. All rights reserved.
 //
 
 import Foundation
@@ -21,5 +21,12 @@ class bl_Music_CountInfo :MusicCountInfo_BlService {
             score = score + comboE*5
         }
         return score
+    }
+    
+    func countMoneyExByScore(score: Int) -> [Int] {
+        var money:Int = (score*Constant.PET_STATE)/10000
+        var experince:Int = (score*(100-Constant.PET_STATE))/10000
+        return [money,experince]
+        //Constant.PET_STATE
     }
 }

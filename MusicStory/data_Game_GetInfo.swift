@@ -15,7 +15,7 @@ class data_Game_GetInfo:GameGetInfo_DataService {
     }
     
     func getPetInfoOld() -> PetPo {
-        var po:PetPo = PetPo(state: "", experince: 0, lv: 0)
+        var po:PetPo = PetPo(state: 100, experince: 0, lv: 0)
         return po
     }
     
