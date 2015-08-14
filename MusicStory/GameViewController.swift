@@ -58,7 +58,7 @@ class GameViewController: UIViewController {
         //        var list4=musicData.musicPath4
         //        var list5=musicData.musicPath5
         //        var list6=musicData.musicPath6
-        var list1=[2.0]
+        var list1=[1.0]
         var list2=[2.0]
         var list3=[3.0]
         var list4=[4.0]

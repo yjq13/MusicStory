@@ -67,6 +67,7 @@
 		E36230D51B77E97D00F53E1A /* GameInfoVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230D41B77E97D00F53E1A /* GameInfoVo.swift */; };
 		E36230DA1B78ACD200F53E1A /* AllInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E36230D91B78ACD200F53E1A /* AllInfo.plist */; };
 		E36230DC1B78ACF400F53E1A /* StoryInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E36230DB1B78ACF400F53E1A /* StoryInfo.plist */; };
+		E3D106E71B7E3E170008268B /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D106E61B7E3E170008268B /* test.plist */; };
 		E3D419681B7D618E004DAAB4 /* bls_Music_CountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +146,7 @@
 		E36230D41B77E97D00F53E1A /* GameInfoVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfoVo.swift; sourceTree = "<group>"; };
 		E36230D91B78ACD200F53E1A /* AllInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AllInfo.plist; sourceTree = "<group>"; };
 		E36230DB1B78ACF400F53E1A /* StoryInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StoryInfo.plist; sourceTree = "<group>"; };
+		E3D106E61B7E3E170008268B /* test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = test.plist; sourceTree = "<group>"; };
 		E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bls_Music_CountInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -441,6 +443,7 @@
 		E36230DD1B78ADC200F53E1A /* MusicConfig */ = {
 			isa = PBXGroup;
 			children = (
+				E3D106E61B7E3E170008268B /* test.plist */,
 			);
 			name = MusicConfig;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D106E71B7E3E170008268B /* test.plist in Resources */,
 				04F085D61B7889EA003C154F /* 6.jpg in Resources */,
 				E36230DA1B78ACD200F53E1A /* AllInfo.plist in Resources */,
 				04F085D51B7889EA003C154F /* 5.jpg in Resources */,

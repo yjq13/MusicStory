@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicStory/bls_Music_GetData.swift"
@@ -20,7 +20,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicStory/MusicDataPo.swift"
@@ -36,15 +36,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicStory/data_Music_GetData.swift"
-            timestampString = "460810716.315852"
+            timestampString = "461259223.114459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "getMusicData(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -68,7 +68,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicStory/StoryInfoVo.swift"
@@ -84,7 +84,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicStory/StoryInfoVo.swift"
@@ -100,7 +100,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicStory/bls_Music_WriteInfo.swift"
@@ -114,7 +114,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicStory/bl_Music_GetInfo.swift"
@@ -127,14 +127,14 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MusicStory.bl_Music_GetInfo.getMusicInfo.getter : MusicStory.MusicGetInfo_DataService"
                   moduleName = "MusicStory"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/bl_Music_GetInfo.swift"
-                  timestampString = "461234633.44845"
+                  timestampString = "461260857.90504"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -142,14 +142,14 @@
                   offsetFromSymbolStart = "15">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MusicStory.bl_Music_GetInfo.getMusicInfo.setter : MusicStory.MusicGetInfo_DataService"
                   moduleName = "MusicStory"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/bl_Music_GetInfo.swift"
-                  timestampString = "461234633.448573"
+                  timestampString = "461260857.905166"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -157,14 +157,14 @@
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MusicStory.bl_Music_GetInfo.getMusicInfo.materializeForSet : MusicStory.MusicGetInfo_DataService"
                   moduleName = "MusicStory"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/bl_Music_GetInfo.swift"
-                  timestampString = "461234633.448674"
+                  timestampString = "461260857.905264"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -172,14 +172,14 @@
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MusicStory.bl_Music_GetInfo.init (MusicStory.bl_Music_GetInfo.Type)() -&gt; MusicStory.bl_Music_GetInfo"
                   moduleName = "MusicStory"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yjq131250077/Documents/Xcode/MusicStory/MusicStory/bl_Music_GetInfo.swift"
-                  timestampString = "461234633.448767"
+                  timestampString = "461260857.905367"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "12"
@@ -208,7 +208,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicStory/bls_Music_CountInfo.swift"
