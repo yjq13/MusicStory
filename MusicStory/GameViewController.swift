@@ -16,19 +16,33 @@ class GameViewController: UIViewController {
     var score:Int!//得分
     var combo:[Int] = []//连击数
     var comboLiter:Int=0//combo数组的计数器
+    var perfectNum:Int=0
+    var greatNum:Int=0
+    var badNum:Int=0
+    var missNum:Int=0
+    var rythmHasBeenJudged=false//用于判定节奏
     
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var stopView: UITableViewCell!
+    @IBOutlet weak var scoreView: UITableViewCell!
     override func viewDidLoad() {
         super.viewDidLoad()
+        musicName="M-0000"
         var getMusicData:MusicGetData_BlService=bl_Music_GetData()
-        //musicData=getMusicData.getMusicData(musicName)
-        //隐藏暂停选项
+        musicData=getMusicData.getMusicData(musicName)
+        //隐藏
         stopView.hidden=true
+        scoreView.hidden=true
         //初始化
         combo=[0]
         comboLiter=0
         score=0
         isPause=false
+        perfectNum=0
+        greatNum=0
+        badNum=0
+        missNum=0
+        rythmHasBeenJudged=false
         
         //游戏开始
         UIView.animateWithDuration(1, delay:0,
@@ -52,18 +66,12 @@ class GameViewController: UIViewController {
     //动画开始时间
     var beginTime:CFTimeInterval!
     func gameAnimation() {
-        //        var list1=musicData.musicPath1
-        //        var list2=musicData.musicPath2
-        //        var list3=musicData.musicPath3
-        //        var list4=musicData.musicPath4
-        //        var list5=musicData.musicPath5
-        //        var list6=musicData.musicPath6
-        var list1=[1.0]
-        var list2=[2.0]
-        var list3=[3.0]
-        var list4=[4.0]
-        var list5=[7.0]
-        var list6=[6.0]
+        var list1=musicData.musicPath1
+        var list2=musicData.musicPath2
+        var list3=musicData.musicPath3
+        var list4=musicData.musicPath4
+        var list5=musicData.musicPath5
+        var list6=musicData.musicPath6
         
         var gameTime=0.0
         var listOfLast=[list1[list1.count-1],list2[list2.count-1],list3[list3.count-1],list4[list4.count-1],list5[list5.count-1],list6[list6.count-1]]
@@ -92,8 +100,15 @@ class GameViewController: UIViewController {
                             (finished:Bool) -> Void in
                             UIView.animateWithDuration(1, animations:{
                                 ()-> Void in
-                                // background1.layer.removeFromSuperlayer()
+                                if !self.rythmHasBeenJudged {
+                                    print("miss")
+                                    if(self.combo[self.comboLiter] != 0){
+                                        self.combo.append(0)
+                                        self.comboLiter++
+                                    }
+                                }
                                 background1.hidden=true
+                                self.rythmHasBeenJudged=false
                             })
                     })
                     
@@ -115,8 +130,15 @@ class GameViewController: UIViewController {
                             (finished:Bool) -> Void in
                             UIView.animateWithDuration(1, animations:{
                                 ()-> Void in
-                                //background2.layer.removeFromSuperlayer()
+                                if !self.rythmHasBeenJudged {
+                                    print("miss")
+                                    if(self.combo[self.comboLiter] != 0){
+                                        self.combo.append(0)
+                                        self.comboLiter++
+                                    }
+                                }
                                 background2.hidden=true
+                                self.rythmHasBeenJudged=false
                             })
                     })
                 }
@@ -138,8 +160,15 @@ class GameViewController: UIViewController {
                             (finished:Bool) -> Void in
                             UIView.animateWithDuration(1, animations:{
                                 ()-> Void in
-                                //background3.layer.removeFromSuperlayer()
+                                if !self.rythmHasBeenJudged {
+                                    print("miss")
+                                    if(self.combo[self.comboLiter] != 0){
+                                        self.combo.append(0)
+                                        self.comboLiter++
+                                    }
+                                }
                                 background3.hidden=true
+                                self.rythmHasBeenJudged=false
                             })
                     })
                 }
@@ -162,8 +191,15 @@ class GameViewController: UIViewController {
                             (finished:Bool) -> Void in
                             UIView.animateWithDuration(1, animations:{
                                 ()-> Void in
-                                //background4.layer.removeFromSuperlayer()
+                                if !self.rythmHasBeenJudged {
+                                    print("miss")
+                                    if(self.combo[self.comboLiter] != 0){
+                                        self.combo.append(0)
+                                        self.comboLiter++
+                                    }
+                                }
                                 background4.hidden=true
+                                self.rythmHasBeenJudged=false
                             })
                     })
                 }
@@ -183,8 +219,15 @@ class GameViewController: UIViewController {
                             (finished:Bool) -> Void in
                             UIView.animateWithDuration(1, animations:{
                                 ()-> Void in
-                                // background5.layer.removeFromSuperlayer()
+                                if !self.rythmHasBeenJudged {
+                                    print("miss")
+                                    if(self.combo[self.comboLiter] != 0){
+                                        self.combo.append(0)
+                                        self.comboLiter++
+                                    }
+                                }
                                 background5.hidden=true
+                                self.rythmHasBeenJudged=false
                             })
                     })
                 }
@@ -204,8 +247,17 @@ class GameViewController: UIViewController {
                             (finished:Bool) -> Void in
                             UIView.animateWithDuration(1, animations:{
                                 ()-> Void in
-                                // background6.layer.removeFromSuperlayer()
+                                if !self.rythmHasBeenJudged {
+                                    print("miss")
+                                    if(self.combo[self.comboLiter] != 0){
+                                        self.combo.append(0)
+                                        self.comboLiter++
+                                    }else{
+                                        
+                                    }
+                                }
                                 background6.hidden=true
+                                self.rythmHasBeenJudged=false
                             })
                     })
                 }
@@ -213,8 +265,12 @@ class GameViewController: UIViewController {
             },
             completion:{//游戏结束，展示得分并返回
                 (finished:Bool) -> Void in
-                print(self.combo)
-                self.backButton(self)
+                self.missNum=list1.count+list2.count+list3.count+list4.count+list5.count+list6.count - self.perfectNum - self.greatNum - self.badNum
+                var gameInfo=GameInfoVo(perfectNum: self.perfectNum, greatNum: self.greatNum, badNum: self.badNum, missNum: self.missNum, combo: self.combo)
+                var musicWriteData:MusicCountInfo_BlService=bl_Music_CountInfo()
+                self.score=musicWriteData.countScoreByGame(gameInfo)
+                self.scoreLabel.text=String(self.score)
+                self.scoreView.hidden=false
         })
         
     }
@@ -228,152 +284,26 @@ class GameViewController: UIViewController {
     
     
     @IBAction func touchButton1(sender: AnyObject) {
-        var musicTime=[2.0]
-        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
-        for i in musicTime {
-            var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.1) {
-                print("perfect")
-                combo[comboLiter]++
-            }else if(offset>=0.1&&offset<0.2){
-                print("great")
-                combo[comboLiter]++
-            }else if(offset>=0.2&&offset<0.3){
-                print("bad")
-                combo.append(0)
-                comboLiter++
-            }else{
-                print("miss")
-                combo.append(0)
-                comboLiter++
-            }
-        }
-        
+        buttonPushed(musicData.musicPath1)
     }
     
     @IBAction func touchButton2(sender: AnyObject) {
-        var musicTime=musicData.musicPath2
-        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
-        for i in musicTime {
-            var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.1) {
-                print("perfect")
-                combo[comboLiter]++
-            }else if(offset>=0.1&&offset<0.2){
-                print("great")
-                combo[comboLiter]++
-            }else if(offset>=0.2&&offset<0.3){
-                print("bad")
-                combo.append(0)
-                comboLiter++
-            }else{
-                print("miss")
-                combo.append(0)
-                comboLiter++
-            }
-
-            
-        }
+        buttonPushed(musicData.musicPath2)
         
     }
     @IBAction func touchButton3(sender: AnyObject) {
-        var musicTime=musicData.musicPath3
-        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
-        for i in musicTime {
-            var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.1) {
-                print("perfect")
-                combo[comboLiter]++
-            }else if(offset>=0.1&&offset<0.2){
-                print("great")
-                combo[comboLiter]++
-            }else if(offset>=0.2&&offset<0.3){
-                print("bad")
-                combo.append(0)
-                comboLiter++
-            }else{
-                print("miss")
-                combo.append(0)
-                comboLiter++
-            }
-
-            
-        }
-        
+        buttonPushed(musicData.musicPath3)
     }
     
     @IBAction func touchButton6(sender: AnyObject) {
-        var musicTime=musicData.musicPath6
-        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
-        for i in musicTime {
-            var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.1) {
-                print("perfect")
-                combo[comboLiter]++
-            }else if(offset>=0.1&&offset<0.2){
-                print("great")
-                combo[comboLiter]++
-            }else if(offset>=0.2&&offset<0.3){
-                print("bad")
-                combo.append(0)
-                comboLiter++
-            }else{
-                print("miss")
-                combo.append(0)
-                comboLiter++
-            }
-            
-        }
-        
+        buttonPushed(musicData.musicPath6)
     }
     
     @IBAction func touchButton5(sender: AnyObject) {
-        var musicTime=musicData.musicPath5
-        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
-        for i in musicTime {
-            var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.1) {
-                print("perfect")
-                combo[comboLiter]++
-            }else if(offset>=0.1&&offset<0.2){
-                print("great")
-                combo[comboLiter]++
-            }else if(offset>=0.2&&offset<0.3){
-                print("bad")
-                combo.append(0)
-                comboLiter++
-            }else{
-                print("miss")
-                combo.append(0)
-                comboLiter++
-            }
-
-        }
-        
+        buttonPushed(musicData.musicPath5)
     }
     @IBAction func touchButton4(sender: AnyObject) {
-        var musicTime=musicData.musicPath4
-        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
-        for i in musicTime {
-            var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.1) {
-                print("perfect")
-                combo[comboLiter]++
-            }else if(offset>=0.1&&offset<0.2){
-                print("great")
-                combo[comboLiter]++
-            }else if(offset>=0.2&&offset<0.3){
-                print("bad")
-                combo.append(0)
-                comboLiter++
-            }else{
-                print("miss")
-                combo.append(0)
-                comboLiter++
-            }
-
-        }
-        
+        buttonPushed(musicData.musicPath4)
     }
     @IBAction func resumeButton(sender: AnyObject) {
         self.stopView.hidden=true
@@ -393,6 +323,12 @@ class GameViewController: UIViewController {
         let myStoryBoard = self.storyboard
         let anotherView:UIViewController = myStoryBoard?.instantiateViewControllerWithIdentifier(Constant.LAST_VIEW_IDENTIFY) as! UIViewController
         self.presentViewController(anotherView, animated: true, completion: nil)
+    }
+    @IBAction func gameOverButton(sender: AnyObject) {
+        backButton(self)
+    }
+    @IBAction func gameRetryButton(sender: AnyObject) {
+        retryButton(self)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -439,6 +375,37 @@ class GameViewController: UIViewController {
     //下面是显示perfect等效果的方法
     
     func showEffentAnimation(){
+        
+    }
+    //下面方法是按钮按下之后判断的方法
+    func buttonPushed(musicTime:[Double]){
+        var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
+        if !rythmHasBeenJudged {
+        for i in musicTime {
+            var offset=i-buttonPushTime
+            if (offset>=0&&offset<0.1) {
+                print("perfect")
+                rythmHasBeenJudged=true
+                perfectNum++
+                combo[comboLiter]++
+            }else if(offset>=0.1&&offset<0.2){
+                print("great")
+                rythmHasBeenJudged=true
+                greatNum++
+                combo[comboLiter]++
+            }else if(offset>=0.2&&offset<0.3){
+                print("bad")
+                rythmHasBeenJudged=true
+                badNum++
+                if(self.combo[self.comboLiter] != 0){
+                    combo.append(0)
+                    comboLiter++
+                }
+            }
+            
+        }
+        }
+        
         
     }
     
