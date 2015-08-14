@@ -12,9 +12,10 @@ class GameViewController: UIViewController {
     var musicName:String=Constant.MUSIC_NAME//音乐名
     var musicSpeed:Double=Constant.SPEED//音乐速度
     var musicData:MusicDataVo!
-    var isPause:Bool=false//判断暂停
-    var score:Int=0//得分
-    var combo:Int=0//连击数
+    var isPause:Bool!//判断暂停
+    var score:Int!//得分
+    var combo:[Int] = []//连击数
+    var comboLiter:Int=0//combo数组的计数器
     
     @IBOutlet weak var stopView: UITableViewCell!
     override func viewDidLoad() {
@@ -23,6 +24,12 @@ class GameViewController: UIViewController {
         //musicData=getMusicData.getMusicData(musicName)
         //隐藏暂停选项
         stopView.hidden=true
+        //初始化
+        combo=[0]
+        comboLiter=0
+        score=0
+        isPause=false
+        
         //游戏开始
         UIView.animateWithDuration(1, delay:0,
             options:UIViewAnimationOptions.TransitionNone, animations:
@@ -204,8 +211,9 @@ class GameViewController: UIViewController {
                 }
                 
             },
-            completion:{
+            completion:{//游戏结束，展示得分并返回
                 (finished:Bool) -> Void in
+                print(self.combo)
                 self.backButton(self)
         })
         
@@ -220,17 +228,24 @@ class GameViewController: UIViewController {
     
     
     @IBAction func touchButton1(sender: AnyObject) {
-        var musicTime=musicData.musicPath1
+        var musicTime=[2.0]
         var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
         for i in musicTime {
             var offset=i-buttonPushTime
             if (offset>=0&&offset<0.1) {
                 print("perfect")
-                combo++
+                combo[comboLiter]++
             }else if(offset>=0.1&&offset<0.2){
-                print("good")
+                print("great")
+                combo[comboLiter]++
+            }else if(offset>=0.2&&offset<0.3){
+                print("bad")
+                combo.append(0)
+                comboLiter++
             }else{
-                
+                print("miss")
+                combo.append(0)
+                comboLiter++
             }
         }
         
@@ -243,9 +258,20 @@ class GameViewController: UIViewController {
             var offset=i-buttonPushTime
             if (offset>=0&&offset<0.1) {
                 print("perfect")
+                combo[comboLiter]++
             }else if(offset>=0.1&&offset<0.2){
-                print("good")
+                print("great")
+                combo[comboLiter]++
+            }else if(offset>=0.2&&offset<0.3){
+                print("bad")
+                combo.append(0)
+                comboLiter++
+            }else{
+                print("miss")
+                combo.append(0)
+                comboLiter++
             }
+
             
         }
         
@@ -257,9 +283,20 @@ class GameViewController: UIViewController {
             var offset=i-buttonPushTime
             if (offset>=0&&offset<0.1) {
                 print("perfect")
+                combo[comboLiter]++
             }else if(offset>=0.1&&offset<0.2){
-                print("good")
+                print("great")
+                combo[comboLiter]++
+            }else if(offset>=0.2&&offset<0.3){
+                print("bad")
+                combo.append(0)
+                comboLiter++
+            }else{
+                print("miss")
+                combo.append(0)
+                comboLiter++
             }
+
             
         }
         
@@ -272,8 +309,18 @@ class GameViewController: UIViewController {
             var offset=i-buttonPushTime
             if (offset>=0&&offset<0.1) {
                 print("perfect")
+                combo[comboLiter]++
             }else if(offset>=0.1&&offset<0.2){
-                print("good")
+                print("great")
+                combo[comboLiter]++
+            }else if(offset>=0.2&&offset<0.3){
+                print("bad")
+                combo.append(0)
+                comboLiter++
+            }else{
+                print("miss")
+                combo.append(0)
+                comboLiter++
             }
             
         }
@@ -287,10 +334,20 @@ class GameViewController: UIViewController {
             var offset=i-buttonPushTime
             if (offset>=0&&offset<0.1) {
                 print("perfect")
+                combo[comboLiter]++
             }else if(offset>=0.1&&offset<0.2){
-                print("good")
+                print("great")
+                combo[comboLiter]++
+            }else if(offset>=0.2&&offset<0.3){
+                print("bad")
+                combo.append(0)
+                comboLiter++
+            }else{
+                print("miss")
+                combo.append(0)
+                comboLiter++
             }
-            
+
         }
         
     }
@@ -301,10 +358,20 @@ class GameViewController: UIViewController {
             var offset=i-buttonPushTime
             if (offset>=0&&offset<0.1) {
                 print("perfect")
+                combo[comboLiter]++
             }else if(offset>=0.1&&offset<0.2){
-                print("good")
+                print("great")
+                combo[comboLiter]++
+            }else if(offset>=0.2&&offset<0.3){
+                print("bad")
+                combo.append(0)
+                comboLiter++
+            }else{
+                print("miss")
+                combo.append(0)
+                comboLiter++
             }
-            
+
         }
         
     }
@@ -368,6 +435,11 @@ class GameViewController: UIViewController {
         imageView.animationRepeatCount=1
         imageView.startAnimating()
         self.view.addSubview(imageView)
+    }
+    //下面是显示perfect等效果的方法
+    
+    func showEffentAnimation(){
+        
     }
     
     /*
