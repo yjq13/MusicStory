@@ -28,6 +28,8 @@ class data_Game_GetInfo:GameGetInfo_DataService {
     
     func getPetInfoOld() -> PetPo {
         var dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("AllInfo", ofType: "plist")!)
+        //dict?.setValue(100, forKeyPath: "state")
+        //dict?.writeToFile("state", atomically: true)
         var state: AnyObject? = dict?.objectForKey("state")!
         var experince: AnyObject? = dict?.objectForKey("experince")!
         var lv: AnyObject? = dict?.objectForKey("petLV")!
@@ -39,6 +41,7 @@ class data_Game_GetInfo:GameGetInfo_DataService {
         return po
     }
     func getExamInfo(Int)->MusicInfoPo{
+        
         var po:MusicInfoPo = MusicInfoPo(score: 0, combo: 0, evaluation: "", ID: "", difficulty: 0, name: "", lv: 0, imagePath: "")
         return po
 

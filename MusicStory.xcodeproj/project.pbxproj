@@ -295,6 +295,7 @@
 		E362306E1B74039D00F53E1A /* bl */ = {
 			isa = PBXGroup;
 			children = (
+				E36230DB1B78ACF400F53E1A /* StoryInfo.plist */,
 				E362309C1B7688A700F53E1A /* bl_Music */,
 				E362309B1B76889A00F53E1A /* bl_Game */,
 			);
@@ -424,7 +425,6 @@
 				E3D106EB1B7E53540008268B /* MusicInfo */,
 				E36230DD1B78ADC200F53E1A /* MusicConfig */,
 				E36230D91B78ACD200F53E1A /* AllInfo.plist */,
-				E36230DB1B78ACF400F53E1A /* StoryInfo.plist */,
 				E3D106E81B7E4B480008268B /* examination.plist */,
 			);
 			name = ConfigurationFile;
