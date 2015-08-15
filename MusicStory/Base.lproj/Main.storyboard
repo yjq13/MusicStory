@@ -485,7 +485,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ScN-5R-Kyx">
-                                <rect key="frame" x="140" y="250" width="60" height="30"/>
+                                <rect key="frame" x="120" y="249" width="60" height="30.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -494,19 +494,10 @@
                                     <action selector="touchButton2:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="g9P-yQ-Bz8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kV1-t2-ayi">
-                                <rect key="frame" x="260" y="250" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchButton4:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="LdS-Ha-IRE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lis-fP-ixw">
-                                <rect key="frame" x="80" y="250" width="60" height="30"/>
+                                <rect key="frame" x="30" y="250" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -515,7 +506,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7TL-qz-ihg">
-                                <rect key="frame" x="380" y="250" width="60" height="30"/>
+                                <rect key="frame" x="480" y="250" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -535,7 +526,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PHj-Mv-I8i">
-                                <rect key="frame" x="320" y="250" width="60" height="30"/>
+                                <rect key="frame" x="390" y="250" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -545,7 +536,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P2I-PM-5gH">
-                                <rect key="frame" x="200" y="250" width="60" height="30"/>
+                                <rect key="frame" x="210" y="250" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -631,11 +622,27 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kV1-t2-ayi">
+                                <rect key="frame" x="300" y="250" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton4:" destination="oXb-zd-x9Z" eventType="touchUpInside" id="LdS-Ha-IRE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="button1" destination="lis-fP-ixw" id="IRA-Pj-ec7"/>
+                        <outlet property="button2" destination="ScN-5R-Kyx" id="cXx-Rl-Mj6"/>
+                        <outlet property="button3" destination="P2I-PM-5gH" id="f9j-lZ-mFC"/>
+                        <outlet property="button4" destination="kV1-t2-ayi" id="22T-lF-3Pn"/>
+                        <outlet property="button5" destination="PHj-Mv-I8i" id="wLT-9n-b5o"/>
+                        <outlet property="button6" destination="7TL-qz-ihg" id="juq-vT-BgC"/>
                         <outlet property="scoreLabel" destination="KFz-yT-aW7" id="Ji2-lT-ta1"/>
                         <outlet property="scoreView" destination="p7x-3l-dwK" id="2kv-ES-hux"/>
                         <outlet property="stopView" destination="LZI-xS-frK" id="iP9-OF-mHI"/>

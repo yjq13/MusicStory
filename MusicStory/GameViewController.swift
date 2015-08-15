@@ -67,8 +67,8 @@ class GameViewController: UIViewController {
     //游戏开始
     //六个按键的节奏=6个数组
     //音符高宽
-    var width:CGFloat=50
-    var heigth:CGFloat=20
+    var width:CGFloat=60
+    var heigth:CGFloat=30
     //动画开始时间
     var beginTime:CFTimeInterval!
     func gameAnimation() {
@@ -92,7 +92,7 @@ class GameViewController: UIViewController {
                 ()-> Void in
                 for t in list1{
                     var delay = t + self.musicOffset
-                    var background1 = UIView(frame:CGRectMake(100, 50, self.width, self.heigth))
+                    var background1 = UIView(frame:CGRectMake(30, 50, self.width, self.heigth))
                     background1.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background1)
                     background1.alpha=0.0
@@ -102,6 +102,7 @@ class GameViewController: UIViewController {
                             ()-> Void in
                             background1.alpha=1.0
                             background1.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                            self.view.bringSubviewToFront(self.button1)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -123,7 +124,7 @@ class GameViewController: UIViewController {
                 
                 for t in list2{
                     var delay = t + self.musicOffset
-                    var background2 = UIView(frame:CGRectMake(180, 50, self.width, self.heigth))
+                    var background2 = UIView(frame:CGRectMake(120, 50, self.width, self.heigth))
                     background2.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background2)
                     background2.alpha=0.0
@@ -133,6 +134,7 @@ class GameViewController: UIViewController {
                             ()-> Void in
                             background2.alpha=1.0
                             background2.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                            self.view.bringSubviewToFront(self.button2)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -154,7 +156,7 @@ class GameViewController: UIViewController {
                 
                 for t in list3{
                     var delay = t + self.musicOffset
-                    var background3 = UIView(frame:CGRectMake(260, 50, self.width, self.heigth))
+                    var background3 = UIView(frame:CGRectMake(210, 50, self.width, self.heigth))
                     background3.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background3)
                     background3.alpha=0.0
@@ -164,6 +166,7 @@ class GameViewController: UIViewController {
                             ()-> Void in
                             background3.alpha=1.0
                             background3.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                            self.view.bringSubviewToFront(self.button3)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -186,7 +189,7 @@ class GameViewController: UIViewController {
                 
                 for t in list4{
                     var delay = t + self.musicOffset
-                    var background4 = UIView(frame:CGRectMake(340, 50, self.width, self.heigth))
+                    var background4 = UIView(frame:CGRectMake(300, 50, self.width, self.heigth))
                     background4.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background4)
                     background4.alpha=0.0
@@ -196,6 +199,7 @@ class GameViewController: UIViewController {
                             ()-> Void in
                             background4.alpha=1.0
                             background4.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                            self.view.bringSubviewToFront(self.button4)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -215,7 +219,7 @@ class GameViewController: UIViewController {
                 }
                 for t in list5{
                     var delay = t + self.musicOffset
-                    var background5 = UIView(frame:CGRectMake(420, 50, self.width, self.heigth))
+                    var background5 = UIView(frame:CGRectMake(390, 50, self.width, self.heigth))
                     background5.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background5)
                     background5.alpha=0.0
@@ -225,6 +229,7 @@ class GameViewController: UIViewController {
                             ()-> Void in
                             background5.alpha=1.0
                             background5.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                            self.view.bringSubviewToFront(self.button5)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -244,7 +249,7 @@ class GameViewController: UIViewController {
                 }
                 for t in list6{
                     var delay = t + self.musicOffset
-                    var background6 = UIView(frame:CGRectMake(500, 50, self.width, self.heigth))
+                    var background6 = UIView(frame:CGRectMake(480, 50, self.width, self.heigth))
                     background6.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background6)
                     background6.alpha=0.0
@@ -254,6 +259,7 @@ class GameViewController: UIViewController {
                             ()-> Void in
                             background6.alpha=1.0
                             background6.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                            self.view.bringSubviewToFront(self.button6)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -296,6 +302,12 @@ class GameViewController: UIViewController {
     
     
     
+    @IBOutlet weak var button6: UIButton!
+    @IBOutlet weak var button5: UIButton!
+    @IBOutlet weak var button4: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button1: UIButton!
     @IBAction func touchButton1(sender: AnyObject) {
         buttonPushed(musicData.musicPath1)
     }
