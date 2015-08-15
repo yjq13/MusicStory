@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController {
     var musicName:String=Constant.MUSIC_NAME//音乐名
@@ -21,6 +22,7 @@ class GameViewController: UIViewController {
     var badNum:Int=0
     var missNum:Int=0
     var rythmHasBeenJudged=false//用于判定节奏
+    var musicPlayer=AVAudioPlayer()
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var stopView: UITableViewCell!
@@ -44,6 +46,8 @@ class GameViewController: UIViewController {
         missNum=0
         rythmHasBeenJudged=false
         
+        // musicThread()
+        playerMusic()
         //游戏开始
         UIView.animateWithDuration(1, delay:0,
             options:UIViewAnimationOptions.TransitionNone, animations:
@@ -340,6 +344,8 @@ class GameViewController: UIViewController {
         var pauseTime=CFTimeInterval(layer.convertTime(CACurrentMediaTime(), fromLayer: nil))
         layer.speed=0
         layer.timeOffset=pauseTime
+        musicPlayer.pause()
+        
     }
     func resumeLayer(var layer:CALayer){
         var pauseTime=CFTimeInterval(layer.timeOffset)
@@ -348,6 +354,9 @@ class GameViewController: UIViewController {
         layer.beginTime=0.0
         var timeSincePause=CFTimeInterval(layer.convertTime(CACurrentMediaTime(), fromLayer: nil)) - pauseTime+5
         layer.beginTime=timeSincePause
+        musicThread()
+        
+        
     }
     //下面用来重试游戏
     func retryLayer(var layer:CALayer){
@@ -356,6 +365,9 @@ class GameViewController: UIViewController {
         layer.beginTime=0.0
         var timeSinceBegin=CFTimeInterval(layer.convertTime(CACurrentMediaTime(), fromLayer: nil)) - beginTime
         layer.beginTime=timeSinceBegin
+        musicPlayer.stop()
+        musicPlayer.prepareToPlay()
+        musicPlayer.play()
     }
     //下面是恢复时的倒计时动画
     func resumeAnimation(){
@@ -381,34 +393,53 @@ class GameViewController: UIViewController {
     func buttonPushed(musicTime:[Double]){
         var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
         if !rythmHasBeenJudged {
-        for i in musicTime {
-            var offset=i-buttonPushTime
-            if (offset>=0&&offset<0.1) {
-                print("perfect")
-                rythmHasBeenJudged=true
-                perfectNum++
-                combo[comboLiter]++
-            }else if(offset>=0.1&&offset<0.2){
-                print("great")
-                rythmHasBeenJudged=true
-                greatNum++
-                combo[comboLiter]++
-            }else if(offset>=0.2&&offset<0.3){
-                print("bad")
-                rythmHasBeenJudged=true
-                badNum++
-                if(self.combo[self.comboLiter] != 0){
-                    combo.append(0)
-                    comboLiter++
+            for i in musicTime {
+                var offset=i-buttonPushTime
+                if (offset>=0&&offset<0.1) {
+                    print("perfect")
+                    rythmHasBeenJudged=true
+                    perfectNum++
+                    combo[comboLiter]++
+                }else if(offset>=0.1&&offset<0.2){
+                    print("great")
+                    rythmHasBeenJudged=true
+                    greatNum++
+                    combo[comboLiter]++
+                }else if(offset>=0.2&&offset<0.3){
+                    print("bad")
+                    rythmHasBeenJudged=true
+                    badNum++
+                    if(self.combo[self.comboLiter] != 0){
+                        combo.append(0)
+                        comboLiter++
+                    }
                 }
+                
             }
-            
-        }
         }
         
         
     }
     
+    
+    func musicThread(){
+        var myThread = NSThread(target:self,selector:"resumeMusic",object:nil)
+        myThread.start()
+    }
+    //下面方法用于获取音乐
+    func playerMusic(){
+        let musicPath=NSBundle.mainBundle().pathForResource("小苹果", ofType: "mp3")
+        let url=NSURL(fileURLWithPath: musicPath!)
+        musicPlayer=AVAudioPlayer(contentsOfURL: url, error: nil)
+        musicPlayer.prepareToPlay()
+        musicPlayer.play()
+    }
+    
+    //下面用户回复音乐播放
+    func resumeMusic(){
+        sleep(5)//延迟5秒回复
+        musicPlayer.play()
+    }
     /*
     // MARK: - Navigation
     

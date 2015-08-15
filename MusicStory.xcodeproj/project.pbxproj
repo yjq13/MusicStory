@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A0011D1B7F5485004B289A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0011C1B7F5485004B289A /* GameViewController.swift */; };
 		04F085D11B7889EA003C154F /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04F085CB1B7889EA003C154F /* 1.jpg */; };
 		04F085D21B7889EA003C154F /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04F085CC1B7889EA003C154F /* 2.jpg */; };
 		04F085D31B7889EA003C154F /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04F085CD1B7889EA003C154F /* 3.jpg */; };
@@ -48,7 +49,6 @@
 		E36230911B74054400F53E1A /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362308B1B74054400F53E1A /* RoomViewController.swift */; };
 		E36230931B74054400F53E1A /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362308D1B74054400F53E1A /* SwitchViewController.swift */; };
 		E36230961B74055D00F53E1A /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230951B74055D00F53E1A /* BuyViewController.swift */; };
-		E36230981B74F01A00F53E1A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230971B74F01A00F53E1A /* GameViewController.swift */; };
 		E362309A1B74F02800F53E1A /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230991B74F02800F53E1A /* StoryViewController.swift */; };
 		E36230B61B76BDCB00F53E1A /* MusicDataVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230B51B76BDCB00F53E1A /* MusicDataVo.swift */; };
 		E36230B81B76BDF900F53E1A /* BuyMusicVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230B71B76BDF900F53E1A /* BuyMusicVo.swift */; };
@@ -85,6 +85,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A0011C1B7F5485004B289A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		04F085CB1B7889EA003C154F /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		04F085CC1B7889EA003C154F /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		04F085CD1B7889EA003C154F /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
@@ -130,7 +131,6 @@
 		E362308B1B74054400F53E1A /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		E362308D1B74054400F53E1A /* SwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		E36230951B74055D00F53E1A /* BuyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
-		E36230971B74F01A00F53E1A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		E36230991B74F02800F53E1A /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		E36230B51B76BDCB00F53E1A /* MusicDataVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDataVo.swift; sourceTree = "<group>"; };
 		E36230B71B76BDF900F53E1A /* BuyMusicVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyMusicVo.swift; sourceTree = "<group>"; };
@@ -260,8 +260,8 @@
 				E36230951B74055D00F53E1A /* BuyViewController.swift */,
 				E362308A1B74054400F53E1A /* DeskViewController.swift */,
 				E362308B1B74054400F53E1A /* RoomViewController.swift */,
+				04A0011C1B7F5485004B289A /* GameViewController.swift */,
 				E362308D1B74054400F53E1A /* SwitchViewController.swift */,
-				E36230971B74F01A00F53E1A /* GameViewController.swift */,
 				E36230991B74F02800F53E1A /* StoryViewController.swift */,
 				E36230CE1B77563C00F53E1A /* IGViewController.swift */,
 			);
@@ -589,7 +589,6 @@
 				E36230671B7402F600F53E1A /* bls_Game_InfoManage.swift in Sources */,
 				E362309A1B74F02800F53E1A /* StoryViewController.swift in Sources */,
 				E36230221B74006F00F53E1A /* ViewController.swift in Sources */,
-				E36230981B74F01A00F53E1A /* GameViewController.swift in Sources */,
 				E36230761B7403CE00F53E1A /* data_Music_GetData.swift in Sources */,
 				E36230901B74054400F53E1A /* DeskViewController.swift in Sources */,
 				E36230931B74054400F53E1A /* SwitchViewController.swift in Sources */,
@@ -607,6 +606,7 @@
 				E36230911B74054400F53E1A /* RoomViewController.swift in Sources */,
 				E36230821B7403FA00F53E1A /* bl_Game_WriteInfo.swift in Sources */,
 				E362306C1B7402F600F53E1A /* bls_Music_WriteInfo.swift in Sources */,
+				04A0011D1B7F5485004B289A /* GameViewController.swift in Sources */,
 				E36230C21B76BF6B00F53E1A /* BuyMusicPo.swift in Sources */,
 				E36230C61B76BFAB00F53E1A /* AllInfoPo.swift in Sources */,
 				E36230811B7403FA00F53E1A /* bl_Game_GetInfo.swift in Sources */,
