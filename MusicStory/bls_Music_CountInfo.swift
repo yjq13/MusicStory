@@ -10,5 +10,7 @@ import Foundation
 protocol MusicCountInfo_BlService{
     func countScoreByGame(GameInfoVo)->Int
     
+    func evaluationByGame(GameInfoVo)->String
+    
     func countMoneyExByScore(Int)->[Int]
 }

@@ -48,7 +48,7 @@ class data_Music_getInfo:MusicGetInfo_DataService {
         var valueArr = dict?.allValues
         var polist:[BuyMusicPo] = []
         var count = 0
-        
+        println(counter)
         for(count;count<counter;count++){
             var id: String = valueArr![count].objectForKey("ID") as! String
             var price: Int = valueArr![count].objectForKey("price") as! Int

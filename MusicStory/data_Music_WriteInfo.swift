@@ -29,7 +29,7 @@ class  data_Music_WriteInfo:MusicWriteInfo_DataService{
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
         let path = documentsDirectory.stringByAppendingPathComponent("MusicInfoSet.plist")
-        var dict = NSMutableDictionary(contentsOfFile: path)
+        var dict = NSMutableDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("MusicInfoSet", ofType: "plist")!)
         var musicdata: NSMutableDictionary = dict?.valueForKey(Po.ID) as! NSMutableDictionary
         musicdata.setObject(Po.combo, forKey: "combo")
         musicdata.setObject(Po.evaluation, forKey: "evaluation")
