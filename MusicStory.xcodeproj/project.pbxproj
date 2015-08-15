@@ -70,6 +70,7 @@
 		E3D106E71B7E3E170008268B /* M-0000.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D106E61B7E3E170008268B /* M-0000.plist */; };
 		E3D106E91B7E4B480008268B /* examination.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D106E81B7E4B480008268B /* examination.plist */; };
 		E3D106ED1B7E545B0008268B /* MusicInfoSet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D106EC1B7E545B0008268B /* MusicInfoSet.plist */; };
+		E3D3FB7E1B7F966A00F23F77 /* launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3FB7D1B7F966A00F23F77 /* launch.swift */; };
 		E3D419681B7D618E004DAAB4 /* bls_Music_CountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +152,7 @@
 		E3D106E61B7E3E170008268B /* M-0000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "M-0000.plist"; sourceTree = "<group>"; };
 		E3D106E81B7E4B480008268B /* examination.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = examination.plist; sourceTree = "<group>"; };
 		E3D106EC1B7E545B0008268B /* MusicInfoSet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MusicInfoSet.plist; path = MusicStory/MusicInfoSet.plist; sourceTree = SOURCE_ROOT; };
+		E3D3FB7D1B7F966A00F23F77 /* launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launch.swift; sourceTree = "<group>"; };
 		E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bls_Music_CountInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,6 +232,7 @@
 				E362304F1B74023200F53E1A /* dataService */,
 				E362304E1B74022000F53E1A /* ui */,
 				E362301E1B74006F00F53E1A /* Info.plist */,
+				E3D3FB7D1B7F966A00F23F77 /* launch.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 			files = (
 				E36230C41B76BF9400F53E1A /* StoryInfoPo.swift in Sources */,
 				E36230591B7402B600F53E1A /* ds_Game_WriteInfo.swift in Sources */,
+				E3D3FB7E1B7F966A00F23F77 /* launch.swift in Sources */,
 				E36230CD1B77552F00F53E1A /* Constant.swift in Sources */,
 				E36230581B7402B600F53E1A /* ds_Game_InfoManage.swift in Sources */,
 				E36230D51B77E97D00F53E1A /* GameInfoVo.swift in Sources */,

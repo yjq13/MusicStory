@@ -259,11 +259,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicStory/bls_Music_CountInfo.swift"
-            timestampString = "461235299.914096"
+            timestampString = "461342261.785281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13">
+            startingLineNumber = "15"
+            endingLineNumber = "15">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -391,6 +391,22 @@
             startingLineNumber = "47"
             endingLineNumber = "47"
             landmarkName = "getMusicInfoForBuy()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicStory/ViewController.swift"
+            timestampString = "461347399.23446"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
