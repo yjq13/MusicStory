@@ -28,8 +28,6 @@ class data_Game_GetInfo:GameGetInfo_DataService {
     
     func getPetInfoOld() -> PetPo {
         var dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("AllInfo", ofType: "plist")!)
-        //dict?.setValue(100, forKeyPath: "state")
-        //dict?.writeToFile("state", atomically: true)
         var state: AnyObject? = dict?.objectForKey("state")!
         var experince: AnyObject? = dict?.objectForKey("experince")!
         var lv: AnyObject? = dict?.objectForKey("petLV")!

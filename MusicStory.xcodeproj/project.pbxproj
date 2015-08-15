@@ -150,7 +150,7 @@
 		E36230DB1B78ACF400F53E1A /* StoryInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StoryInfo.plist; sourceTree = "<group>"; };
 		E3D106E61B7E3E170008268B /* M-0000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "M-0000.plist"; sourceTree = "<group>"; };
 		E3D106E81B7E4B480008268B /* examination.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = examination.plist; sourceTree = "<group>"; };
-		E3D106EC1B7E545B0008268B /* MusicInfoSet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MusicInfoSet.plist; sourceTree = "<group>"; };
+		E3D106EC1B7E545B0008268B /* MusicInfoSet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MusicInfoSet.plist; path = MusicStory/MusicInfoSet.plist; sourceTree = SOURCE_ROOT; };
 		E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bls_Music_CountInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

@@ -10,7 +10,19 @@ import Foundation
 
 class  data_Music_WriteInfo:MusicWriteInfo_DataService{
     func WriteMusicBoughtInfo(Po: BuyMusicPo) {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0) as! NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("MusicInfoSet.plist")
+        var dict = NSMutableDictionary(contentsOfFile: path)
+        var musicdata: NSMutableDictionary = dict?.valueForKey("M-0000") as! NSMutableDictionary
+        musicdata.setObject(Po.difficulty, forKey: "difficulty")
+        dict?.setObject(musicdata, forKey: "M-0000")
         
+        dict?.writeToFile(NSBundle.mainBundle().pathForResource("MusicInfoSet", ofType: "plist")!, atomically: false)
+        dict?.writeToFile(path, atomically: false)
+
+        let resultDictionary = NSMutableDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("MusicInfoSet", ofType: "plist")!)
+        println(resultDictionary)
     }
     
     func WriteMusicInfoByID(Po: MusicInfoPo) {

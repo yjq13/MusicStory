@@ -17,9 +17,9 @@ class data_Music_getInfo:MusicGetInfo_DataService {
         var evaluation: AnyObject? = musicInfo?.objectForKey("evaluation")!
         var ID: AnyObject? = musicInfo?.objectForKey("ID")!
         var difficulty: AnyObject? = musicInfo?.objectForKey("difficulty")!
-        var lv: AnyObject? = musicInfo?.objectForKey("lv")!
+        var lv: AnyObject? = musicInfo?.objectForKey("musicLV")!
         var imagePath: AnyObject? = musicInfo?.objectForKey("imagePath")!
-        var name: AnyObject? = dict?.objectForKey("name")!
+        var name: AnyObject? = musicInfo?.objectForKey("name")!
         
         var scoreGet = score as! Int
         var comboGet = combo as! Int
@@ -29,7 +29,7 @@ class data_Music_getInfo:MusicGetInfo_DataService {
         var lvGet = lv as! Int
         var nameGet = name as! String
         var imagePathGet = imagePath as! String
-        var po :MusicInfoPo = MusicInfoPo(score: 0, combo: 0, evaluation: "", ID: "", difficulty: 0, name: "", lv: 0, imagePath: "")
+        var po :MusicInfoPo = MusicInfoPo(score: scoreGet, combo: comboGet, evaluation: evaluationGet, ID: IDGet, difficulty: difficultyGet, name: nameGet, lv: lvGet, imagePath: imagePathGet)
         
         return po
     }

@@ -12,9 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var getInfo = data_Game_GetInfo()
-        var po = getInfo.getPetInfoOld()
-        println(po.state)
+        var getInfo = data_Music_WriteInfo()
+        var po: BuyMusicPo = BuyMusicPo(ID: "M-0000", price: 0, name: "test", imagePath: "", difficulty: 5, lv: 0, ifBought: true)
+        getInfo.WriteMusicBoughtInfo(po)
+        var get = data_Music_getInfo()
+        var npo = get.getMusicInfoByID("M-0000")
+        println(npo.difficulty)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
