@@ -72,6 +72,7 @@
 		E3D106ED1B7E545B0008268B /* MusicInfoSet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D106EC1B7E545B0008268B /* MusicInfoSet.plist */; };
 		E3D3FB7E1B7F966A00F23F77 /* launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3FB7D1B7F966A00F23F77 /* launch.swift */; };
 		E3D419681B7D618E004DAAB4 /* bls_Music_CountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */; };
+		E3D6F43C1B7FC6E200BE62B5 /* 小苹果.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3D6F43B1B7FC6E200BE62B5 /* 小苹果.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,7 @@
 		E3D106EC1B7E545B0008268B /* MusicInfoSet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MusicInfoSet.plist; path = MusicStory/MusicInfoSet.plist; sourceTree = SOURCE_ROOT; };
 		E3D3FB7D1B7F966A00F23F77 /* launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launch.swift; sourceTree = "<group>"; };
 		E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bls_Music_CountInfo.swift; sourceTree = "<group>"; };
+		E3D6F43B1B7FC6E200BE62B5 /* 小苹果.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "小苹果.mp3"; path = "../../../../Downloads/小苹果.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -445,6 +447,7 @@
 		E36230D81B78AC3200F53E1A /* MusicFIle */ = {
 			isa = PBXGroup;
 			children = (
+				E3D6F43B1B7FC6E200BE62B5 /* 小苹果.mp3 */,
 			);
 			name = MusicFIle;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D6F43C1B7FC6E200BE62B5 /* 小苹果.mp3 in Resources */,
 				E3D106E71B7E3E170008268B /* M-0000.plist in Resources */,
 				04F085D61B7889EA003C154F /* 6.jpg in Resources */,
 				E36230DA1B78ACD200F53E1A /* AllInfo.plist in Resources */,
