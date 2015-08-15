@@ -44,6 +44,7 @@ class data_Game_GetInfo:GameGetInfo_DataService {
         var po:PetPo = PetPo(state: stateGet, experince: experinceGet, lv: lvGet)
         return po
     }
+    //no
     func getExamInfo(Int)->MusicInfoPo{
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
@@ -53,7 +54,7 @@ class data_Game_GetInfo:GameGetInfo_DataService {
         return po
 
     }
-    
+    //no
     func getStoryInfo(StoryStep:Int) -> StoryInfoPo {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
