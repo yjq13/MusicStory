@@ -10,7 +10,10 @@ import Foundation
 
 class data_Game_GetInfo:GameGetInfo_DataService {
     func getAllInfoOld() -> AllInfoPo {
-        var dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("AllInfo", ofType: "plist")!)
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0) as! NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("AllInfo.plist")
+        var dict = NSDictionary(contentsOfFile:path)
         var storystep: AnyObject? = dict?.objectForKey("storyStep")!
         var lv: AnyObject? = dict?.objectForKey("lv")!
         var money: AnyObject? = dict?.objectForKey("money")!
@@ -27,7 +30,10 @@ class data_Game_GetInfo:GameGetInfo_DataService {
     }
     
     func getPetInfoOld() -> PetPo {
-        var dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("AllInfo", ofType: "plist")!)
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0) as! NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("AllInfo.plist")
+        var dict = NSDictionary(contentsOfFile: path)
         var state: AnyObject? = dict?.objectForKey("state")!
         var experince: AnyObject? = dict?.objectForKey("experince")!
         var lv: AnyObject? = dict?.objectForKey("petLV")!
@@ -39,13 +45,20 @@ class data_Game_GetInfo:GameGetInfo_DataService {
         return po
     }
     func getExamInfo(Int)->MusicInfoPo{
-        
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0) as! NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("examination.plist")
+        var dict = NSDictionary(contentsOfFile: path)
         var po:MusicInfoPo = MusicInfoPo(score: 0, combo: 0, evaluation: "", ID: "", difficulty: 0, name: "", lv: 0, imagePath: "")
         return po
 
     }
     
     func getStoryInfo(StoryStep:Int) -> StoryInfoPo {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0) as! NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("StoryInfo.plist")
+        var dict = NSDictionary(contentsOfFile: path)
         var po:StoryInfoPo = StoryInfoPo(step: 0, target: "", MusicID: "", LvNeed: 0)
         return po
     }

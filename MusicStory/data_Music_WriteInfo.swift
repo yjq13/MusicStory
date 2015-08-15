@@ -14,9 +14,9 @@ class  data_Music_WriteInfo:MusicWriteInfo_DataService{
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
         let path = documentsDirectory.stringByAppendingPathComponent("MusicInfoSet.plist")
         var dict = NSMutableDictionary(contentsOfFile: path)
-        var musicdata: NSMutableDictionary = dict?.valueForKey("M-0000") as! NSMutableDictionary
-        musicdata.setObject(Po.difficulty, forKey: "difficulty")
-        dict?.setObject(musicdata, forKey: "M-0000")
+        var musicdata: NSMutableDictionary = dict?.valueForKey(Po.ID) as! NSMutableDictionary
+        musicdata.setObject(Po.ifBought, forKey: "ifBought")
+        dict?.setObject(musicdata, forKey: Po.ID)
         
         dict?.writeToFile(NSBundle.mainBundle().pathForResource("MusicInfoSet", ofType: "plist")!, atomically: false)
         dict?.writeToFile(path, atomically: false)

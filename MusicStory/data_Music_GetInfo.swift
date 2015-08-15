@@ -9,8 +9,13 @@
 import Foundation
 
 class data_Music_getInfo:MusicGetInfo_DataService {
+    
     func getMusicInfoByID(ID: String) -> MusicInfoPo {
-        var dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("MusicInfoSet", ofType: "plist")!)
+        
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0) as! NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("MusicInfoSet.plist")
+        var dict = NSDictionary(contentsOfFile: path)
         var musicInfo: AnyObject? = dict?.objectForKey(ID)!
         var score: AnyObject? = musicInfo?.objectForKey("score")!
         var combo: AnyObject? = musicInfo?.objectForKey("combo")!
@@ -35,7 +40,10 @@ class data_Music_getInfo:MusicGetInfo_DataService {
     }
     
     func getMusicInfoForBuy() -> [BuyMusicPo] {
-       var dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("MusicInfoSet", ofType: "plist")!)
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0) as! NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("MusicInfoSet.plist")
+        var dict = NSDictionary(contentsOfFile: path)
         
         var polist:[BuyMusicPo] = []
         //polist.append(Bpo)
