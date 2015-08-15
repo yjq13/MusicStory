@@ -12,12 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var getInfo = data_Music_WriteInfo()
-       var po: MusicInfoPo =  MusicInfoPo(score: 10, combo: 0, evaluation: "C", ID: "M-0000", difficulty: 0, name: "test", lv: 0, imagePath: "")
-        //getInfo.WriteMusicInfoByID(po)
+//        var getInfo = data_Music_WriteInfo()
+//       var po: MusicInfoPo =  MusicInfoPo(score: 10, combo: 0, evaluation: "C", ID: "M-0000", difficulty: 0, name: "test", lv: 0, imagePath: "")
+//        getInfo.WriteMusicInfoByID(po)
         var get = data_Music_getInfo()
-        var npo = get.getMusicInfoByID("M-0000")
-        println(npo.evaluation)
+        var npo = get.getMusicInfoForBuy()
+        println(npo[0].musicLV)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

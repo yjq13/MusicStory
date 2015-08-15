@@ -11,7 +11,7 @@
 		<key>ifBought</key>
 		<false/>
 		<key>imagePath</key>
-		<string>None</string>
+		<string>nothing</string>
 		<key>difficulty</key>
 		<integer>0</integer>
 		<key>score</key>
@@ -23,7 +23,7 @@
 		<key>name</key>
 		<string>test</string>
 		<key>evaluation</key>
-		<string>None</string>
+		<string>nothing</string>
 	</dict>
 </dict>
 </plist>

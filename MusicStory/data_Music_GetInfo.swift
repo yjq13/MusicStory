@@ -44,9 +44,23 @@ class data_Music_getInfo:MusicGetInfo_DataService {
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
         let path = documentsDirectory.stringByAppendingPathComponent("MusicInfoSet.plist")
         var dict = NSDictionary(contentsOfFile: path)
-        
+        var counter = dict?.count
+        var valueArr = dict?.allValues
         var polist:[BuyMusicPo] = []
-        //polist.append(Bpo)
-        return polist
+        var count = 0
+        
+        for(count;count<counter;count++){
+            var id: String = valueArr![count].objectForKey("ID") as! String
+            var price: Int = valueArr![count].objectForKey("price") as! Int
+            var name: String = valueArr![count].objectForKey("name") as! String
+            var iamgePath: String = valueArr![count].objectForKey("imagePath") as! String
+            var difficulty: Int = valueArr![count].objectForKey("difficulty") as! Int
+            var lv: Int = valueArr![count].objectForKey("musicLV") as! Int
+            var ifBought: Bool = valueArr![count].objectForKey("ifBought") as! Bool
+            var po:BuyMusicPo = BuyMusicPo(ID: id, price: price, name: name, imagePath: iamgePath, difficulty: difficulty, lv: lv, ifBought: ifBought)
+            polist.append(po)
+        }
+            return polist
+        
     }
 }
