@@ -13,6 +13,11 @@
 		<real>29.545</real>
 		<real>30.423</real>
 		<real>37.647</real>
+		<string>48.474</string>
+		<string>51.848</string>
+		<string>53.872</string>
+		<string>54.390</string>
+		<string>58.689</string>
 	</array>
 	<key>path2</key>
 	<array>
@@ -25,6 +30,13 @@
 		<real>19.591</real>
 		<real>23.493</real>
 		<real>44.503</real>
+		<string>48.875</string>
+		<string>50.593</string>
+		<string>52.236</string>
+		<string>53.916</string>
+		<string>55.250</string>
+		<string>57.807</string>
+		<string>62.814</string>
 	</array>
 	<key>path3</key>
 	<array>
@@ -41,6 +53,15 @@
 		<real>33.925</real>
 		<real>38.108</real>
 		<real>44.272</real>
+		<real>45.777</real>
+		<string>50.790</string>
+		<string>52.683</string>
+		<string>53.950</string>
+		<string>55.638</string>
+		<string>57.402</string>
+		<string>59.106</string>
+		<string>61.509</string>
+		<string>63.206</string>
 	</array>
 	<key>path4</key>
 	<array>
@@ -57,6 +78,14 @@
 		<real>34.378</real>
 		<real>41.045</real>
 		<real>43.162</real>
+		<real>44.898</real>
+		<string>47.909</string>
+		<string>50.977</string>
+		<string>53.146</string>
+		<string>54.832</string>
+		<string>56.948</string>
+		<string>59.557</string>
+		<string>61.882</string>
 	</array>
 	<key>path5</key>
 	<array>
@@ -81,6 +110,14 @@
 		<real>38.57</real>
 		<real>40.872</real>
 		<real>42.312</real>
+		<real>45.33</real>
+		<real>48.056</real>
+		<real>49.313</real>
+		<real>51.174</real>
+		<real>56.042</real>
+		<string>61.915</string>
+		<string>62.401</string>
+		<string>63.643</string>
 	</array>
 	<key>path6</key>
 	<array>
@@ -101,6 +138,13 @@
 		<real>39.046</real>
 		<real>42.681</real>
 		<real>43.564</real>
+		<real>45.777</real>
+		<real>49.787</real>
+		<real>51.392</real>
+		<real>56.535</real>
+		<real>58.248</real>
+		<string>60.056</string>
+		<string>61.995</string>
 	</array>
 </dict>
 </plist>
