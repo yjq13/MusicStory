@@ -23,8 +23,6 @@ class GameViewController: UIViewController {
     var missNum:Int=0
     var rythmHasBeenJudged=false//用于判定节奏
     var musicPlayer=AVAudioPlayer()
-    let musicOffset:Double=2//音乐和节奏延迟
-    var scoreLevel=""//评分
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var stopView: UITableViewCell!
@@ -47,9 +45,9 @@ class GameViewController: UIViewController {
         badNum=0
         missNum=0
         rythmHasBeenJudged=false
-        scoreLevel=""
         
-        musicStartThread()
+        // musicThread()
+        playerMusic()
         //游戏开始
         UIView.animateWithDuration(1, delay:0,
             options:UIViewAnimationOptions.TransitionNone, animations:
@@ -91,12 +89,11 @@ class GameViewController: UIViewController {
             {
                 ()-> Void in
                 for t in list1{
-                    var delay = t + self.musicOffset
                     var background1 = UIView(frame:CGRectMake(100, 50, self.width, self.heigth))
                     background1.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background1)
                     background1.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(delay-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
@@ -122,12 +119,11 @@ class GameViewController: UIViewController {
                 }
                 
                 for t in list2{
-                    var delay = t + self.musicOffset
                     var background2 = UIView(frame:CGRectMake(180, 50, self.width, self.heigth))
                     background2.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background2)
                     background2.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(delay-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
@@ -153,12 +149,11 @@ class GameViewController: UIViewController {
                 
                 
                 for t in list3{
-                    var delay = t + self.musicOffset
                     var background3 = UIView(frame:CGRectMake(260, 50, self.width, self.heigth))
                     background3.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background3)
                     background3.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(delay-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
@@ -185,12 +180,11 @@ class GameViewController: UIViewController {
                 
                 
                 for t in list4{
-                    var delay = t + self.musicOffset
                     var background4 = UIView(frame:CGRectMake(340, 50, self.width, self.heigth))
                     background4.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background4)
                     background4.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(delay-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
@@ -214,12 +208,11 @@ class GameViewController: UIViewController {
                     })
                 }
                 for t in list5{
-                    var delay = t + self.musicOffset
                     var background5 = UIView(frame:CGRectMake(420, 50, self.width, self.heigth))
                     background5.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background5)
                     background5.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(delay-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
@@ -243,12 +236,11 @@ class GameViewController: UIViewController {
                     })
                 }
                 for t in list6{
-                    var delay = t + self.musicOffset
                     var background6 = UIView(frame:CGRectMake(500, 50, self.width, self.heigth))
                     background6.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background6)
                     background6.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(delay-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
@@ -281,8 +273,7 @@ class GameViewController: UIViewController {
                 var gameInfo=GameInfoVo(perfectNum: self.perfectNum, greatNum: self.greatNum, badNum: self.badNum, missNum: self.missNum, combo: self.combo)
                 var musicWriteData:MusicCountInfo_BlService=bl_Music_CountInfo()
                 self.score=musicWriteData.countScoreByGame(gameInfo)
-                self.scoreLevel=musicWriteData.evaluationByGame(gameInfo)
-                self.scoreLabel.text=String("\(self.scoreLevel): \(self.score)")
+                self.scoreLabel.text=String(self.score)
                 self.scoreView.hidden=false
         })
         
@@ -363,7 +354,7 @@ class GameViewController: UIViewController {
         layer.beginTime=0.0
         var timeSincePause=CFTimeInterval(layer.convertTime(CACurrentMediaTime(), fromLayer: nil)) - pauseTime+5
         layer.beginTime=timeSincePause
-        musicResumeThread()
+        musicThread()
         
         
     }
@@ -431,21 +422,16 @@ class GameViewController: UIViewController {
     }
     
     
-    func musicResumeThread(){
+    func musicThread(){
         var myThread = NSThread(target:self,selector:"resumeMusic",object:nil)
         myThread.start()
     }
-    func musicStartThread(){
-        var myThread = NSThread(target:self,selector:"playMusic",object:nil)
-        myThread.start()
-    }
     //下面方法用于获取音乐
-    func playMusic(){
+    func playerMusic(){
         let musicPath=NSBundle.mainBundle().pathForResource("小苹果", ofType: "mp3")
         let url=NSURL(fileURLWithPath: musicPath!)
         musicPlayer=AVAudioPlayer(contentsOfURL: url, error: nil)
         musicPlayer.prepareToPlay()
-        sleep(2)
         musicPlayer.play()
     }
     
