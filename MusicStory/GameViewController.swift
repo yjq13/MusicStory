@@ -13,7 +13,7 @@ class GameViewController: UIViewController {
     var musicName:String=Constant.MUSIC_NAME//音乐名
     var musicSpeed:Double=Constant.SPEED//音乐速度
     var musicData:MusicDataVo!
-    var isPause:Bool!//判断暂停
+    var isPause:Bool=false//判断暂停
     var score:Int!//得分
     var combo:[Int] = []//连击数
     var comboLiter:Int=0//combo数组的计数器
@@ -136,7 +136,7 @@ class GameViewController: UIViewController {
                             ()-> Void in
                             background2.alpha=1.0
                             background2.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
-                             self.view.bringSubviewToFront(self.button2)
+                            self.view.bringSubviewToFront(self.button2)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -167,7 +167,7 @@ class GameViewController: UIViewController {
                             ()-> Void in
                             background3.alpha=1.0
                             background3.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
-                             self.view.bringSubviewToFront(self.button3)
+                            self.view.bringSubviewToFront(self.button3)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -199,7 +199,7 @@ class GameViewController: UIViewController {
                             ()-> Void in
                             background4.alpha=1.0
                             background4.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
-                             self.view.bringSubviewToFront(self.button4)
+                            self.view.bringSubviewToFront(self.button4)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -228,7 +228,7 @@ class GameViewController: UIViewController {
                             ()-> Void in
                             background5.alpha=1.0
                             background5.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
-                             self.view.bringSubviewToFront(self.button5)
+                            self.view.bringSubviewToFront(self.button5)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -257,7 +257,7 @@ class GameViewController: UIViewController {
                             ()-> Void in
                             background6.alpha=1.0
                             background6.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
-                             self.view.bringSubviewToFront(self.button6)
+                            self.view.bringSubviewToFront(self.button6)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -294,7 +294,7 @@ class GameViewController: UIViewController {
     //下面是6键模式的按键
     @IBAction func stopButton(sender: AnyObject) {
         pauseLayer(self.view.layer)
-        
+        isPause=true
         stopView.hidden=false
         stopButton.hidden=true
     }
@@ -335,10 +335,11 @@ class GameViewController: UIViewController {
         self.resumeAnimation()
         self.resumeLayer(self.view.layer)
         stopButton.hidden=false
+        isPause=false
         
     }
     @IBAction func retryButton(sender: AnyObject) {
-        
+        isPause=false
         retryLayer(self.view.layer)
         self.viewDidLoad()
         stopView.hidden=true
@@ -388,8 +389,7 @@ class GameViewController: UIViewController {
         var timeSinceBegin=CFTimeInterval(layer.convertTime(CACurrentMediaTime(), fromLayer: nil)) - beginTime
         layer.beginTime=timeSinceBegin
         musicPlayer.stop()
-        musicPlayer.prepareToPlay()
-        musicPlayer.play()
+        musicStartThread()
     }
     //下面是恢复时的倒计时动画
     func resumeAnimation(){
@@ -416,7 +416,7 @@ class GameViewController: UIViewController {
         var buttonPushTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))-beginTime
         if !rythmHasBeenJudged {
             for i in musicTime {
-                var offset=i-buttonPushTime
+                var offset=i + self.musicOffset - buttonPushTime
                 if (offset>=0&&offset<0.1) {
                     print("perfect")
                     rythmHasBeenJudged=true
@@ -458,7 +458,9 @@ class GameViewController: UIViewController {
         musicPlayer=AVAudioPlayer(contentsOfURL: url, error: nil)
         musicPlayer.prepareToPlay()
         sleep(2)
-        musicPlayer.play()
+        if !isPause{
+            musicPlayer.play()
+        }
     }
     
     //下面用户回复音乐播放

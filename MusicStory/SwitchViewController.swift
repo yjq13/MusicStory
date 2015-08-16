@@ -20,8 +20,10 @@ class SwitchViewController: UIViewController,UIPickerViewDataSource,UIPickerView
         speedChooseView.hidden=true
     }
 
+    @IBOutlet weak var button1: UIPickerView!
     @IBAction func startGameButton(sender: AnyObject) {
         speedChooseView.hidden=false
+        self.view.bringSubviewToFront(button1)
         Constant.LAST_VIEW_IDENTIFY="switch"
     }
     override func didReceiveMemoryWarning() {
