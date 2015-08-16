@@ -24,6 +24,7 @@ class GameViewController: UIViewController {
     var rythmHasBeenJudged=false//用于判定节奏
     var musicPlayer=AVAudioPlayer()
     var scoreLevel:String=""
+    var musicOffset:Double=2//节奏开始偏差
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var stopView: UITableViewCell!
@@ -48,15 +49,17 @@ class GameViewController: UIViewController {
         rythmHasBeenJudged=false
         stopButton.hidden=false
         scoreLevel=""
+        musicOffset=2
         
-        // musicThread()
-        playerMusic()
+        musicStartThread()
+        
         //游戏开始
         UIView.animateWithDuration(1, delay:0,
             options:UIViewAnimationOptions.TransitionNone, animations:
             {
                 ()-> Void in
                 println("gameStart")
+                
             },
             completion:{
                 (finished:Bool) -> Void in
@@ -96,7 +99,7 @@ class GameViewController: UIViewController {
                     background1.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background1)
                     background1.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed + self.musicOffset),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
@@ -127,7 +130,7 @@ class GameViewController: UIViewController {
                     background2.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background2)
                     background2.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed + self.musicOffset),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
@@ -158,7 +161,7 @@ class GameViewController: UIViewController {
                     background3.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background3)
                     background3.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed + self.musicOffset),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
@@ -190,7 +193,7 @@ class GameViewController: UIViewController {
                     background4.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background4)
                     background4.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed + self.musicOffset),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
@@ -219,7 +222,7 @@ class GameViewController: UIViewController {
                     background5.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background5)
                     background5.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed + self.musicOffset),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
@@ -248,7 +251,7 @@ class GameViewController: UIViewController {
                     background6.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background6)
                     background6.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed + self.musicOffset),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
@@ -373,7 +376,7 @@ class GameViewController: UIViewController {
         layer.beginTime=0.0
         var timeSincePause=CFTimeInterval(layer.convertTime(CACurrentMediaTime(), fromLayer: nil)) - pauseTime+5
         layer.beginTime=timeSincePause
-        musicThread()
+        musicResumeThread()
         
         
     }
@@ -439,18 +442,22 @@ class GameViewController: UIViewController {
         
         
     }
+    func musicStartThread(){
+        var myThread = NSThread(target:self,selector:"playMusic",object:nil)
+        myThread.start()
+    }
     
-    
-    func musicThread(){
+    func musicResumeThread(){
         var myThread = NSThread(target:self,selector:"resumeMusic",object:nil)
         myThread.start()
     }
     //下面方法用于获取音乐
-    func playerMusic(){
+    func playMusic(){
         let musicPath=NSBundle.mainBundle().pathForResource("眼泪", ofType: "mp3")
         let url=NSURL(fileURLWithPath: musicPath!)
         musicPlayer=AVAudioPlayer(contentsOfURL: url, error: nil)
         musicPlayer.prepareToPlay()
+        sleep(2)
         musicPlayer.play()
     }
     
