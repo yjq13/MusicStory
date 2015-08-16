@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04A0011D1B7F5485004B289A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0011C1B7F5485004B289A /* GameViewController.swift */; };
-		04C9B8F71B8070600019A897 /* 小苹果.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C9B8F61B8070600019A897 /* 小苹果.mp3 */; };
-		04C9B8F91B8070690019A897 /* 眼泪.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C9B8F81B8070690019A897 /* 眼泪.mp3 */; };
 		04F085D11B7889EA003C154F /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04F085CB1B7889EA003C154F /* 1.jpg */; };
 		04F085D21B7889EA003C154F /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04F085CC1B7889EA003C154F /* 2.jpg */; };
 		04F085D31B7889EA003C154F /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04F085CD1B7889EA003C154F /* 3.jpg */; };
@@ -69,6 +67,7 @@
 		E36230D51B77E97D00F53E1A /* GameInfoVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36230D41B77E97D00F53E1A /* GameInfoVo.swift */; };
 		E36230DA1B78ACD200F53E1A /* AllInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E36230D91B78ACD200F53E1A /* AllInfo.plist */; };
 		E36230DC1B78ACF400F53E1A /* StoryInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E36230DB1B78ACF400F53E1A /* StoryInfo.plist */; };
+		E3D08DAF1B813FFA00D8D6F2 /* 眼泪.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3D08DAE1B813FFA00D8D6F2 /* 眼泪.mp3 */; };
 		E3D106E71B7E3E170008268B /* M-0000.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D106E61B7E3E170008268B /* M-0000.plist */; };
 		E3D106E91B7E4B480008268B /* examination.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D106E81B7E4B480008268B /* examination.plist */; };
 		E3D106ED1B7E545B0008268B /* MusicInfoSet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D106EC1B7E545B0008268B /* MusicInfoSet.plist */; };
@@ -89,8 +88,6 @@
 
 /* Begin PBXFileReference section */
 		04A0011C1B7F5485004B289A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		04C9B8F61B8070600019A897 /* 小苹果.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "小苹果.mp3"; sourceTree = "<group>"; };
-		04C9B8F81B8070690019A897 /* 眼泪.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "眼泪.mp3"; sourceTree = "<group>"; };
 		04F085CB1B7889EA003C154F /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		04F085CC1B7889EA003C154F /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		04F085CD1B7889EA003C154F /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
@@ -154,6 +151,7 @@
 		E36230D41B77E97D00F53E1A /* GameInfoVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfoVo.swift; sourceTree = "<group>"; };
 		E36230D91B78ACD200F53E1A /* AllInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AllInfo.plist; sourceTree = "<group>"; };
 		E36230DB1B78ACF400F53E1A /* StoryInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StoryInfo.plist; sourceTree = "<group>"; };
+		E3D08DAE1B813FFA00D8D6F2 /* 眼泪.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "眼泪.mp3"; path = "../../../../Downloads/眼泪.mp3"; sourceTree = "<group>"; };
 		E3D106E61B7E3E170008268B /* M-0000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "M-0000.plist"; sourceTree = "<group>"; };
 		E3D106E81B7E4B480008268B /* examination.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = examination.plist; sourceTree = "<group>"; };
 		E3D106EC1B7E545B0008268B /* MusicInfoSet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MusicInfoSet.plist; path = MusicStory/MusicInfoSet.plist; sourceTree = SOURCE_ROOT; };
@@ -451,8 +449,7 @@
 		E36230D81B78AC3200F53E1A /* MusicFIle */ = {
 			isa = PBXGroup;
 			children = (
-				04C9B8F61B8070600019A897 /* 小苹果.mp3 */,
-				04C9B8F81B8070690019A897 /* 眼泪.mp3 */,
+				E3D08DAE1B813FFA00D8D6F2 /* 眼泪.mp3 */,
 			);
 			name = MusicFIle;
 			sourceTree = "<group>";
@@ -556,16 +553,15 @@
 			files = (
 				E3D106E71B7E3E170008268B /* M-0000.plist in Resources */,
 				04F085D61B7889EA003C154F /* 6.jpg in Resources */,
-				04C9B8F71B8070600019A897 /* 小苹果.mp3 in Resources */,
 				E36230DA1B78ACD200F53E1A /* AllInfo.plist in Resources */,
 				E3D6F4441B8017E000BE62B5 /* M-0001.plist in Resources */,
 				04F085D51B7889EA003C154F /* 5.jpg in Resources */,
 				E36230411B7400E600F53E1A /* Main.storyboard in Resources */,
 				04F085D21B7889EA003C154F /* 2.jpg in Resources */,
 				E362302A1B74006F00F53E1A /* LaunchScreen.xib in Resources */,
-				04C9B8F91B8070690019A897 /* 眼泪.mp3 in Resources */,
 				04F085D11B7889EA003C154F /* 1.jpg in Resources */,
 				E3D106E91B7E4B480008268B /* examination.plist in Resources */,
+				E3D08DAF1B813FFA00D8D6F2 /* 眼泪.mp3 in Resources */,
 				E3D106ED1B7E545B0008268B /* MusicInfoSet.plist in Resources */,
 				E36230DC1B78ACF400F53E1A /* StoryInfo.plist in Resources */,
 				04F085D41B7889EA003C154F /* 4.jpg in Resources */,

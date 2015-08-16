@@ -20,6 +20,10 @@
 		<real>58.689</real>
 		<real>64.521</real>
 		<real>66.78</real>
+		<real>68.208</real>
+		<real>71.51900000000001</real>
+		<string>75.328</string>
+		<string>76.186</string>
 	</array>
 	<key>path2</key>
 	<array>
@@ -40,6 +44,9 @@
 		<real>57.807</real>
 		<real>62.814</real>
 		<real>66.593</real>
+		<real>71.128</real>
+		<real>72.447</real>
+		<string>77.084</string>
 	</array>
 	<key>path3</key>
 	<array>
@@ -67,6 +74,10 @@
 		<real>63.206</real>
 		<real>64.71899999999999</real>
 		<real>66.39</real>
+		<real>67.83</real>
+		<real>68.41200000000001</real>
+		<real>72.837</real>
+		<string>76.664</string>
 	</array>
 	<key>path4</key>
 	<array>
@@ -93,6 +104,10 @@
 		<real>61.882</real>
 		<real>64.956</real>
 		<real>66.218</real>
+		<real>68.657</real>
+		<integer>72</integer>
+		<real>73.468</real>
+		<string>77.482</string>
 	</array>
 	<key>path5</key>
 	<array>
@@ -127,6 +142,9 @@
 		<real>63.643</real>
 		<real>65.136</real>
 		<real>65.982</real>
+		<real>70.235</real>
+		<real>73.258</real>
+		<string>75.806</string>
 	</array>
 	<key>path6</key>
 	<array>
@@ -155,6 +173,9 @@
 		<real>60.056</real>
 		<real>61.995</real>
 		<real>65.393</real>
+		<real>70.676</real>
+		<real>73.70699999999999</real>
+		<string>77.969</string>
 	</array>
 </dict>
 </plist>
