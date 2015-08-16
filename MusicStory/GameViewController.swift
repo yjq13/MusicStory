@@ -23,6 +23,8 @@ class GameViewController: UIViewController {
     var missNum:Int=0
     var rythmHasBeenJudged=false//用于判定节奏
     var musicPlayer=AVAudioPlayer()
+    let musicOffset:Double=2//音乐和节奏延迟
+    var scoreLevel=""//评分
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var stopView: UITableViewCell!
@@ -45,9 +47,9 @@ class GameViewController: UIViewController {
         badNum=0
         missNum=0
         rythmHasBeenJudged=false
+        scoreLevel=""
         
-        // musicThread()
-        playerMusic()
+        musicStartThread()
         //游戏开始
         UIView.animateWithDuration(1, delay:0,
             options:UIViewAnimationOptions.TransitionNone, animations:
@@ -65,8 +67,8 @@ class GameViewController: UIViewController {
     //游戏开始
     //六个按键的节奏=6个数组
     //音符高宽
-    var width:CGFloat=50
-    var heigth:CGFloat=20
+    var width:CGFloat=60
+    var heigth:CGFloat=30
     //动画开始时间
     var beginTime:CFTimeInterval!
     func gameAnimation() {
@@ -89,16 +91,18 @@ class GameViewController: UIViewController {
             {
                 ()-> Void in
                 for t in list1{
-                    var background1 = UIView(frame:CGRectMake(100, 50, self.width, self.heigth))
+                    var delay = t + self.musicOffset
+                    var background1 = UIView(frame:CGRectMake(30, 50, self.width, self.heigth))
                     background1.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background1)
                     background1.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(delay-self.musicSpeed),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
                             background1.alpha=1.0
                             background1.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                            self.view.bringSubviewToFront(self.button1)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -119,16 +123,18 @@ class GameViewController: UIViewController {
                 }
                 
                 for t in list2{
-                    var background2 = UIView(frame:CGRectMake(180, 50, self.width, self.heigth))
+                    var delay = t + self.musicOffset
+                    var background2 = UIView(frame:CGRectMake(120, 50, self.width, self.heigth))
                     background2.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background2)
                     background2.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(delay-self.musicSpeed),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
                             background2.alpha=1.0
                             background2.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                            self.view.bringSubviewToFront(self.button2)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -149,16 +155,18 @@ class GameViewController: UIViewController {
                 
                 
                 for t in list3{
-                    var background3 = UIView(frame:CGRectMake(260, 50, self.width, self.heigth))
+                    var delay = t + self.musicOffset
+                    var background3 = UIView(frame:CGRectMake(210, 50, self.width, self.heigth))
                     background3.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background3)
                     background3.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(delay-self.musicSpeed),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
                             background3.alpha=1.0
                             background3.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                            self.view.bringSubviewToFront(self.button3)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -180,16 +188,18 @@ class GameViewController: UIViewController {
                 
                 
                 for t in list4{
-                    var background4 = UIView(frame:CGRectMake(340, 50, self.width, self.heigth))
+                    var delay = t + self.musicOffset
+                    var background4 = UIView(frame:CGRectMake(300, 50, self.width, self.heigth))
                     background4.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background4)
                     background4.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(delay-self.musicSpeed),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
                             background4.alpha=1.0
                             background4.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                            self.view.bringSubviewToFront(self.button4)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -208,16 +218,18 @@ class GameViewController: UIViewController {
                     })
                 }
                 for t in list5{
-                    var background5 = UIView(frame:CGRectMake(420, 50, self.width, self.heigth))
+                    var delay = t + self.musicOffset
+                    var background5 = UIView(frame:CGRectMake(390, 50, self.width, self.heigth))
                     background5.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background5)
                     background5.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(delay-self.musicSpeed),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
                             background5.alpha=1.0
                             background5.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                            self.view.bringSubviewToFront(self.button5)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -236,16 +248,18 @@ class GameViewController: UIViewController {
                     })
                 }
                 for t in list6{
-                    var background6 = UIView(frame:CGRectMake(500, 50, self.width, self.heigth))
+                    var delay = t + self.musicOffset
+                    var background6 = UIView(frame:CGRectMake(480, 50, self.width, self.heigth))
                     background6.backgroundColor = UIColor.darkGrayColor()
                     self.view.addSubview(background6)
                     background6.alpha=0.0
-                    UIView.animateWithDuration(1, delay:(t-self.musicSpeed),
+                    UIView.animateWithDuration(1, delay:(delay-self.musicSpeed),
                         options:UIViewAnimationOptions.TransitionNone, animations:
                         {
                             ()-> Void in
                             background6.alpha=1.0
                             background6.layer.setAffineTransform(CGAffineTransformMakeTranslation(0, 200))
+                            self.view.bringSubviewToFront(self.button6)
                         },
                         completion:{
                             (finished:Bool) -> Void in
@@ -273,7 +287,8 @@ class GameViewController: UIViewController {
                 var gameInfo=GameInfoVo(perfectNum: self.perfectNum, greatNum: self.greatNum, badNum: self.badNum, missNum: self.missNum, combo: self.combo)
                 var musicWriteData:MusicCountInfo_BlService=bl_Music_CountInfo()
                 self.score=musicWriteData.countScoreByGame(gameInfo)
-                self.scoreLabel.text=String(self.score)
+                self.scoreLevel=musicWriteData.evaluationByGame(gameInfo)
+                self.scoreLabel.text=String("\(self.scoreLevel): \(self.score)")
                 self.scoreView.hidden=false
         })
         
@@ -287,6 +302,12 @@ class GameViewController: UIViewController {
     
     
     
+    @IBOutlet weak var button6: UIButton!
+    @IBOutlet weak var button5: UIButton!
+    @IBOutlet weak var button4: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button1: UIButton!
     @IBAction func touchButton1(sender: AnyObject) {
         buttonPushed(musicData.musicPath1)
     }
@@ -354,7 +375,7 @@ class GameViewController: UIViewController {
         layer.beginTime=0.0
         var timeSincePause=CFTimeInterval(layer.convertTime(CACurrentMediaTime(), fromLayer: nil)) - pauseTime+5
         layer.beginTime=timeSincePause
-        musicThread()
+        musicResumeThread()
         
         
     }
@@ -422,16 +443,21 @@ class GameViewController: UIViewController {
     }
     
     
-    func musicThread(){
+    func musicResumeThread(){
         var myThread = NSThread(target:self,selector:"resumeMusic",object:nil)
         myThread.start()
     }
+    func musicStartThread(){
+        var myThread = NSThread(target:self,selector:"playMusic",object:nil)
+        myThread.start()
+    }
     //下面方法用于获取音乐
-    func playerMusic(){
+    func playMusic(){
         let musicPath=NSBundle.mainBundle().pathForResource("小苹果", ofType: "mp3")
         let url=NSURL(fileURLWithPath: musicPath!)
         musicPlayer=AVAudioPlayer(contentsOfURL: url, error: nil)
         musicPlayer.prepareToPlay()
+        sleep(2)
         musicPlayer.play()
     }
     
