@@ -73,6 +73,8 @@
 		E3D3FB7E1B7F966A00F23F77 /* launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3FB7D1B7F966A00F23F77 /* launch.swift */; };
 		E3D419681B7D618E004DAAB4 /* bls_Music_CountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */; };
 		E3D6F43C1B7FC6E200BE62B5 /* 小苹果.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3D6F43B1B7FC6E200BE62B5 /* 小苹果.mp3 */; };
+		E3D6F4421B8017CE00BE62B5 /* 眼泪.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3D6F4411B8017CE00BE62B5 /* 眼泪.mp3 */; };
+		E3D6F4441B8017E000BE62B5 /* M-0001.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D6F4431B8017E000BE62B5 /* M-0001.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +158,8 @@
 		E3D3FB7D1B7F966A00F23F77 /* launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launch.swift; sourceTree = "<group>"; };
 		E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bls_Music_CountInfo.swift; sourceTree = "<group>"; };
 		E3D6F43B1B7FC6E200BE62B5 /* 小苹果.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "小苹果.mp3"; path = "../../../../Downloads/小苹果.mp3"; sourceTree = "<group>"; };
+		E3D6F4411B8017CE00BE62B5 /* 眼泪.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "眼泪.mp3"; path = "../../../../Downloads/眼泪.mp3"; sourceTree = "<group>"; };
+		E3D6F4431B8017E000BE62B5 /* M-0001.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "M-0001.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,6 +451,7 @@
 		E36230D81B78AC3200F53E1A /* MusicFIle */ = {
 			isa = PBXGroup;
 			children = (
+				E3D6F4411B8017CE00BE62B5 /* 眼泪.mp3 */,
 				E3D6F43B1B7FC6E200BE62B5 /* 小苹果.mp3 */,
 			);
 			name = MusicFIle;
@@ -456,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				E3D106E61B7E3E170008268B /* M-0000.plist */,
+				E3D6F4431B8017E000BE62B5 /* M-0001.plist */,
 			);
 			name = MusicConfig;
 			sourceTree = "<group>";
@@ -552,12 +558,14 @@
 				E3D106E71B7E3E170008268B /* M-0000.plist in Resources */,
 				04F085D61B7889EA003C154F /* 6.jpg in Resources */,
 				E36230DA1B78ACD200F53E1A /* AllInfo.plist in Resources */,
+				E3D6F4441B8017E000BE62B5 /* M-0001.plist in Resources */,
 				04F085D51B7889EA003C154F /* 5.jpg in Resources */,
 				E36230411B7400E600F53E1A /* Main.storyboard in Resources */,
 				04F085D21B7889EA003C154F /* 2.jpg in Resources */,
 				E362302A1B74006F00F53E1A /* LaunchScreen.xib in Resources */,
 				04F085D11B7889EA003C154F /* 1.jpg in Resources */,
 				E3D106E91B7E4B480008268B /* examination.plist in Resources */,
+				E3D6F4421B8017CE00BE62B5 /* 眼泪.mp3 in Resources */,
 				E3D106ED1B7E545B0008268B /* MusicInfoSet.plist in Resources */,
 				E36230DC1B78ACF400F53E1A /* StoryInfo.plist in Resources */,
 				04F085D41B7889EA003C154F /* 4.jpg in Resources */,
