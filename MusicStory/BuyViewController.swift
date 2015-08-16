@@ -10,6 +10,7 @@ import UIKit
 
 class BuyViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
+    @IBOutlet weak var musicCell: UITableViewCell!
     var items=["小苹果","眼泪"]
     @IBOutlet weak var buyButton: UIButton!
     @IBOutlet weak var musicField: UITextField!
