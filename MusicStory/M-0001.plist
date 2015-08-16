@@ -18,6 +18,8 @@
 		<real>53.872</real>
 		<real>54.39</real>
 		<real>58.689</real>
+		<real>64.521</real>
+		<real>66.78</real>
 	</array>
 	<key>path2</key>
 	<array>
@@ -37,6 +39,7 @@
 		<real>55.25</real>
 		<real>57.807</real>
 		<real>62.814</real>
+		<real>66.593</real>
 	</array>
 	<key>path3</key>
 	<array>
@@ -62,6 +65,8 @@
 		<real>59.106</real>
 		<real>61.509</real>
 		<real>63.206</real>
+		<real>64.71899999999999</real>
+		<real>66.39</real>
 	</array>
 	<key>path4</key>
 	<array>
@@ -86,6 +91,8 @@
 		<real>56.948</real>
 		<real>59.557</real>
 		<real>61.882</real>
+		<real>64.956</real>
+		<real>66.218</real>
 	</array>
 	<key>path5</key>
 	<array>
@@ -118,6 +125,8 @@
 		<real>61.915</real>
 		<real>62.401</real>
 		<real>63.643</real>
+		<real>65.136</real>
+		<real>65.982</real>
 	</array>
 	<key>path6</key>
 	<array>
@@ -145,6 +154,7 @@
 		<real>58.248</real>
 		<real>60.056</real>
 		<real>61.995</real>
+		<real>65.393</real>
 	</array>
 </dict>
 </plist>
