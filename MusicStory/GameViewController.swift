@@ -23,13 +23,14 @@ class GameViewController: UIViewController {
     var missNum:Int=0
     var rythmHasBeenJudged=false//用于判定节奏
     var musicPlayer=AVAudioPlayer()
+    var scoreLevel:String=""
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var stopView: UITableViewCell!
     @IBOutlet weak var scoreView: UITableViewCell!
     override func viewDidLoad() {
         super.viewDidLoad()
-        musicName="M-0000"
+        musicName="M-0001"
         var getMusicData:MusicGetData_BlService=bl_Music_GetData()
         musicData=getMusicData.getMusicData(musicName)
         //隐藏
@@ -46,6 +47,7 @@ class GameViewController: UIViewController {
         missNum=0
         rythmHasBeenJudged=false
         stopButton.hidden=false
+        scoreLevel=""
         
         // musicThread()
         playerMusic()
@@ -86,7 +88,7 @@ class GameViewController: UIViewController {
         beginTime=CFTimeInterval(self.view.layer.convertTime(CACurrentMediaTime(), fromLayer: nil))
         //设置动画效果
         UIView.animateWithDuration(musicSpeed, delay:gameTime+3,
-            options:UIViewAnimationOptions.TransitionNone, animations:
+            options:UIViewAnimationOptions.CurveLinear, animations:
             {
                 ()-> Void in
                 for t in list1{
@@ -280,7 +282,8 @@ class GameViewController: UIViewController {
                 var gameInfo=GameInfoVo(perfectNum: self.perfectNum, greatNum: self.greatNum, badNum: self.badNum, missNum: self.missNum, combo: self.combo)
                 var musicWriteData:MusicCountInfo_BlService=bl_Music_CountInfo()
                 self.score=musicWriteData.countScoreByGame(gameInfo)
-                self.scoreLabel.text=String(self.score)
+                self.scoreLevel=musicWriteData.evaluationByGame(gameInfo)
+                self.scoreLabel.text=String("\(self.scoreLevel):  \(self.score)")
                 self.scoreView.hidden=false
         })
         
@@ -444,7 +447,7 @@ class GameViewController: UIViewController {
     }
     //下面方法用于获取音乐
     func playerMusic(){
-        let musicPath=NSBundle.mainBundle().pathForResource("小苹果", ofType: "mp3")
+        let musicPath=NSBundle.mainBundle().pathForResource("眼泪", ofType: "mp3")
         let url=NSURL(fileURLWithPath: musicPath!)
         musicPlayer=AVAudioPlayer(contentsOfURL: url, error: nil)
         musicPlayer.prepareToPlay()
