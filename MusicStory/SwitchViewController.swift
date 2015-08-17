@@ -12,6 +12,7 @@ class SwitchViewController: UIViewController,UIPickerViewDataSource,UIPickerView
     //let colorclass = color()
     var colors = ["None"]
     
+    @IBOutlet weak var musicPickBiew: UIPickerView!
     @IBOutlet weak var speedChooseView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +21,8 @@ class SwitchViewController: UIViewController,UIPickerViewDataSource,UIPickerView
         speedChooseView.hidden=true
     }
 
-    @IBOutlet weak var button1: UIPickerView!
     @IBAction func startGameButton(sender: AnyObject) {
         speedChooseView.hidden=false
-        self.view.bringSubviewToFront(button1)
         Constant.LAST_VIEW_IDENTIFY="switch"
     }
     override func didReceiveMemoryWarning() {

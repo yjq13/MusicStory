@@ -24,7 +24,7 @@ class GameViewController: UIViewController {
     var rythmHasBeenJudged=false//用于判定节奏
     var musicPlayer=AVAudioPlayer()
     var scoreLevel:String=""
-    var musicOffset:Double=2//节奏开始偏差
+    var musicOffset:Double=2.1//节奏开始偏差
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var stopView: UITableViewCell!

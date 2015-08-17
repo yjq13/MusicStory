@@ -207,26 +207,31 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="FzN-0a-BH9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" id="FzN-0a-BH9">
                                 <rect key="frame" x="410" y="241" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jha-Lk-ot0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="22" sectionFooterHeight="22" id="jha-Lk-ot0">
                                 <rect key="frame" x="0.0" y="0.0" width="321" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" id="3cp-sc-UNV">
-                                        <rect key="frame" x="0.0" y="22" width="321" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="40" id="3cp-sc-UNV">
+                                        <rect key="frame" x="0.0" y="22" width="321" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3cp-sc-UNV" id="kR1-Ir-rN4">
-                                            <rect key="frame" x="0.0" y="0.0" width="321" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="321" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="oto-Ro-yax" id="ci3-O1-Pfm"/>
+                                    <outlet property="delegate" destination="oto-Ro-yax" id="hnY-fg-t3O"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -234,13 +239,13 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="buyButton" destination="eOu-16-V8T" id="gZK-Kn-ePg"/>
-                        <outlet property="musicField" destination="FzN-0a-BH9" id="53x-ub-sqY"/>
-                        <outlet property="musicTable" destination="jha-Lk-ot0" id="mSf-dW-cT1"/>
+                        <outlet property="musicPriceField" destination="FzN-0a-BH9" id="Bt6-Cd-Nrz"/>
+                        <outlet property="musicTable" destination="jha-Lk-ot0" id="IQe-jM-2TJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rzi-TT-W2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-363" y="1196"/>
+            <point key="canvasLocation" x="-287" y="1218"/>
         </scene>
         <!--Story View Controller-->
         <scene sceneID="xe0-gF-mjE">
@@ -487,7 +492,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="button1" destination="f5h-pW-48A" id="fKO-QP-e9J"/>
+                        <outlet property="musicPickBiew" destination="f5h-pW-48A" id="75u-gN-BiC"/>
                         <outlet property="speedChooseView" destination="doi-Jy-rMr" id="5fN-JJ-QOo"/>
                     </connections>
                 </viewController>

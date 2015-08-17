@@ -9,17 +9,15 @@
 import UIKit
 
 class BuyViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-
-    @IBOutlet weak var musicCell: UITableViewCell!
-    var items=["小苹果","眼泪"]
+    var items=["小苹果","眼泪","傻吊应佳琪","帅哥马长松","啊","妈的还有谁","a","b","c"]
+    var item = [musicName]()
     @IBOutlet weak var buyButton: UIButton!
-    @IBOutlet weak var musicField: UITextField!
+    @IBOutlet weak var musicPriceField: UITextField!
     @IBOutlet weak var musicTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        musicTable.dataSource=self
-        musicTable.delegate=self
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +39,12 @@ class BuyViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
         
         return cell;
     }
+    
+    //点击表格触发事件
+//    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//    }
+    
 
     /*
     // MARK: - Navigation
@@ -52,4 +56,8 @@ class BuyViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
     }
     */
 
+}
+class musicName: NSObject {
+    var name = ""
+    var selected = false
 }
