@@ -17,6 +17,12 @@ class BuyViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        for var i=0;i<items.count;i++ {
+            var tem=musicName()
+            tem.name=items[i]
+            tem.selected=false
+            item.append(tem)
+        }
         
     }
 
@@ -27,23 +33,33 @@ class BuyViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
     @IBAction func buyMusic(sender: AnyObject) {
     }
     func tableView(tableView:UITableView,numberOfRowsInSection section: Int) -> Int{
-        return self.items.count
+        return self.item.count
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-        var row=indexPath.row as Int
-        cell.textLabel!.text=self.items[row]
+        let music = item[indexPath.row]
+        
+        cell.textLabel!.text = music.name
         
         return cell;
     }
     
     //点击表格触发事件
-//    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-//        
-//    }
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        let music = item[indexPath.row]
+        music.selected = !music.selected;
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell?.backgroundColor = UIColor.clearColor()
+        if(music.selected){
+            cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+        }else{
+            cell?.accessoryType = UITableViewCellAccessoryType.None
+        }
+    }
     
 
     /*

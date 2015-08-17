@@ -417,17 +417,17 @@ class GameViewController: UIViewController {
         if !rythmHasBeenJudged {
             for i in musicTime {
                 var offset=i + self.musicOffset - buttonPushTime
-                if (offset>=0&&offset<0.1) {
+                if (offset >= -0.1&&offset<0) {
                     print("perfect")
                     rythmHasBeenJudged=true
                     perfectNum++
                     combo[comboLiter]++
-                }else if(offset>=0.1&&offset<0.2){
+                }else if(offset>=0&&offset<0.1){
                     print("great")
                     rythmHasBeenJudged=true
                     greatNum++
                     combo[comboLiter]++
-                }else if(offset>=0.2&&offset<0.3){
+                }else if(offset>=0.1&&offset<0.2){
                     print("bad")
                     rythmHasBeenJudged=true
                     badNum++
