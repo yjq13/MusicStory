@@ -12,8 +12,12 @@ class BuyViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
     var items=["小苹果","眼泪","傻吊应佳琪","帅哥马长松","啊","妈的还有谁","a","b","c"]
     var item = [musicName]()
     @IBOutlet weak var buyButton: UIButton!
-    @IBOutlet weak var musicPriceField: UITextField!
+   
     @IBOutlet weak var musicTable: UITableView!
+    @IBOutlet weak var musicPriceLabel: UILabel!
+    
+    var price=0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -48,7 +52,8 @@ class BuyViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
     }
     
     //点击表格触发事件
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let music = item[indexPath.row]
         music.selected = !music.selected;
         
@@ -56,12 +61,12 @@ class BuyViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
         cell?.backgroundColor = UIColor.clearColor()
         if(music.selected){
             cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+        
         }else{
             cell?.accessoryType = UITableViewCellAccessoryType.None
         }
-    }
-    
 
+    }
     /*
     // MARK: - Navigation
 
