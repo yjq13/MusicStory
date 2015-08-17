@@ -30,6 +30,23 @@
 		<real>87.923</real>
 		<real>93.015</real>
 		<real>95.15900000000001</real>
+		<real>99.136</real>
+		<real>103.245</real>
+		<real>109.068</real>
+		<real>109.457</real>
+		<real>110.15</real>
+		<real>112.487</real>
+		<real>112.848</real>
+		<real>113.235</real>
+		<real>113.628</real>
+		<real>114.402</real>
+		<real>114.998</real>
+		<real>115.828</real>
+		<real>116.709</real>
+		<real>120.121</real>
+		<real>121.926</real>
+		<real>124.529</real>
+		<real>125.715</real>
 	</array>
 	<key>path2</key>
 	<array>
@@ -58,6 +75,14 @@
 		<real>90.863</real>
 		<real>95.34099999999999</real>
 		<real>96.377</real>
+		<real>99.786</real>
+		<real>101.45</real>
+		<real>102.798</real>
+		<real>106.77</real>
+		<real>103.699</real>
+		<real>114.607</real>
+		<real>124.246</real>
+		<real>126.658</real>
 	</array>
 	<key>path3</key>
 	<array>
@@ -97,6 +122,24 @@
 		<real>91.706</real>
 		<real>95.56100000000001</real>
 		<real>95.95999999999999</real>
+		<real>98.53400000000001</real>
+		<real>99.239</real>
+		<real>100.934</real>
+		<real>102.351</real>
+		<real>104.122</real>
+		<real>110.553</real>
+		<real>112.277</real>
+		<real>113.836</real>
+		<real>114.036</real>
+		<real>116.238</real>
+		<real>117.109</real>
+		<real>119.072</real>
+		<real>120.517</real>
+		<real>121.722</real>
+		<real>122.1</real>
+		<real>123.901</real>
+		<real>125.307</real>
+		<real>125.89</real>
 	</array>
 	<key>path4</key>
 	<array>
@@ -136,6 +179,22 @@
 		<real>93.38</real>
 		<real>95.729</real>
 		<real>96.79300000000001</real>
+		<real>99.322</real>
+		<real>101.037</real>
+		<real>105.431</real>
+		<real>107.202</real>
+		<real>108.88</real>
+		<real>110.979</real>
+		<real>112.662</real>
+		<real>113.453</real>
+		<real>114.248</real>
+		<real>115.404</real>
+		<real>117.569</real>
+		<real>119.213</real>
+		<real>120.883</real>
+		<real>122.295</real>
+		<real>126.116</real>
+		<real>126.976</real>
 	</array>
 	<key>path5</key>
 	<array>
@@ -181,6 +240,16 @@
 		<real>92.34699999999999</real>
 		<real>93.834</real>
 		<real>97.23099999999999</real>
+		<real>100.186</real>
+		<real>105.863</real>
+		<real>107.621</real>
+		<real>109.278</real>
+		<real>113.05</real>
+		<real>119.279</real>
+		<real>121.313</real>
+		<real>122.481</real>
+		<real>123.479</real>
+		<real>126.185</real>
 	</array>
 	<key>path6</key>
 	<array>
@@ -220,6 +289,19 @@
 		<real>92.565</real>
 		<real>94.26000000000001</real>
 		<real>97.691</real>
+		<real>100.589</real>
+		<real>101.937</real>
+		<real>104.573</real>
+		<real>106.327</real>
+		<real>108.09</real>
+		<real>109.683</real>
+		<real>111.431</real>
+		<real>118.013</real>
+		<real>119.692</real>
+		<real>122.651</real>
+		<real>122.868</real>
+		<real>126.276</real>
+		<real>127.358</real>
 	</array>
 </dict>
 </plist>
