@@ -10,7 +10,7 @@ import UIKit
 
 class SwitchViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     //let colorclass = color()
-    var colors = ["None"]
+    var colors = ["1","2","3","4","5","6"]
     
     @IBOutlet weak var musicPickBiew: UIPickerView!
     @IBOutlet weak var speedChooseView: UIView!

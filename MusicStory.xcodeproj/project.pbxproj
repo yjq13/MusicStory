@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047DC7A71B8CCE1800433D24 /* TaskSwitcherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DC7A61B8CCE1800433D24 /* TaskSwitcherViewController.m */; };
 		0482A5EE1B81D2CC0034278E /* 眼泪.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0482A5ED1B81D2CC0034278E /* 眼泪.mp3 */; };
 		04A0011D1B7F5485004B289A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0011C1B7F5485004B289A /* GameViewController.swift */; };
 		04A664151B8477B500936543 /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04A6640B1B8477B500936543 /* 00.jpg */; };
@@ -98,6 +99,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		047DC7A51B8CCE1800433D24 /* TaskSwitcherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskSwitcherViewController.h; sourceTree = "<group>"; };
+		047DC7A61B8CCE1800433D24 /* TaskSwitcherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSwitcherViewController.m; sourceTree = "<group>"; };
 		0482A5ED1B81D2CC0034278E /* 眼泪.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "眼泪.mp3"; sourceTree = "<group>"; };
 		04A0011C1B7F5485004B289A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		04A664011B8470A400936543 /* MusicStory-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicStory-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -306,6 +309,8 @@
 		E362304E1B74022000F53E1A /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				047DC7A51B8CCE1800433D24 /* TaskSwitcherViewController.h */,
+				047DC7A61B8CCE1800433D24 /* TaskSwitcherViewController.m */,
 				E36230951B74055D00F53E1A /* BuyViewController.swift */,
 				E362308A1B74054400F53E1A /* DeskViewController.swift */,
 				E362308B1B74054400F53E1A /* RoomViewController.swift */,
@@ -661,6 +666,7 @@
 				E36230851B7403FA00F53E1A /* bl_Music_GetInfo.swift in Sources */,
 				E36230771B7403CE00F53E1A /* data_Music_GetInfo.swift in Sources */,
 				E36230CA1B77166800F53E1A /* MusicInfoPo.swift in Sources */,
+				047DC7A71B8CCE1800433D24 /* TaskSwitcherViewController.m in Sources */,
 				E36230D31B77DD4F00F53E1A /* PetPo.swift in Sources */,
 				E362305C1B7402B600F53E1A /* ds_Music_InfoManage.swift in Sources */,
 				E3D419681B7D618E004DAAB4 /* bls_Music_CountInfo.swift in Sources */,
