@@ -16,7 +16,5 @@
 	<integer>0</integer>
 	<key>sound</key>
 	<true/>
-	<key>speed</key>
-	<integer>1</integer>
 </dict>
 </plist>

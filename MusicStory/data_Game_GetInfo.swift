@@ -18,14 +18,12 @@ class data_Game_GetInfo:GameGetInfo_DataService {
         var lv: AnyObject? = dict?.objectForKey("lv")!
         var money: AnyObject? = dict?.objectForKey("money")!
         var sound: AnyObject? = dict?.objectForKey("sound")!
-        var speed: AnyObject? = dict?.objectForKey("speed")!
         
         var lvGet = lv as! Int
         var storyStepGet = storystep as! Int
         var moneyGet = money as! Int
         var soundGet = sound as! Bool
-        var speedGet = speed as! Int
-        var po:AllInfoPo = AllInfoPo(storyStep: storyStepGet, lv: lvGet, money: moneyGet,volume:0.0,music:true,sound:soundGet,speed:speedGet)
+        var po:AllInfoPo = AllInfoPo(storyStep: storyStepGet, lv: lvGet, money: moneyGet,sound:soundGet)
         return po
     }
     
@@ -60,7 +58,7 @@ class data_Game_GetInfo:GameGetInfo_DataService {
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
         let path = documentsDirectory.stringByAppendingPathComponent("StoryInfo.plist")
         var dict = NSDictionary(contentsOfFile: path)
-        var po:StoryInfoPo = StoryInfoPo(step: 0, target: "", MusicID: "", LvNeed: 0)
+        var po:StoryInfoPo = StoryInfoPo(step: 0, target: "", MusicID: "", LvNeed: 0,description:"")
         return po
     }
 }

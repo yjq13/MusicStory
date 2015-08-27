@@ -26,6 +26,27 @@
 		<string>nothing</string>
 	</dict>
 	<key>M-0001</key>
-	<dict/>
+	<dict>
+		<key>ID</key>
+		<string>M-0001</string>
+		<key>price</key>
+		<integer>0</integer>
+		<key>ifBought</key>
+		<false/>
+		<key>imagePath</key>
+		<string></string>
+		<key>difficulty</key>
+		<integer>0</integer>
+		<key>score</key>
+		<integer>0</integer>
+		<key>combo</key>
+		<integer>0</integer>
+		<key>musicLV</key>
+		<integer>0</integer>
+		<key>name</key>
+		<string>tears</string>
+		<key>evaluation</key>
+		<string>nothing</string>
+	</dict>
 </dict>
 </plist>

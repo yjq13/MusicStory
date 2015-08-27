@@ -38,7 +38,7 @@ class data_Music_getInfo:MusicGetInfo_DataService {
         
         return po
     }
-    //no
+
     func getMusicInfoForBuy() -> [BuyMusicPo] {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as! NSString

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0482A5EE1B81D2CC0034278E /* 眼泪.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0482A5ED1B81D2CC0034278E /* 眼泪.mp3 */; };
 		04A0011D1B7F5485004B289A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0011C1B7F5485004B289A /* GameViewController.swift */; };
 		04A664151B8477B500936543 /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04A6640B1B8477B500936543 /* 00.jpg */; };
 		04A664161B8477B500936543 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04A6640C1B8477B500936543 /* 01.jpg */; };
@@ -85,6 +84,7 @@
 		E3D3FB7E1B7F966A00F23F77 /* launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3FB7D1B7F966A00F23F77 /* launch.swift */; };
 		E3D419681B7D618E004DAAB4 /* bls_Music_CountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */; };
 		E3D6F4441B8017E000BE62B5 /* M-0001.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D6F4431B8017E000BE62B5 /* M-0001.plist */; };
+		E3D992C71B824CE800570EE1 /* 眼泪.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3D992C61B824CE800570EE1 /* 眼泪.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +98,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0482A5ED1B81D2CC0034278E /* 眼泪.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "眼泪.mp3"; sourceTree = "<group>"; };
 		04A0011C1B7F5485004B289A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		04A664011B8470A400936543 /* MusicStory-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicStory-Bridging-Header.h"; sourceTree = "<group>"; };
 		04A664081B8471BD00936543 /* LTInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTInfiniteScrollView.h; sourceTree = "<group>"; };
@@ -182,6 +181,7 @@
 		E3D3FB7D1B7F966A00F23F77 /* launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launch.swift; sourceTree = "<group>"; };
 		E3D419671B7D618E004DAAB4 /* bls_Music_CountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bls_Music_CountInfo.swift; sourceTree = "<group>"; };
 		E3D6F4431B8017E000BE62B5 /* M-0001.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "M-0001.plist"; sourceTree = "<group>"; };
+		E3D992C61B824CE800570EE1 /* 眼泪.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "眼泪.mp3"; path = "../../../../Downloads/眼泪.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -494,7 +494,7 @@
 		E36230D81B78AC3200F53E1A /* MusicFIle */ = {
 			isa = PBXGroup;
 			children = (
-				0482A5ED1B81D2CC0034278E /* 眼泪.mp3 */,
+				E3D992C61B824CE800570EE1 /* 眼泪.mp3 */,
 			);
 			name = MusicFIle;
 			sourceTree = "<group>";
@@ -605,6 +605,7 @@
 				E36230DA1B78ACD200F53E1A /* AllInfo.plist in Resources */,
 				E3D6F4441B8017E000BE62B5 /* M-0001.plist in Resources */,
 				04F085D51B7889EA003C154F /* 5.jpg in Resources */,
+				E3D992C71B824CE800570EE1 /* 眼泪.mp3 in Resources */,
 				E36230411B7400E600F53E1A /* Main.storyboard in Resources */,
 				04F085D21B7889EA003C154F /* 2.jpg in Resources */,
 				04A664151B8477B500936543 /* 00.jpg in Resources */,
@@ -615,7 +616,6 @@
 				04A6641D1B8477B500936543 /* 08.jpg in Resources */,
 				04F085D11B7889EA003C154F /* 1.jpg in Resources */,
 				E3D106E91B7E4B480008268B /* examination.plist in Resources */,
-				0482A5EE1B81D2CC0034278E /* 眼泪.mp3 in Resources */,
 				E3D106ED1B7E545B0008268B /* MusicInfoSet.plist in Resources */,
 				E36230DC1B78ACF400F53E1A /* StoryInfo.plist in Resources */,
 				04A6641C1B8477B500936543 /* 07.jpg in Resources */,
