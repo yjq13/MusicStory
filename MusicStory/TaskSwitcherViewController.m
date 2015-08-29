@@ -8,6 +8,7 @@
 
 #import "TaskSwitcherViewController.h"
 #import "LTInfiniteScrollView.h"
+#import "musicStory-swift.h"
 
 #define SCREEN_WIDTH ceil([UIScreen mainScreen].bounds.size.width/10)*10
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -18,7 +19,11 @@
 @interface TaskSwitcherViewController ()<LTInfiniteScrollViewDelegate,LTInfiniteScrollViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableViewCell *speedChooseView;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UIPickerView *levelChooseView;
 @property (strong, nonatomic) LTInfiniteScrollView *scrollView;
+@property (nonatomic) int count;
+@property (nonatomic) int index;
+@property (nonatomic) double *ewr;
 
 @end
 
@@ -30,10 +35,14 @@
     // Do any additional setup after loading the view.
     self.scrollView = [[LTInfiniteScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     [self.view addSubview:self.scrollView];
-    
+    _count=0;
+    _index=0;
     self.scrollView.dataSource = self;
     self.scrollView.delegate = self;
     self.scrollView.maxScrollDistance = 3;
+    [self.scrollView addSubview:_startButton];
+    [self.scrollView addSubview:_speedChooseView];
+    _speedChooseView.hidden=true;
 }
 
 - (void)viewDidLayoutSubviews
@@ -70,11 +79,11 @@
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 300)];
     
     
-    UIView *icon = [[UIView alloc] initWithFrame:CGRectMake(20, 10, 140, 40)];
+    UIView *icon = [[UIView alloc] initWithFrame:CGRectMake(140, 10, 140, 40)];
     icon.backgroundColor = [UIColor whiteColor];
     icon.layer.cornerRadius = 5;
     
-    UIView *snapshot = [[UIView alloc] initWithFrame:CGRectMake(0, 60, width, 230)];
+    UIView *snapshot = [[UIView alloc] initWithFrame:CGRectMake(0, 60, width, 180)];
     snapshot.backgroundColor = [UIColor whiteColor];
     snapshot.layer.cornerRadius = 5;
     
@@ -83,7 +92,6 @@
     imageID=[imageID stringByAppendingString:[NSString stringWithFormat:@"%ld",(long)index]];
     imageID=[imageID stringByAppendingString:@".jpg"];
     
-    NSLog(imageID);
     
     UIImageView *musicImageView=[[UIImageView alloc]initWithFrame:CGRectMake(40, 40, 100, 100)];
     UIImage *musicImage=[UIImage imageNamed:imageID];
@@ -145,8 +153,60 @@
     transform = CGAffineTransformTranslate(transform, translation, 0);
     view.transform = transform;
     //NSLog(@"%f",progress);
+    if(self.count == numberOfShowView){
+        _count=0;
+    }
+    float i=progress;
+    if(i<=0){
+        i = i + numberOfShowView;
+    }
+    i = numberOfShowView-i;
+    double t=i-(int)i;
+    if(t==0||i==0){
+        if(_count == 0){
+            _index = (int)i;
+
+            NSLog(@"%d\n",_index);
+            
+            
+        }
+    }else{
+       
+    }
+    _count++;
+
+    
 }
 - (IBAction)start:(UIButton *)sender {
+    _speedChooseView.hidden=false;
+    [Constant setLAST_VIEW_IDENTIFY:@"switch"];
+}
+- (IBAction)closeChooseSpeedView:(UIButton *)sender {
+    _speedChooseView.hidden=true;
+}
+- (IBAction)chooseSpeed1:(UIButton *)sender {
+    [Constant setSPEED:2];
+    //下面的方法是代码跳转界面
+    UIStoryboard *myBoard = self.storyboard;
+    UIViewController *anotherView=[myBoard instantiateViewControllerWithIdentifier:@"game"];
+    //self.presentViewController(anotherView, animated: true, completion: nil)
+    [self presentViewController:anotherView animated:true completion:nil];
+}
+- (IBAction)chooseSpeed2:(UIButton *)sender {
+    [Constant setSPEED:1.5];
+    //下面的方法是代码跳转界面
+    UIStoryboard *myBoard = self.storyboard;
+    UIViewController *anotherView=[myBoard instantiateViewControllerWithIdentifier:@"game"];
+    //self.presentViewController(anotherView, animated: true, completion: nil)
+    [self presentViewController:anotherView animated:true completion:nil];
+}
+- (IBAction)chooseSpeed3:(UIButton *)sender {
+    [Constant setSPEED:1];
+    //下面的方法是代码跳转界面
+    UIStoryboard *myBoard = self.storyboard;
+    UIViewController *anotherView=[myBoard instantiateViewControllerWithIdentifier:@"game"];
+    //self.presentViewController(anotherView, animated: true, completion: nil)
+    [self presentViewController:anotherView animated:true completion:nil];
 }
 
 @end

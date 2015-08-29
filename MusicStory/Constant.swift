@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Constant{
+class Constant:NSObject{
     static var MONEY = 0
     static var LV = 0
     static var STORY_STEP = 1
