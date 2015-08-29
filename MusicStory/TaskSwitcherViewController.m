@@ -13,12 +13,12 @@
 #define SCREEN_WIDTH ceil([UIScreen mainScreen].bounds.size.width/10)*10
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define NUMBER_OF_VISIBLE_VIEWS 5
-#define COLOR [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1]
 #define numberOfShowView 10
 
 @interface TaskSwitcherViewController ()<LTInfiniteScrollViewDelegate,LTInfiniteScrollViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableViewCell *speedChooseView;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UIPickerView *levelChooseView;
 @property (strong, nonatomic) LTInfiniteScrollView *scrollView;
 @property (nonatomic) int count;
@@ -31,7 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = COLOR;
+    self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
     self.scrollView = [[LTInfiniteScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     [self.view addSubview:self.scrollView];
@@ -42,6 +42,7 @@
     self.scrollView.maxScrollDistance = 3;
     [self.scrollView addSubview:_startButton];
     [self.scrollView addSubview:_speedChooseView];
+    [self.scrollView addSubview:_backButton];
     _speedChooseView.hidden=true;
 }
 
@@ -80,7 +81,7 @@
     
     
     UIView *icon = [[UIView alloc] initWithFrame:CGRectMake(140, 10, 140, 40)];
-    icon.backgroundColor = [UIColor whiteColor];
+    icon.backgroundColor = [UIColor blueColor];
     icon.layer.cornerRadius = 5;
     
     UIView *snapshot = [[UIView alloc] initWithFrame:CGRectMake(0, 60, width, 180)];
