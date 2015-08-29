@@ -12,10 +12,12 @@ class StoryInfoVo {
     var target:String
     var MusicID:String
     var LvNeed:Int
-    init(step:Int,target:String,MusicID:String,LvNeed:Int){
+    var description:String
+    init(step:Int,target:String,MusicID:String,LvNeed:Int,description:String){
         self.step=step
         self.target=target
         self.MusicID=MusicID
         self.LvNeed=LvNeed
+        self.description=description
     }
 }
